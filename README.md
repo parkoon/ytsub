@@ -1,55 +1,47 @@
-# Podong Web
+# OpenNext Starter
 
-## 🚀 시작하기
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-### 환경변수 설정
+## Getting Started
 
-`.env.local` 파일을 생성하고 환경변수를 설정하세요:
+Read the documentation at https://opennext.js.org/cloudflare.
 
-```bash
-NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
-NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
-```
+## Develop
 
-### 개발 서버 실행
+Run the Next.js development server:
 
 ```bash
-yarn dev
+npm run dev
+# or similar package manager command
 ```
 
-[http://localhost:3000](http://localhost:3000)에서 확인할 수 있습니다.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📁 프로젝트 구조
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-```
-src/
-├── api/          # API 함수
-├── app/          # Next.js App Router
-├── components/   # 공통 컴포넌트
-│   └── ui/       # shadcn/ui 컴포넌트
-├── config/       # 설정 (env 등)
-├── hooks/        # 커스텀 훅
-├── lib/          # 유틸리티 (axios, supabase, utils)
-├── providers/    # Context Providers
-└── types/        # 타입 정의
+## Preview
+
+Preview the application locally on the Cloudflare runtime:
+
+```bash
+npm run preview
+# or similar package manager command
 ```
 
-## 🛠 스크립트
+## Deploy
 
-| 명령어 | 설명 |
-|--------|------|
-| `yarn dev` | 개발 서버 실행 (Turbo) |
-| `yarn build` | 프로덕션 빌드 |
-| `yarn lint` | ESLint 검사 |
-| `yarn lint:fix` | ESLint 자동 수정 |
-| `yarn format` | Prettier 포맷팅 |
+Deploy the application to Cloudflare:
 
-## 📦 기술 스택
+```bash
+npm run deploy
+# or similar package manager command
+```
 
-- **Framework**: Next.js 16
-- **Styling**: Tailwind CSS v4, shadcn/ui
-- **State**: React Query
-- **Form**: React Hook Form + Zod
-- **Backend**: Supabase
-- **HTTP Client**: Axios
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!

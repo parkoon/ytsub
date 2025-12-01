@@ -1,8 +1,5 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
-    "source.organizeImports": "never"
-  }
+	"files.associations": {
+		"wrangler.json": "jsonc"
+	}
 }
