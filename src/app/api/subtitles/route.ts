@@ -48,9 +48,11 @@ export async function GET(request: NextRequest) {
       viewCount: Number(videoInfo.basic_info.view_count) || 0,
       channelName: videoInfo.basic_info.author || 'Unknown',
     };
+    console.log('🚀 ~ GET ~ video:', video);
 
     // 사용 가능한 자막 트랙 가져오기
     const captionTracks = videoInfo.captions?.caption_tracks || [];
+    console.log('🚀 ~ GET ~ captionTracks:', captionTracks);
 
     if (captionTracks.length === 0) {
       return NextResponse.json({
