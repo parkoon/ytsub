@@ -64,5 +64,4 @@ export function useSubtitles(videoId: string | null) {
   });
 }
 
-export type { SubtitleLanguage, VideoInfo, SubtitleData, SubtitleData, SubtitlesResponse };
-
+export type { SubtitleData, SubtitleLanguage, SubtitlesResponse, VideoInfo };
