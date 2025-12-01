@@ -4,8 +4,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
     "source.organizeImports": "never"
-  },
-  "files.associations": {
-    "wrangler.json": "jsonc"
   }
 }

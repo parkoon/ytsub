@@ -1,47 +1,55 @@
-# OpenNext Starter
+# Podong Web
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 🚀 시작하기
 
-## Getting Started
+### 환경변수 설정
 
-Read the documentation at https://opennext.js.org/cloudflare.
-
-## Develop
-
-Run the Next.js development server:
+`.env.local` 파일을 생성하고 환경변수를 설정하세요:
 
 ```bash
-npm run dev
-# or similar package manager command
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+NEXT_PUBLIC_API_BASE_URL=http://localhost:4000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Preview
-
-Preview the application locally on the Cloudflare runtime:
+### 개발 서버 실행
 
 ```bash
-npm run preview
-# or similar package manager command
+yarn dev
 ```
 
-## Deploy
+[http://localhost:3000](http://localhost:3000)에서 확인할 수 있습니다.
 
-Deploy the application to Cloudflare:
+## 📁 프로젝트 구조
 
-```bash
-npm run deploy
-# or similar package manager command
+```
+src/
+├── api/          # API 함수
+├── app/          # Next.js App Router
+├── components/   # 공통 컴포넌트
+│   └── ui/       # shadcn/ui 컴포넌트
+├── config/       # 설정 (env 등)
+├── hooks/        # 커스텀 훅
+├── lib/          # 유틸리티 (axios, supabase, utils)
+├── providers/    # Context Providers
+└── types/        # 타입 정의
 ```
 
-## Learn More
+## 🛠 스크립트
 
-To learn more about Next.js, take a look at the following resources:
+| 명령어 | 설명 |
+|--------|------|
+| `yarn dev` | 개발 서버 실행 (Turbo) |
+| `yarn build` | 프로덕션 빌드 |
+| `yarn lint` | ESLint 검사 |
+| `yarn lint:fix` | ESLint 자동 수정 |
+| `yarn format` | Prettier 포맷팅 |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 기술 스택
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: Next.js 16
+- **Styling**: Tailwind CSS v4, shadcn/ui
+- **State**: React Query
+- **Form**: React Hook Form + Zod
+- **Backend**: Supabase
+- **HTTP Client**: Axios

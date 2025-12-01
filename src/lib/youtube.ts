@@ -33,4 +33,3 @@ export function extractVideoId(urlOrId: string): string | null {
 export function isValidYouTubeUrl(urlOrId: string): boolean {
   return extractVideoId(urlOrId) !== null;
 }
-
