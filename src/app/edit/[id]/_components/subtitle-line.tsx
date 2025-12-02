@@ -17,11 +17,11 @@ import { useSubtitleEditorStore } from '@/store/subtitle-editor-store';
 import type { Subtitle } from '@/types';
 import { formatTimeForEdit, isValidTimeFormat, parseTimeToMs } from '@/utils/time-format';
 
-interface SubtitleLineProps {
+type SubtitleLineProps = {
   subtitle: Subtitle;
   onPlay?: (startTime: number, endTime: number) => void;
   isPlayerReady?: boolean;
-}
+};
 
 function SubtitleLineComponent({ subtitle, onPlay, isPlayerReady = false }: SubtitleLineProps) {
   const updateSubtitle = useSubtitleEditorStore((state) => state.updateSubtitle);
@@ -155,14 +155,25 @@ function SubtitleLineComponent({ subtitle, onPlay, isPlayerReady = false }: Subt
   const hasTimeError = startTimeMs >= endTimeMs;
 
   return (
-    <div className="relative flex gap-4 rounded border-b bg-white p-4">
+    <div className="relative flex items-center rounded border-b bg-white px-2 py-4">
       {/* Index Badge */}
       <div className="bg-muted text-muted-foreground absolute top-0 left-0 rounded-tl rounded-br px-1.5 py-0.5 text-xs font-medium">
         #{subtitle.index}
       </div>
 
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={handlePlay}
+        disabled={!isPlayerReady || !onPlay}
+        className="mr-2 h-8 w-8"
+        title="Play this segment"
+      >
+        <Play className="h-4 w-4" />
+      </Button>
+
       {/* Left: Time Inputs */}
-      <div className="flex flex-col gap-2">
+      <div className="mr-2 flex flex-col gap-1">
         {/* Start Time */}
         <div className="relative">
           <Input
@@ -237,7 +248,7 @@ function SubtitleLineComponent({ subtitle, onPlay, isPlayerReady = false }: Subt
       </div>
 
       {/* Center: Text Editor */}
-      <div className="flex-1">
+      <div className="mr-2 flex-1">
         <Textarea
           value={displayText}
           onChange={(e) => handleTextChange(e.target.value)}
@@ -247,66 +258,53 @@ function SubtitleLineComponent({ subtitle, onPlay, isPlayerReady = false }: Subt
         />
       </div>
 
-      {/* Right: Play Button and Menu */}
-      <div className="flex flex-col items-center gap-2">
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={handlePlay}
-          disabled={!isPlayerReady || !onPlay}
-          className="h-8 w-8 p-0"
-          title="Play this segment"
-        >
-          <Play className="h-4 w-4" />
-        </Button>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-              <MoreHorizontal className="h-4 w-4" />
-              <span className="sr-only">Open menu</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuItem
-              onClick={() => {
-                if (currentIndex !== -1) {
-                  insertBefore(currentIndex);
-                }
-              }}
-            >
-              Insert Before
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => {
-                if (currentIndex !== -1) {
-                  insertAfter(currentIndex);
-                }
-              }}
-            >
-              Insert After
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => {
-                if (currentIndex !== -1) {
-                  duplicateLine(currentIndex);
-                }
-              }}
-            >
-              Duplicate Line
-            </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => {
-                if (currentIndex !== -1) {
-                  deleteLine(currentIndex);
-                }
-              }}
-              className="text-destructive focus:text-destructive"
-            >
-              Delete Line
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
-      </div>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+            <MoreHorizontal className="h-4 w-4" />
+            <span className="sr-only">Open menu</span>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end">
+          <DropdownMenuItem
+            onClick={() => {
+              if (currentIndex !== -1) {
+                insertBefore(currentIndex);
+              }
+            }}
+          >
+            Insert Before
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => {
+              if (currentIndex !== -1) {
+                insertAfter(currentIndex);
+              }
+            }}
+          >
+            Insert After
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => {
+              if (currentIndex !== -1) {
+                duplicateLine(currentIndex);
+              }
+            }}
+          >
+            Duplicate Line
+          </DropdownMenuItem>
+          <DropdownMenuItem
+            onClick={() => {
+              if (currentIndex !== -1) {
+                deleteLine(currentIndex);
+              }
+            }}
+            className="text-destructive focus:text-destructive"
+          >
+            Delete Line
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }

@@ -138,5 +138,5 @@ export function YoutubePlayer({ videoId, onReady }: YoutubePlayerProps) {
     };
   }, [isAPILoaded, videoId]);
 
-  return <div ref={containerRef} />;
+  return <div ref={containerRef} className="h-full w-full" />;
 }

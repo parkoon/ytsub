@@ -8,7 +8,6 @@ import { ArrowLeft, Download } from 'lucide-react';
 import { SubtitleLine } from '@/app/edit/[id]/_components/subtitle-line';
 import { YoutubePlayer, type YoutubePlayerRef } from '@/app/edit/[id]/_components/youtube-player';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import {
   Dialog,
   DialogContent,
@@ -26,7 +25,7 @@ import {
 } from '@/components/ui/select';
 import { useSubtitleEditorStore } from '@/store/subtitle-editor-store';
 import { useSubtitleStore } from '@/store/subtitle-store';
-import { downloadSubtitle, SubtitleUtils } from '@/utils/subtitle.utils';
+import { downloadSubtitle, downloadSubtitleJSON, SubtitleUtils } from '@/utils/subtitle.utils';
 
 export default function EditPage() {
   const params = useParams();
@@ -49,9 +48,9 @@ export default function EditPage() {
 
   // 다운로드 모달 관련
   const [isDownloadDialogOpen, setIsDownloadDialogOpen] = useState(false);
-  const [selectedFormat, setSelectedFormat] = useState<'srt' | 'vtt' | 'sub' | 'sbv' | 'txt'>(
-    'srt'
-  );
+  const [selectedFormat, setSelectedFormat] = useState<
+    'srt' | 'vtt' | 'sub' | 'sbv' | 'txt' | 'json'
+  >('srt');
 
   // 세션이 없으면 홈으로 리다이렉트
   useEffect(() => {
@@ -93,7 +92,15 @@ export default function EditPage() {
   };
 
   const handleDownload = () => {
-    downloadSubtitle(subtitles, subtitleData.videoId, 'en', selectedFormat);
+    if (selectedFormat === 'json') {
+      const exportData = {
+        ...subtitleData,
+        subtitles,
+      };
+      downloadSubtitleJSON(exportData, subtitleData.videoId);
+    } else {
+      downloadSubtitle(subtitles, subtitleData.videoId, 'en', selectedFormat);
+    }
     setIsDownloadDialogOpen(false);
   };
 
@@ -163,13 +170,6 @@ export default function EditPage() {
 
   return (
     <div className="bg-background relative flex min-h-screen w-full flex-col items-center overflow-x-hidden">
-      <YoutubePlayer
-        videoId={subtitleData.videoId}
-        onReady={(player) => {
-          playerRef.current = { player, isReady: true };
-          setIsPlayerReady(true);
-        }}
-      />
       {/* Sticky Header */}
       <header className="bg-background sticky top-0 z-10 w-full border-b border-dashed border-gray-300">
         <div className="mx-auto flex w-full max-w-7xl items-center justify-between border-r border-l border-dashed border-gray-300 p-6">
@@ -211,6 +211,7 @@ export default function EditPage() {
                     <SelectItem value="sub">SubViewer (.sub)</SelectItem>
                     <SelectItem value="sbv">YouTube Subtitles (.sbv)</SelectItem>
                     <SelectItem value="txt">Plain Text (.txt)</SelectItem>
+                    <SelectItem value="json">JSON (.json)</SelectItem>
                   </SelectContent>
                 </Select>
                 <Button onClick={handleDownload} className="w-full">
@@ -223,33 +224,39 @@ export default function EditPage() {
       </header>
 
       {/* Main Content */}
-      <main className="flex h-full w-full max-w-7xl grow flex-col items-center border-r border-l border-dashed border-gray-300 px-4 py-16">
+      <main className="relative flex h-full w-full max-w-7xl grow flex-col items-center border-r border-l border-dashed border-gray-300 px-4 py-16 pt-4">
         {/* Video Info */}
-        <Card className="w-full max-w-3xl bg-white/50 p-6 shadow-[0_4px_14px_0_rgba(0,0,0,0.05)] dark:bg-zinc-800/20">
-          <CardContent className="space-y-4 p-0">
-            <div>
-              <h2 className="mb-2 text-left text-xl font-semibold">{subtitleData.title}</h2>
-              <div className="text-muted-foreground space-y-1 text-left text-sm">
-                <p>Video ID: {subtitleData.videoId}</p>
-                <p>Duration: {SubtitleUtils.formatTime(subtitleData.duration * 1000)}</p>
-              </div>
+
+        <div className="flex w-full gap-4">
+          <div className="aspect-video w-[420px] overflow-hidden rounded">
+            <YoutubePlayer
+              videoId={subtitleData.videoId}
+              onReady={(player) => {
+                playerRef.current = { player, isReady: true };
+                setIsPlayerReady(true);
+              }}
+            />
+          </div>
+          <div className="flex-1 rounded bg-white p-4">
+            <h2 className="mb-2 text-left text-xl font-semibold">{subtitleData.title}</h2>
+            <div className="text-muted-foreground space-y-1 text-left text-sm">
+              <p>Video ID: {subtitleData.videoId}</p>
+              <p>Duration: {SubtitleUtils.formatTime(subtitleData.duration * 1000)}</p>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
         {/* Subtitle Editor */}
         {subtitles.length > 0 && (
-          <div className="mt-6 w-full">
-            <div className="divide-y">
-              {subtitles.map((subtitle) => (
-                <SubtitleLine
-                  key={subtitle.index}
-                  subtitle={subtitle}
-                  onPlay={playSegment}
-                  isPlayerReady={isPlayerReady}
-                />
-              ))}
-            </div>
+          <div className="mt-6 flex w-full flex-col gap-2">
+            {subtitles.map((subtitle) => (
+              <SubtitleLine
+                key={subtitle.index}
+                subtitle={subtitle}
+                onPlay={playSegment}
+                isPlayerReady={isPlayerReady}
+              />
+            ))}
           </div>
         )}
       </main>
