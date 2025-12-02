@@ -3,6 +3,8 @@
  * - 프로젝트 전역에서 사용하는 타입들을 정의
  */
 
+import { GetYTSubtitleResponse } from '@/api/types';
+
 // API 응답 기본 타입
 export interface ApiResponse<T> {
   data: T;
@@ -38,14 +40,17 @@ export interface Language {
   isAuto: boolean;
 }
 
-export interface SubtitleResponse {
-  videoId: string;
-  title: string;
-  duration: number;
-  thumbnail: string;
-  subtitles: Subtitle[];
-}
-
 export interface SubtitleError {
   detail: string;
+}
+
+// 자막 세션 타입 (Zustand store용)
+export interface SubtitleSession {
+  id: string;
+  data: GetYTSubtitleResponse;
+  metadata: {
+    createdAt: number;
+    videoId: string;
+    url: string;
+  };
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist_Mono, Inter } from 'next/font/google';
 import Script from 'next/script';
 
+import { Toaster } from '@/components/ui/toast';
 import { env } from '@/config/env';
 import { AnalyticsProvider } from '@/providers/analytics-provider';
 import { QueryProvider } from '@/providers/query-provider';
@@ -147,7 +148,10 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
         <AnalyticsProvider>
-          <QueryProvider>{children}</QueryProvider>
+          <QueryProvider>
+            {children}
+            <Toaster />
+          </QueryProvider>
         </AnalyticsProvider>
       </body>
     </html>

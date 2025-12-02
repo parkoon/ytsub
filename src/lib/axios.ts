@@ -39,7 +39,7 @@ api.interceptors.response.use(
       throw new Error(detail);
     } else if (error.request) {
       // 요청은 보냈지만 응답이 없는 경우
-      throw new Error('네트워크 연결을 확인해주세요.');
+      throw new Error('Check your network connection');
     } else {
       throw new Error(error.message);
     }

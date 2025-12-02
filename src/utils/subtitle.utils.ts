@@ -1,3 +1,4 @@
+import { GetYTSubtitleResponse } from '@/api/types';
 import type { Subtitle } from '@/types';
 
 /**
@@ -109,6 +110,24 @@ export function downloadSubtitle(
   const a = document.createElement('a');
   a.href = url;
   a.download = `${videoId}-${language}.${format}`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+/**
+ * 자막 데이터를 JSON 형식으로 다운로드 (개발자용)
+ * @param data - SubtitleResponse 전체 데이터
+ * @param videoId - 비디오 ID
+ */
+export function downloadSubtitleJSON(data: GetYTSubtitleResponse, videoId: string): void {
+  const content = JSON.stringify(data, null, 2);
+  const blob = new Blob([content], { type: 'application/json;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${videoId}-subtitles.json`;
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
