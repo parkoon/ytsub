@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
 import { Geist_Mono, Inter } from 'next/font/google';
+import Script from 'next/script';
 
+import { env } from '@/config/env';
+import { AnalyticsProvider } from '@/providers/analytics-provider';
 import { QueryProvider } from '@/providers/query-provider';
 
 import './globals.css';
@@ -28,10 +31,36 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const gaId = env.NEXT_PUBLIC_GA_ID;
+
   return (
     <html lang="en">
+      <head>
+        {gaId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="google-analytics"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${gaId}');
+                `,
+              }}
+            />
+          </>
+        )}
+      </head>
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
-        <QueryProvider>{children}</QueryProvider>
+        <AnalyticsProvider>
+          <QueryProvider>{children}</QueryProvider>
+        </AnalyticsProvider>
       </body>
     </html>
   );

@@ -8,6 +8,7 @@ import { z } from 'zod';
 const EnvSchema = z.object({
   YTSUB_API_URL: z.string().url().optional().default('http://localhost:8000'),
   YTSUB_API_KEY: z.string().optional(),
+  NEXT_PUBLIC_GA_ID: z.string().optional(),
 });
 
 type EnvType = z.infer<typeof EnvSchema>;
@@ -24,6 +25,7 @@ const createEnv = (): EnvType => {
         ? 'https://ytsub-api-production.up.railway.app'
         : 'http://localhost:8000'),
     YTSUB_API_KEY: process.env.NEXT_PUBLIC_YTSUB_API_KEY,
+    NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
   };
 
   const parsedEnv = EnvSchema.safeParse(envVars);

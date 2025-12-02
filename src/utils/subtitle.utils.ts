@@ -1,4 +1,4 @@
-import type { SubtitleCue } from '@/types';
+import type { Subtitle } from '@/types';
 
 /**
  * 자막 관련 유틸리티 함수들
@@ -26,7 +26,7 @@ export class SubtitleUtils {
    * @param timeMs - 찾을 시간 (밀리초)
    * @returns 해당 시간의 자막 또는 null
    */
-  static findCueAtTime(cues: SubtitleCue[], timeMs: number): SubtitleCue | null {
+  static findCueAtTime(cues: Subtitle[], timeMs: number): Subtitle | null {
     return cues.find((cue) => timeMs >= cue.startTime && timeMs <= cue.endTime) || null;
   }
 
@@ -35,7 +35,7 @@ export class SubtitleUtils {
    * @param cues - 자막 큐 배열
    * @returns SRT 형식 문자열
    */
-  static toSRT(cues: SubtitleCue[]): string {
+  static toSRT(cues: Subtitle[]): string {
     return cues
       .map((cue) => {
         const start = this.formatSRTTime(cue.startTime);
@@ -50,7 +50,7 @@ export class SubtitleUtils {
    * @param cues - 자막 큐 배열
    * @returns VTT 형식 문자열
    */
-  static toVTT(cues: SubtitleCue[]): string {
+  static toVTT(cues: Subtitle[]): string {
     let vtt = 'WEBVTT\n\n';
     cues.forEach((cue) => {
       const start = this.formatVTTTime(cue.startTime);
@@ -97,7 +97,7 @@ export class SubtitleUtils {
  * @param format - 다운로드 형식 (srt 또는 vtt)
  */
 export function downloadSubtitle(
-  cues: SubtitleCue[],
+  cues: Subtitle[],
   videoId: string,
   language: string,
   format: 'srt' | 'vtt' = 'srt'
