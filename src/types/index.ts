@@ -28,7 +28,8 @@ export interface PaginatedResponse<T> {
 
 // YouTube 자막 관련 타입 (외부 API 응답 형식)
 export interface Subtitle {
-  index: number;
+  id: string; // 고유 ID (timestamp 기반)
+  index: number; // 표시용 순서
   startTime: number;
   endTime: number;
   text: string;

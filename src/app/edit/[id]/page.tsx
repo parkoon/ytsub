@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 
 import { ArrowLeft, Download } from 'lucide-react';
@@ -23,22 +23,23 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { useSubtitleEditorStore } from '@/store/subtitle-editor-store';
 import { useSubtitleStore } from '@/store/subtitle-store';
 import { downloadSubtitle, downloadSubtitleJSON, SubtitleUtils } from '@/utils/subtitle.utils';
+import { isValidTimeFormat, parseTimeToMs } from '@/utils/time-format';
 
 export default function EditPage() {
   const params = useParams();
   const router = useRouter();
   const sessionId = params.id as string;
 
-  // 세션 스토어에서 데이터 가져오기
-  const getSession = useSubtitleStore((state) => state.getSession);
-  const session = getSession(sessionId);
-
-  // 편집 스토어
-  const loadSubtitles = useSubtitleEditorStore((state) => state.loadSubtitles);
-  const subtitles = useSubtitleEditorStore((state) => state.subtitles);
+  // 단일 스토어에서 모든 데이터 가져오기
+  // sessions[sessionId]를 직접 구독하여 변경사항을 감지
+  const session = useSubtitleStore((state) => state.sessions[sessionId]);
+  const updateSubtitle = useSubtitleStore((state) => state.updateSubtitle);
+  const insertBefore = useSubtitleStore((state) => state.insertBefore);
+  const insertAfter = useSubtitleStore((state) => state.insertAfter);
+  const deleteLine = useSubtitleStore((state) => state.deleteLine);
+  const duplicateLine = useSubtitleStore((state) => state.duplicateLine);
 
   // YouTube 플레이어 관련
   const playerRef = useRef<YoutubePlayerRef | null>(null);
@@ -59,13 +60,6 @@ export default function EditPage() {
     }
   }, [session, router]);
 
-  // 세션 데이터를 편집 스토어에 로드
-  useEffect(() => {
-    if (session) {
-      loadSubtitles(session.data.videoId, session.data.subtitles);
-    }
-  }, [session, loadSubtitles]);
-
   // 플레이어 정리
   useEffect(() => {
     return () => {
@@ -77,6 +71,102 @@ export default function EditPage() {
     };
   }, []);
 
+  // Callback 함수들 (sessionId 포함)
+  const handleStartTimeChange = useCallback(
+    (id: string, value: string) => {
+      console.log('🔄 [Page] handleStartTimeChange:', { sessionId, id, value });
+      if (isValidTimeFormat(value)) {
+        const ms = parseTimeToMs(value);
+        updateSubtitle(sessionId, id, { startTime: ms });
+      }
+    },
+    [sessionId, updateSubtitle]
+  );
+
+  const handleEndTimeChange = useCallback(
+    (id: string, value: string) => {
+      console.log('🔄 [Page] handleEndTimeChange:', { sessionId, id, value });
+      if (isValidTimeFormat(value)) {
+        const ms = parseTimeToMs(value);
+        updateSubtitle(sessionId, id, { endTime: ms });
+      }
+    },
+    [sessionId, updateSubtitle]
+  );
+
+  const handleTextChange = useCallback(
+    (id: string, value: string) => {
+      console.log('🔄 [Page] handleTextChange:', {
+        sessionId,
+        id,
+        value: value.substring(0, 50),
+      });
+      updateSubtitle(sessionId, id, { text: value });
+    },
+    [sessionId, updateSubtitle]
+  );
+
+  const handleInsertBefore = useCallback(
+    (id: string) => {
+      console.log('➕ [Page] handleInsertBefore:', { sessionId, id });
+      insertBefore(sessionId, id);
+    },
+    [sessionId, insertBefore]
+  );
+
+  const handleInsertAfter = useCallback(
+    (id: string) => {
+      console.log('➕ [Page] handleInsertAfter:', { sessionId, id });
+      insertAfter(sessionId, id);
+    },
+    [sessionId, insertAfter]
+  );
+
+  const handleDelete = useCallback(
+    (id: string) => {
+      console.log('🗑️ [Page] handleDelete:', { sessionId, id });
+      deleteLine(sessionId, id);
+    },
+    [sessionId, deleteLine]
+  );
+
+  const handleDuplicate = useCallback(
+    (id: string) => {
+      console.log('📋 [Page] handleDuplicate:', { sessionId, id });
+      duplicateLine(sessionId, id);
+    },
+    [sessionId, duplicateLine]
+  );
+
+  const handleTimeAdjust = useCallback(
+    (id: string, field: 'start' | 'end', direction: 'up' | 'down') => {
+      if (!session) return;
+
+      const subtitle = session.data.subtitles.find((s) => s.id === id);
+      if (!subtitle) {
+        console.warn('⚠️ [Page] handleTimeAdjust: Subtitle not found', { sessionId, id });
+        return;
+      }
+
+      const currentMs = field === 'start' ? subtitle.startTime : subtitle.endTime;
+      const amount = 100;
+      const newMs = Math.max(0, currentMs + (direction === 'up' ? amount : -amount));
+
+      console.log('⏱️ [Page] handleTimeAdjust:', {
+        sessionId,
+        id,
+        field,
+        direction,
+        currentMs,
+        newMs,
+      });
+      updateSubtitle(sessionId, id, {
+        [field === 'start' ? 'startTime' : 'endTime']: newMs,
+      });
+    },
+    [session, sessionId, updateSubtitle]
+  );
+
   if (!session) {
     return (
       <div className="flex min-h-screen items-center justify-center">
@@ -86,6 +176,8 @@ export default function EditPage() {
   }
 
   const subtitleData = session.data;
+  const subtitles = subtitleData.subtitles;
+  console.log('🚀 ~ EditPage ~ subtitles:', subtitles, subtitles.length);
 
   const handleBack = () => {
     router.push('/');
@@ -226,7 +318,6 @@ export default function EditPage() {
       {/* Main Content */}
       <main className="relative flex h-full w-full max-w-7xl grow flex-col items-center border-r border-l border-dashed border-gray-300 px-4 py-16 pt-4">
         {/* Video Info */}
-
         <div className="flex w-full gap-4">
           <div className="aspect-video w-[420px] overflow-hidden rounded">
             <YoutubePlayer
@@ -251,10 +342,19 @@ export default function EditPage() {
           <div className="mt-6 flex w-full flex-col gap-2">
             {subtitles.map((subtitle) => (
               <SubtitleLine
-                key={subtitle.index}
+                key={subtitle.id}
                 subtitle={subtitle}
+                onStartTimeChange={handleStartTimeChange}
+                onEndTimeChange={handleEndTimeChange}
+                onTextChange={handleTextChange}
+                onInsertBefore={handleInsertBefore}
+                onInsertAfter={handleInsertAfter}
+                onDelete={handleDelete}
+                onDuplicate={handleDuplicate}
+                onTimeAdjust={handleTimeAdjust}
                 onPlay={playSegment}
                 isPlayerReady={isPlayerReady}
+                callbackDelay={2000}
               />
             ))}
           </div>
