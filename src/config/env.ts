@@ -5,7 +5,10 @@ import { z } from 'zod';
  * - 필수 값과 선택적 값을 구분
  * - 타입 안전성 보장
  */
-const EnvSchema = z.object({});
+const EnvSchema = z.object({
+  YTSUB_API_URL: z.string().url().optional().default('http://localhost:8000'),
+  YTSUB_API_KEY: z.string().optional(),
+});
 
 type EnvType = z.infer<typeof EnvSchema>;
 
@@ -14,7 +17,14 @@ const createEnv = (): EnvType => {
    * Next.js에서는 NEXT_PUBLIC_ 접두사가 붙은 환경변수만 클라이언트에서 접근 가능
    * process.env에서 NEXT_PUBLIC_ 접두사를 제거하고 객체로 변환
    */
-  const envVars = {};
+  const envVars = {
+    YTSUB_API_URL:
+      process.env.NEXT_PUBLIC_YTSUB_API_URL ||
+      (process.env.NODE_ENV === 'production'
+        ? 'https://ytsub-api-production.up.railway.app'
+        : 'http://localhost:8000'),
+    YTSUB_API_KEY: process.env.NEXT_PUBLIC_YTSUB_API_KEY,
+  };
 
   const parsedEnv = EnvSchema.safeParse(envVars);
 
