@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { memo, useCallback, useMemo, useState } from 'react';
 
 import { ChevronDown, ChevronUp, MoreHorizontal, Play } from 'lucide-react';
 
@@ -23,13 +23,19 @@ interface SubtitleLineProps {
   isPlayerReady?: boolean;
 }
 
-export function SubtitleLine({ subtitle, onPlay, isPlayerReady = false }: SubtitleLineProps) {
+function SubtitleLineComponent({ subtitle, onPlay, isPlayerReady = false }: SubtitleLineProps) {
   const updateSubtitle = useSubtitleEditorStore((state) => state.updateSubtitle);
   const insertBefore = useSubtitleEditorStore((state) => state.insertBefore);
   const insertAfter = useSubtitleEditorStore((state) => state.insertAfter);
   const deleteLine = useSubtitleEditorStore((state) => state.deleteLine);
   const duplicateLine = useSubtitleEditorStore((state) => state.duplicateLine);
   const subtitles = useSubtitleEditorStore((state) => state.subtitles);
+
+  // 현재 subtitle의 배열 인덱스를 메모이제이션
+  const currentIndex = useMemo(
+    () => subtitles.findIndex((s) => s.index === subtitle.index),
+    [subtitles, subtitle.index]
+  );
 
   // 편집 중일 때만 로컬 state 사용, 그 외에는 subtitle prop 직접 사용
   const [isEditingStartTime, setIsEditingStartTime] = useState(false);
@@ -51,77 +57,91 @@ export function SubtitleLine({ subtitle, onPlay, isPlayerReady = false }: Subtit
     onPlay?.(subtitle.startTime, subtitle.endTime);
   };
 
-  const handleStartTimeChange = (value: string) => {
-    if (!isEditingStartTime) {
-      setIsEditingStartTime(true);
-      setStartTimeStr(formatTimeForEdit(subtitle.startTime));
-    }
-    setStartTimeStr(value);
-    if (isValidTimeFormat(value)) {
-      const ms = parseTimeToMs(value);
-      updateSubtitle(subtitle.index, { startTime: ms });
-    }
-  };
+  const handleStartTimeChange = useCallback(
+    (value: string) => {
+      if (!isEditingStartTime) {
+        setIsEditingStartTime(true);
+        setStartTimeStr(formatTimeForEdit(subtitle.startTime));
+      }
+      setStartTimeStr(value);
+      // onChange에서는 store 업데이트하지 않음 (성능 최적화)
+    },
+    [isEditingStartTime, subtitle.startTime]
+  );
 
-  const handleStartTimeBlur = () => {
+  const handleStartTimeBlur = useCallback(() => {
     setIsEditingStartTime(false);
-    // blur 시 최종 값 동기화
+    // blur 시에만 store 업데이트
     if (isValidTimeFormat(startTimeStr)) {
       const ms = parseTimeToMs(startTimeStr);
       updateSubtitle(subtitle.index, { startTime: ms });
+    } else {
+      // 유효하지 않은 형식이면 원래 값으로 복원
+      setStartTimeStr(formatTimeForEdit(subtitle.startTime));
     }
-  };
+  }, [startTimeStr, subtitle.index, updateSubtitle, subtitle.startTime]);
 
-  const handleEndTimeChange = (value: string) => {
-    if (!isEditingEndTime) {
-      setIsEditingEndTime(true);
-      setEndTimeStr(formatTimeForEdit(subtitle.endTime));
-    }
-    setEndTimeStr(value);
-    if (isValidTimeFormat(value)) {
-      const ms = parseTimeToMs(value);
-      updateSubtitle(subtitle.index, { endTime: ms });
-    }
-  };
+  const handleEndTimeChange = useCallback(
+    (value: string) => {
+      if (!isEditingEndTime) {
+        setIsEditingEndTime(true);
+        setEndTimeStr(formatTimeForEdit(subtitle.endTime));
+      }
+      setEndTimeStr(value);
+      // onChange에서는 store 업데이트하지 않음 (성능 최적화)
+    },
+    [isEditingEndTime, subtitle.endTime]
+  );
 
-  const handleEndTimeBlur = () => {
+  const handleEndTimeBlur = useCallback(() => {
     setIsEditingEndTime(false);
-    // blur 시 최종 값 동기화
+    // blur 시에만 store 업데이트
     if (isValidTimeFormat(endTimeStr)) {
       const ms = parseTimeToMs(endTimeStr);
       updateSubtitle(subtitle.index, { endTime: ms });
+    } else {
+      // 유효하지 않은 형식이면 원래 값으로 복원
+      setEndTimeStr(formatTimeForEdit(subtitle.endTime));
     }
-  };
+  }, [endTimeStr, subtitle.index, updateSubtitle, subtitle.endTime]);
 
-  const handleTextChange = (value: string) => {
-    if (!isEditingText) {
-      setIsEditingText(true);
-      setText(subtitle.text);
-    }
-    setText(value);
-    updateSubtitle(subtitle.index, { text: value });
-  };
+  const handleTextChange = useCallback(
+    (value: string) => {
+      if (!isEditingText) {
+        setIsEditingText(true);
+        setText(subtitle.text);
+      }
+      setText(value);
+      // onChange에서는 store 업데이트하지 않음 (성능 최적화)
+    },
+    [isEditingText, subtitle.text]
+  );
 
-  const handleTextBlur = () => {
+  const handleTextBlur = useCallback(() => {
     setIsEditingText(false);
-  };
+    // blur 시에만 store 업데이트 (최신 text 값 사용)
+    updateSubtitle(subtitle.index, { text: text || subtitle.text });
+  }, [text, subtitle.index, subtitle.text, updateSubtitle]);
 
   // 시간 조정 함수
-  const adjustTime = (field: 'start' | 'end', direction: 'up' | 'down', amount: number = 100) => {
-    const currentMs = field === 'start' ? subtitle.startTime : subtitle.endTime;
-    const newMs = Math.max(0, currentMs + (direction === 'up' ? amount : -amount));
-    const newTimeStr = formatTimeForEdit(newMs);
+  const adjustTime = useCallback(
+    (field: 'start' | 'end', direction: 'up' | 'down', amount: number = 100) => {
+      const currentMs = field === 'start' ? subtitle.startTime : subtitle.endTime;
+      const newMs = Math.max(0, currentMs + (direction === 'up' ? amount : -amount));
+      const newTimeStr = formatTimeForEdit(newMs);
 
-    if (field === 'start') {
-      setIsEditingStartTime(true);
-      setStartTimeStr(newTimeStr);
-      updateSubtitle(subtitle.index, { startTime: newMs });
-    } else {
-      setIsEditingEndTime(true);
-      setEndTimeStr(newTimeStr);
-      updateSubtitle(subtitle.index, { endTime: newMs });
-    }
-  };
+      if (field === 'start') {
+        setIsEditingStartTime(true);
+        setStartTimeStr(newTimeStr);
+        updateSubtitle(subtitle.index, { startTime: newMs });
+      } else {
+        setIsEditingEndTime(true);
+        setEndTimeStr(newTimeStr);
+        updateSubtitle(subtitle.index, { endTime: newMs });
+      }
+    },
+    [subtitle.startTime, subtitle.endTime, subtitle.index, updateSubtitle]
+  );
 
   // 에러 체크: 시작 시간이 끝 시간보다 나중인지
   const startTimeMs =
@@ -249,7 +269,6 @@ export function SubtitleLine({ subtitle, onPlay, isPlayerReady = false }: Subtit
           <DropdownMenuContent align="end">
             <DropdownMenuItem
               onClick={() => {
-                const currentIndex = subtitles.findIndex((s) => s.index === subtitle.index);
                 if (currentIndex !== -1) {
                   insertBefore(currentIndex);
                 }
@@ -259,7 +278,6 @@ export function SubtitleLine({ subtitle, onPlay, isPlayerReady = false }: Subtit
             </DropdownMenuItem>
             <DropdownMenuItem
               onClick={() => {
-                const currentIndex = subtitles.findIndex((s) => s.index === subtitle.index);
                 if (currentIndex !== -1) {
                   insertAfter(currentIndex);
                 }
@@ -269,7 +287,6 @@ export function SubtitleLine({ subtitle, onPlay, isPlayerReady = false }: Subtit
             </DropdownMenuItem>
             <DropdownMenuItem
               onClick={() => {
-                const currentIndex = subtitles.findIndex((s) => s.index === subtitle.index);
                 if (currentIndex !== -1) {
                   duplicateLine(currentIndex);
                 }
@@ -279,7 +296,6 @@ export function SubtitleLine({ subtitle, onPlay, isPlayerReady = false }: Subtit
             </DropdownMenuItem>
             <DropdownMenuItem
               onClick={() => {
-                const currentIndex = subtitles.findIndex((s) => s.index === subtitle.index);
                 if (currentIndex !== -1) {
                   deleteLine(currentIndex);
                 }
@@ -294,3 +310,16 @@ export function SubtitleLine({ subtitle, onPlay, isPlayerReady = false }: Subtit
     </div>
   );
 }
+
+// React.memo로 불필요한 리렌더링 방지
+export const SubtitleLine = memo(SubtitleLineComponent, (prevProps, nextProps) => {
+  // subtitle이 변경되었거나, isPlayerReady가 변경된 경우에만 리렌더링
+  return (
+    prevProps.subtitle.index === nextProps.subtitle.index &&
+    prevProps.subtitle.startTime === nextProps.subtitle.startTime &&
+    prevProps.subtitle.endTime === nextProps.subtitle.endTime &&
+    prevProps.subtitle.text === nextProps.subtitle.text &&
+    prevProps.isPlayerReady === nextProps.isPlayerReady &&
+    prevProps.onPlay === nextProps.onPlay
+  );
+});
