@@ -223,6 +223,7 @@ export default function EditPage() {
   return (
     <div className="bg-background relative flex min-h-screen w-full flex-col items-center overflow-x-hidden">
       <EditHeader
+        currentSessionId={sessionId}
         onBack={handleBack}
         onSave={handleSave}
         saveStatus={saveStatus}
