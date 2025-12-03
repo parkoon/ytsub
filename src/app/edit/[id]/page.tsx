@@ -25,7 +25,6 @@ export default function EditPage() {
 
   const playerRef = useRef<YoutubePlayerRef | null>(null);
   const animationFrameRef = useRef<number | null>(null);
-  const isPlayingRef = useRef(false);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
 
   const [isDownloadDialogOpen, setIsDownloadDialogOpen] = useState(false);
@@ -42,7 +41,6 @@ export default function EditPage() {
         cancelAnimationFrame(animationFrameRef.current);
         animationFrameRef.current = null;
       }
-      isPlayingRef.current = false;
       if (saveTimeoutRef.current) {
         clearTimeout(saveTimeoutRef.current);
         saveTimeoutRef.current = null;
@@ -118,71 +116,49 @@ export default function EditPage() {
     markAsSaved();
   };
 
-  const playSegment = useCallback(
-    (startTime: number, endTime: number) => {
-      const player = playerRef.current?.player;
-      if (!player || !isPlayerReady) {
+  const playSegment = (startTime: number, endTime: number) => {
+    const player = playerRef.current?.player;
+    if (!player || !isPlayerReady) {
+      return;
+    }
+
+    const startSeconds = startTime / 1000;
+    const endSeconds = endTime / 1000;
+
+    player.seekTo(startSeconds, true);
+    player.playVideo();
+
+    const checkTime = () => {
+      if (!playerRef.current?.player) {
         return;
       }
 
-      const startSeconds = startTime / 1000;
-      const endSeconds = endTime / 1000;
+      try {
+        const currentTime = playerRef.current.player.getCurrentTime();
 
-      // 현재 재생 중인 구간이 있으면 정지
-      if (isPlayingRef.current && animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
-        animationFrameRef.current = null;
-        isPlayingRef.current = false;
-      }
-
-      // 시작 시간으로 이동
-      player.seekTo(startSeconds, true);
-
-      // 재생 시작
-      player.playVideo();
-      isPlayingRef.current = true;
-
-      // requestAnimationFrame으로 현재 시간 모니터링
-      const checkTime = () => {
-        if (!playerRef.current?.player || !isPlayingRef.current) {
-          return;
-        }
-
-        try {
-          const currentTime = playerRef.current.player.getCurrentTime();
-          const playerState = playerRef.current.player.getPlayerState();
-
-          // endTime에 도달했거나 플레이어가 정지된 경우
-          if (
-            currentTime >= endSeconds ||
-            playerState === window.YT.PlayerState.ENDED ||
-            playerState === window.YT.PlayerState.PAUSED
-          ) {
-            playerRef.current.player.pauseVideo();
-            isPlayingRef.current = false;
-            if (animationFrameRef.current) {
-              cancelAnimationFrame(animationFrameRef.current);
-              animationFrameRef.current = null;
-            }
-            return;
-          }
-
-          // 계속 모니터링
-          animationFrameRef.current = requestAnimationFrame(checkTime);
-        } catch (error) {
-          console.error('Error checking player time:', error);
-          isPlayingRef.current = false;
+        if (currentTime >= endSeconds) {
+          playerRef.current.player.pauseVideo();
+          playerRef.current.player.seekTo(startSeconds);
           if (animationFrameRef.current) {
             cancelAnimationFrame(animationFrameRef.current);
             animationFrameRef.current = null;
           }
+          return;
         }
-      };
 
-      animationFrameRef.current = requestAnimationFrame(checkTime);
-    },
-    [isPlayerReady]
-  );
+        // 계속 모니터링
+        animationFrameRef.current = requestAnimationFrame(checkTime);
+      } catch (error) {
+        console.error('Error checking player time:', error);
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current);
+          animationFrameRef.current = null;
+        }
+      }
+    };
+
+    animationFrameRef.current = requestAnimationFrame(checkTime);
+  };
 
   if (!session) {
     return (
@@ -221,7 +197,7 @@ export default function EditPage() {
   };
 
   return (
-    <div className="bg-background relative flex min-h-screen w-full flex-col items-center overflow-x-hidden">
+    <div className="bg-background relative flex min-h-screen w-full flex-col items-center">
       <EditHeader
         currentSessionId={sessionId}
         onBack={handleBack}
@@ -235,8 +211,8 @@ export default function EditPage() {
       />
 
       <main className="relative flex h-full w-full max-w-7xl grow flex-col items-center border-r border-l border-dashed border-gray-300 px-4 py-16 pt-4">
-        <div className="flex w-full gap-4">
-          <div className="aspect-video w-[420px] overflow-hidden rounded">
+        <div className="bg-background sticky top-12 z-10 flex w-full gap-4 py-4">
+          <div className="aspect-video w-[420px] rounded">
             <YoutubePlayer
               videoId={subtitleData.videoId}
               onReady={(player) => {

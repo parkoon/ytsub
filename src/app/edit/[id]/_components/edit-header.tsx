@@ -67,8 +67,8 @@ export function EditHeader({
   };
 
   return (
-    <header className="bg-background sticky top-0 z-10 w-full border-b border-dashed border-gray-300">
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between border-r border-l border-dashed border-gray-300 p-6">
+    <header className="bg-background sticky top-0 z-10 flex h-12 w-full items-center border-b border-dashed border-gray-300">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between border-r border-l border-dashed border-gray-300 px-6">
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="sm" onClick={onBack} className="flex items-center gap-2">
             <ArrowLeft className="h-4 w-4" />
