@@ -22,11 +22,13 @@ export function VideoContent({ videoId }: VideoContentProps) {
   const playerRef = useRef<YouTubePlayerRef>(null);
   const { data: video, isLoading, error } = useQuery(getVideoDetailQueryOptions(videoId));
   const [currentSubtitle, setCurrentSubtitle] = useState<VideoDetail['contents'][0] | null>(null);
+  const [isDrillActive, setIsDrillActive] = useState(false);
 
   const { startTimeTracking, stopTimeTracking } = useSubtitleTracking({
     contents: video?.contents || [],
     playerRef,
     currentSubtitle,
+    repeatMode: isDrillActive,
     onSubtitleFound: (foundSubtitle) => {
       setCurrentSubtitle(foundSubtitle);
     },
@@ -105,6 +107,8 @@ export function VideoContent({ videoId }: VideoContentProps) {
         contents={video.contents}
         onPrevious={handlePrevious}
         onNext={handleNext}
+        isDrillActive={isDrillActive}
+        onDrillToggle={() => setIsDrillActive((prev) => !prev)}
       />
     </div>
   );
