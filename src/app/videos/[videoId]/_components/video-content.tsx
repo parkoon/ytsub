@@ -62,7 +62,7 @@ export function VideoContent({ videoId }: VideoContentProps) {
         onStateChange={handleStateChange}
       />
 
-      <SubtitleDisplay currentSubtitle={currentSubtitle} />
+      <SubtitleDisplay currentSubtitle={currentSubtitle} contents={video.contents} />
     </div>
   );
 }

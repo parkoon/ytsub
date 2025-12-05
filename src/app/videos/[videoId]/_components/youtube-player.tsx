@@ -87,7 +87,7 @@ export const YouTubePlayer = forwardRef<YouTubePlayerRef, YouTubePlayerProps>(
         playerRef.current = new window.YT.Player(containerRef.current.id, {
           videoId,
           playerVars: {
-            // controls: 0,
+            controls: 0,
             disablekb: 1,
             fs: 0,
             iv_load_policy: 3,
