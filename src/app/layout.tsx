@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist_Mono, Inter } from 'next/font/google';
 import Script from 'next/script';
 
+import { ThemeProvider } from '@/app/(main)/_components/theme-provider';
 import { Toaster } from '@/components/ui/toast';
 import { env } from '@/config/env';
 import { AnalyticsProvider } from '@/providers/analytics-provider';
@@ -24,21 +25,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'YTSub - Download, Edit, Sync YouTube Subtitles',
+    default: 'YTSub - Learn Korean with YouTube Videos',
     template: '%s | YTSub',
   },
   description:
-    'Download YouTube subtitles, edit subtitle timing, and sync YouTube captions with precision. Free online YouTube subtitle editor for learners, translators, and video editors.',
+    'Learn Korean through YouTube videos with interactive subtitles. Practice pronunciation, study grammar and culture, master shadowing, and test your knowledge with quizzes. The best platform for foreigners learning Korean.',
   keywords: [
-    'download youtube subtitle',
-    'edit youtube subtitle',
-    'sync youtube subtitle',
-    'youtube subtitle editor',
-    'youtube caption download',
-    'subtitle extractor',
-    'subtitle timing editor',
-    'youtube srt download',
-    'youtube vtt download',
+    'learn korean',
+    'korean learning',
+    'korean language learning',
+    'korean pronunciation practice',
+    'korean shadowing',
+    'korean grammar practice',
+    'korean culture learning',
+    'youtube korean learning',
+    'korean subtitles',
+    'korean quiz',
+    'korean study platform',
+    'learn korean online',
+    'korean language app',
+    'korean speaking practice',
+    'korean listening practice',
   ],
   authors: [{ name: 'YTSub' }],
   creator: 'YTSub',
@@ -52,23 +59,23 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://ytsub.org',
     siteName: 'YTSub',
-    title: 'YTSub - Download, Edit, Sync YouTube Subtitles',
+    title: 'YTSub - Learn Korean with YouTube Videos',
     description:
-      'Download YouTube subtitles, edit subtitle timing, and sync YouTube captions with precision. Free online YouTube subtitle editor.',
+      'Learn Korean through YouTube videos with interactive subtitles. Practice pronunciation, study grammar and culture, master shadowing, and test your knowledge with quizzes.',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'YTSub - YouTube Subtitle Editor',
+        alt: 'YTSub - Learn Korean with YouTube Videos',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'YTSub - Download, Edit, Sync YouTube Subtitles',
+    title: 'YTSub - Learn Korean with YouTube Videos',
     description:
-      'Download YouTube subtitles, edit subtitle timing, and sync YouTube captions with precision. Free online YouTube subtitle editor.',
+      'Learn Korean through YouTube videos with interactive subtitles. Practice pronunciation, study grammar and culture, master shadowing, and test your knowledge with quizzes.',
     images: ['/og-image.png'],
     creator: '@ytsub',
   },
@@ -97,9 +104,9 @@ export default function RootLayout({
     '@type': 'WebApplication',
     name: 'YTSub',
     description:
-      'Download YouTube subtitles, edit subtitle timing, and sync YouTube captions with precision. Free online YouTube subtitle editor for learners, translators, and video editors.',
+      'Learn Korean through YouTube videos with interactive subtitles. Practice pronunciation, study grammar and culture, master shadowing, and test your knowledge with quizzes. The best platform for foreigners learning Korean.',
     url: 'https://ytsub.org',
-    applicationCategory: 'MultimediaApplication',
+    applicationCategory: 'EducationalApplication',
     operatingSystem: 'Web Browser',
     offers: {
       '@type': 'Offer',
@@ -107,16 +114,18 @@ export default function RootLayout({
       priceCurrency: 'USD',
     },
     featureList: [
-      'Download YouTube subtitles',
-      'Edit YouTube subtitle timing',
-      'Sync YouTube captions',
-      'Export subtitles in SRT format',
-      'Export subtitles in VTT format',
+      'Learn Korean with YouTube videos',
+      'Practice pronunciation with subtitles',
+      'Study Korean grammar and culture',
+      'Master shadowing practice',
+      'Test knowledge with quizzes',
+      'Save favorite dialogues',
+      'Interactive subtitle learning',
     ],
   };
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {gaId && (
           <>
@@ -147,12 +156,19 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased`}>
-        <AnalyticsProvider>
-          <QueryProvider>
-            {children}
-            <Toaster />
-          </QueryProvider>
-        </AnalyticsProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <AnalyticsProvider>
+            <QueryProvider>
+              {children}
+              <Toaster />
+            </QueryProvider>
+          </AnalyticsProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

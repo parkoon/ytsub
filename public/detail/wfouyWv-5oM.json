@@ -1,0 +1,2140 @@
+{
+  "synopsis": "A billionaire heiress goes undercover as an intern. A coworker falls for her and proposes — but vanishes when he learns who she really is. She brings him back, and they have \"the wedding of the century.\" Three years later, divorce rumors begin...",
+  "contents": [
+    {
+      "original": "세기의 결혼이라고들 했었죠.",
+      "pronunciation": "Segi-ui gyeolhon-irago-deul haesseotjyo.",
+      "translation": "People called it the wedding of the century.",
+      "grammar": [
+        {
+          "pattern": "~이라고 (irago)",
+          "explanation": "Quotation particle, used to quote what someone said",
+          "example": "결혼이라고 = called it a wedding"
+        },
+        {
+          "pattern": "~들 (deul)",
+          "explanation": "Attached to verbs to indicate multiple people did the action",
+          "example": "이라고들 = people (plural) said"
+        },
+        {
+          "pattern": "~었었죠 (eosseotjyo)",
+          "explanation": "Past tense + seeking agreement",
+          "example": "했었죠 = they did, right?"
+        }
+      ],
+      "culture": "Korean media dramatizes marriages between chaebols and commoners as 'weddings of the century' due to the extreme social status gap.",
+      "timestamps": { "from": "00:00:00,000", "to": "00:00:17,680" },
+      "offsets": { "from": 0, "to": 17680 }
+    },
+    {
+      "original": "대한민국 최고 재벌의 딸과 신입사원의 결혼이라니.",
+      "pronunciation": "Daehanminguk choego jaebeol-ui ttal-gwa sinipsawon-ui gyeolhon-irani.",
+      "translation": "A marriage between Korea's top chaebol's daughter and a new employee, can you believe it?",
+      "grammar": [
+        {
+          "pattern": "~의 (ui)",
+          "explanation": "Possessive particle, like 's in English",
+          "example": "재벌의 딸 = chaebol's daughter"
+        },
+        {
+          "pattern": "~과/와 (gwa/wa)",
+          "explanation": "Means 'and' or 'with' between nouns",
+          "example": "딸과 신입사원 = daughter and new employee"
+        },
+        {
+          "pattern": "~이라니 (irani)",
+          "explanation": "Expresses surprise or disbelief",
+          "example": "결혼이라니 = can you believe it's a marriage?"
+        }
+      ],
+      "culture": "Chaebol (재벌) refers to powerful family-owned conglomerates like Samsung or Hyundai. Class-crossing marriages are a staple K-drama theme.",
+      "timestamps": { "from": "00:00:17,680", "to": "00:00:22,120" },
+      "offsets": { "from": 17680, "to": 22120 }
+    },
+    {
+      "original": "벌써 3년이 됐네요.",
+      "pronunciation": "Beolsseo sam-nyeon-i dwaenneyo.",
+      "translation": "It's already been 3 years.",
+      "grammar": [
+        {
+          "pattern": "벌써 (beolsseo)",
+          "explanation": "Already - expresses surprise at time passing quickly",
+          "example": "벌써 3년 = already 3 years"
+        },
+        {
+          "pattern": "~이/가 되다 (i/ga doeda)",
+          "explanation": "To become, to reach a state or amount",
+          "example": "3년이 됐다 = it became 3 years"
+        },
+        {
+          "pattern": "~네요 (neyo)",
+          "explanation": "Ending expressing mild surprise or realization",
+          "example": "됐네요 = (I realize) it's been..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:00:30,160", "to": "00:00:32,920" },
+      "offsets": { "from": 30160, "to": 32920 }
+    },
+    {
+      "original": "엊그제 같은데 말이죠.",
+      "pronunciation": "Eotgeuje gateunde malijyo.",
+      "translation": "It feels like just yesterday, you know.",
+      "grammar": [
+        {
+          "pattern": "엊그제 (eotgeuje)",
+          "explanation": "Day before yesterday, but idiomatically means 'just recently'",
+          "example": "엊그제 같다 = feels like yesterday"
+        },
+        {
+          "pattern": "~ㄴ데 (nde)",
+          "explanation": "Connective ending meaning 'but' or giving background",
+          "example": "같은데 = it seems like, but..."
+        },
+        {
+          "pattern": "말이죠 (malijyo)",
+          "explanation": "Filler phrase seeking agreement, like 'you know'",
+          "example": "말이죠 = right? / you know"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:00:32,920", "to": "00:00:35,840" },
+      "offsets": { "from": 32920, "to": 35840 }
+    },
+    {
+      "original": "남들은 재벌가에 입성한 기분이 어떠냐, 여왕과 결혼해 사는 건 어떤 거냐 물어들 보는데요.",
+      "pronunciation": "Namdeureun jaebolgae ipseonghan gibuni eotteonya, yeowang-gwa gyeolhonhae saneun geon eotteon geonya mureodeul boneundeyo.",
+      "translation": "People ask me how it feels to join a chaebol family, what it's like being married to a queen.",
+      "grammar": [
+        {
+          "pattern": "~냐 (nya)",
+          "explanation": "Casual question ending in indirect speech",
+          "example": "어떠냐 = (asking) how is it"
+        },
+        {
+          "pattern": "~는 건 (neun geon)",
+          "explanation": "Nominalizer, turns verb into 'the thing of doing'",
+          "example": "사는 건 = the thing of living / living"
+        },
+        {
+          "pattern": "물어보다 (mureoboda)",
+          "explanation": "To ask (물어 = ask + 보다 = try)",
+          "example": "물어들 보는데요 = people ask me"
+        }
+      ],
+      "culture": "Calling a wealthy heiress '여왕' (queen) reflects how Koreans perceive chaebol daughters as royalty in modern society.",
+      "timestamps": { "from": "00:00:35,840", "to": "00:00:44,120" },
+      "offsets": { "from": 35840, "to": 44120 }
+    },
+    {
+      "original": "글쎄요, 이런 말하면 믿으실까요?",
+      "pronunciation": "Geulsseyo, ireon mal hamyeon mideusil-kkayo?",
+      "translation": "Well, would you believe me if I said this?",
+      "grammar": [
+        {
+          "pattern": "글쎄요 (geulsseyo)",
+          "explanation": "Interjection meaning 'well...' or 'I'm not sure'",
+          "example": "글쎄요 = well... / hmm..."
+        },
+        {
+          "pattern": "~면 (myeon)",
+          "explanation": "Conditional 'if'",
+          "example": "말하면 = if I say"
+        },
+        {
+          "pattern": "~실까요 (silkkayo)",
+          "explanation": "Honorific + wondering/asking, polite speculation",
+          "example": "믿으실까요 = would you believe (honorific)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:00:44,120", "to": "00:00:47,600" },
+      "offsets": { "from": 44120, "to": 47600 }
+    },
+    {
+      "original": "전 그저 사랑하는 여자를 만나 함께 살고 있는 운 좋은 남자일 뿐이라는 것.",
+      "pronunciation": "Jeon geujeo saranghaneun yeojareul manna hamkke salgo inneun un joheun namja-il ppun-iraneun geot.",
+      "translation": "I'm just a lucky guy who met the woman I love and lives with her.",
+      "grammar": [
+        {
+          "pattern": "전 (jeon)",
+          "explanation": "Contraction of 저는 (jeoneun) = I (humble)",
+          "example": "전 = I"
+        },
+        {
+          "pattern": "~는 (neun) + noun",
+          "explanation": "Present tense modifier for verbs",
+          "example": "사랑하는 여자 = the woman (I) love"
+        },
+        {
+          "pattern": "~일 뿐이다 (il ppunida)",
+          "explanation": "To be nothing but, to be just/only",
+          "example": "남자일 뿐 = just a man, nothing more"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:00:47,600", "to": "00:00:55,600" },
+      "offsets": { "from": 47600, "to": 55600 }
+    },
+    {
+      "original": "백현우 씨가 저랑 결혼한 게 재벌이라 그렇다.",
+      "pronunciation": "Baek Hyeonwu ssi-ga jeorang gyeolhonhan ge jaebol-ira geureota.",
+      "translation": "They say Baek Hyeonwoo married me because I'm a chaebol.",
+      "grammar": [
+        {
+          "pattern": "~씨 (ssi)",
+          "explanation": "Honorific title, like Mr./Ms., used after names",
+          "example": "백현우 씨 = Mr. Baek Hyeonwoo"
+        },
+        {
+          "pattern": "~랑 (rang)",
+          "explanation": "Casual form of 'with' or 'and'",
+          "example": "저랑 = with me"
+        },
+        {
+          "pattern": "~이라 그렇다 (ira geureota)",
+          "explanation": "Because it is (something), that's why",
+          "example": "재벌이라 그렇다 = because (I'm) a chaebol"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:00:55,600", "to": "00:00:59,880" },
+      "offsets": { "from": 55600, "to": 59880 }
+    },
+    {
+      "original": "돈만 보고 결혼한 거다.",
+      "pronunciation": "Don-man bogo gyeolhonhan geoda.",
+      "translation": "He only married for money.",
+      "grammar": [
+        {
+          "pattern": "~만 (man)",
+          "explanation": "Only, just",
+          "example": "돈만 = only money"
+        },
+        {
+          "pattern": "~보고 (bogo)",
+          "explanation": "Looking at / considering (as reason)",
+          "example": "돈만 보고 = looking only at money"
+        },
+        {
+          "pattern": "~ㄴ 거다 (n geoda)",
+          "explanation": "Declarative ending, stating a fact",
+          "example": "결혼한 거다 = (the fact is) he married"
+        }
+      ],
+      "culture": "In Korea, marriages involving wealth disparity often face public suspicion of being 'gold-digging' relationships.",
+      "timestamps": { "from": "00:00:59,880", "to": "00:01:01,600" },
+      "offsets": { "from": 59880, "to": 61600 }
+    },
+    {
+      "original": "정말 별의별 말들이 많았던 걸로 알아요.",
+      "pronunciation": "Jeongmal byeol-uibyeol maldeuri manhatdeon geollo arayo.",
+      "translation": "I know there were all kinds of rumors.",
+      "grammar": [
+        {
+          "pattern": "별의별 (byeol-uibyeol)",
+          "explanation": "All sorts of, various kinds of (often negative)",
+          "example": "별의별 말 = all kinds of talk/rumors"
+        },
+        {
+          "pattern": "~들 (deul)",
+          "explanation": "Plural marker",
+          "example": "말들 = words/rumors (plural)"
+        },
+        {
+          "pattern": "~던 걸로 알다 (deon geollo alda)",
+          "explanation": "To know/understand that something was the case",
+          "example": "많았던 걸로 알아요 = I know there were many"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:01,600", "to": "00:01:10,120" },
+      "offsets": { "from": 61600, "to": 70120 }
+    },
+    {
+      "original": "그건 제가 여러 가지 이유로 얼굴을 공개하지 않아서 그런 소문이 돌았던 거고.",
+      "pronunciation": "Geugeon jega yeoreo gaji iyuro eolgureul gongghae-haji anaseo geureon somuni doratdeon geogo.",
+      "translation": "That's because I didn't reveal my face for various reasons, so those rumors spread.",
+      "grammar": [
+        {
+          "pattern": "여러 가지 (yeoreo gaji)",
+          "explanation": "Various, several kinds of",
+          "example": "여러 가지 이유 = various reasons"
+        },
+        {
+          "pattern": "~지 않다 (ji anta)",
+          "explanation": "Negative form, 'do not'",
+          "example": "공개하지 않다 = do not reveal"
+        },
+        {
+          "pattern": "~아서/어서 (aseo/eoseo)",
+          "explanation": "Because, so (cause and effect)",
+          "example": "안아서 = because I didn't"
+        }
+      ],
+      "culture": "Korean celebrities and chaebol family members often hide their identities or faces to avoid public scrutiny.",
+      "timestamps": { "from": "00:01:10,120", "to": "00:01:15,640" },
+      "offsets": { "from": 70120, "to": 75640 }
+    },
+    {
+      "original": "오늘부로 그런 소문 다 사라지겠네요.",
+      "pronunciation": "Oneul-buro geureon somun da sarajigetneyo.",
+      "translation": "Starting today, all those rumors will disappear.",
+      "grammar": [
+        {
+          "pattern": "~부로 (buro)",
+          "explanation": "Starting from, as of",
+          "example": "오늘부로 = as of today"
+        },
+        {
+          "pattern": "다 (da)",
+          "explanation": "All, everything",
+          "example": "다 사라지다 = all disappear"
+        },
+        {
+          "pattern": "~겠네요 (getneyo)",
+          "explanation": "Future tense + mild realization/expectation",
+          "example": "사라지겠네요 = (I expect) it will disappear"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:15,640", "to": "00:01:18,600" },
+      "offsets": { "from": 75640, "to": 78600 }
+    },
+    {
+      "original": "이렇게 제 얼굴을 공개하니까.",
+      "pronunciation": "Ireoke je eolgureul gongghae-hanikka.",
+      "translation": "Since I'm revealing my face like this.",
+      "grammar": [
+        {
+          "pattern": "이렇게 (ireoke)",
+          "explanation": "Like this, in this way",
+          "example": "이렇게 = like this"
+        },
+        {
+          "pattern": "~니까 (nikka)",
+          "explanation": "Because, since (giving reason)",
+          "example": "공개하니까 = since I'm revealing"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:18,600", "to": "00:01:28,600" },
+      "offsets": { "from": 78600, "to": 88600 }
+    },
+    {
+      "original": "부부 생활 뭐 다 비슷하지 않을까 싶기는 한데.",
+      "pronunciation": "Bubu saenghwal mwo da biseuthaji aneulkka sipgineun hande.",
+      "translation": "I think married life is probably all similar, but...",
+      "grammar": [
+        {
+          "pattern": "부부 (bubu)",
+          "explanation": "Married couple, husband and wife",
+          "example": "부부 생활 = married life"
+        },
+        {
+          "pattern": "~지 않을까 싶다 (ji aneulkka sipda)",
+          "explanation": "I think/wonder if it might be",
+          "example": "비슷하지 않을까 싶다 = I think it might be similar"
+        },
+        {
+          "pattern": "~기는 한데 (gineun hande)",
+          "explanation": "It is true that... but...",
+          "example": "싶기는 한데 = I do think so, but..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:30,880", "to": "00:01:34,680" },
+      "offsets": { "from": 90880, "to": 94680 }
+    },
+    {
+      "original": "아침에 그 사람과 함께 눈을 뜨고 같이 밥을 먹고 물론 출근길도 함께고요.",
+      "pronunciation": "Achime geu saram-gwa hamkke nuneul tteugo gachi babeul meokgo mullon chulgeun-gildo hamkkegoyo.",
+      "translation": "In the morning, I wake up with that person, eat together, and of course commute together too.",
+      "grammar": [
+        {
+          "pattern": "~과/와 함께 (gwa/wa hamkke)",
+          "explanation": "Together with",
+          "example": "그 사람과 함께 = together with that person"
+        },
+        {
+          "pattern": "눈을 뜨다 (nuneul tteuda)",
+          "explanation": "To open one's eyes, to wake up",
+          "example": "눈을 뜨고 = wake up and..."
+        },
+        {
+          "pattern": "물론 (mullon)",
+          "explanation": "Of course, naturally",
+          "example": "물론 출근길도 = of course the commute too"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:34,680", "to": "00:01:48,000" },
+      "offsets": { "from": 94680, "to": 108000 }
+    },
+    {
+      "original": "아침부터 밤까지 함께인 기분이 어떠냐고요?",
+      "pronunciation": "Achim-buteo bam-kkaji hamkkein gibuni eotteonyagoyo?",
+      "translation": "You're asking how it feels to be together from morning to night?",
+      "grammar": [
+        {
+          "pattern": "~부터 ~까지 (buteo ~ kkaji)",
+          "explanation": "From ~ to ~",
+          "example": "아침부터 밤까지 = from morning to night"
+        },
+        {
+          "pattern": "~냐고요 (nyagoyo)",
+          "explanation": "Quoting a question someone asked, 'you're asking if...?'",
+          "example": "어떠냐고요 = you're asking how it is?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:48,000", "to": "00:01:54,680" },
+      "offsets": { "from": 108000, "to": 114680 }
+    },
+    {
+      "original": "매일 행복합니다.",
+      "pronunciation": "Maeil haengbok-hamnida.",
+      "translation": "I'm happy every day.",
+      "grammar": [
+        {
+          "pattern": "매일 (maeil)",
+          "explanation": "Every day",
+          "example": "매일 = every day"
+        },
+        {
+          "pattern": "~합니다 (hamnida)",
+          "explanation": "Formal polite ending",
+          "example": "행복합니다 = I am happy (formal)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:59,920", "to": "00:02:01,400" },
+      "offsets": { "from": 119920, "to": 121400 }
+    },
+    {
+      "original": "저는 5년 전에 유학에서 돌아와서 당시 제 아버지가 대표로 계시던 퀸즈백화점에 인턴으로 들어가게 됐어요.",
+      "pronunciation": "Jeoneun o-nyeon jeone yuhak-eseo dorawaseo dangsi je abeojiga daepyoro gyesideon Kwinjeu-baekhwajeome inteon-euro deureogage dwaesseoyo.",
+      "translation": "Five years ago, I returned from studying abroad and joined Queens Department Store, where my father was the CEO at the time, as an intern.",
+      "grammar": [
+        {
+          "pattern": "유학 (yuhak)",
+          "explanation": "Studying abroad",
+          "example": "유학에서 돌아오다 = return from studying abroad"
+        },
+        {
+          "pattern": "~게 되다 (ge doeda)",
+          "explanation": "To come to, to end up (happening)",
+          "example": "들어가게 됐다 = ended up joining"
+        },
+        {
+          "pattern": "~시던 (sideon)",
+          "explanation": "Honorific past tense modifier",
+          "example": "계시던 = who was (honorific)"
+        }
+      ],
+      "culture": "Korean chaebols often have their children work as undercover interns to learn the business from the ground up before taking leadership roles.",
+      "timestamps": { "from": "00:02:01,400", "to": "00:02:09,080" },
+      "offsets": { "from": 121400, "to": 129080 }
+    },
+    {
+      "original": "일종의 언더커버랄까.",
+      "pronunciation": "Iljong-ui eondeokeobeo-ralkka.",
+      "translation": "Kind of like an undercover, you could say.",
+      "grammar": [
+        {
+          "pattern": "일종의 (iljong-ui)",
+          "explanation": "A kind of, a sort of",
+          "example": "일종의 언더커버 = a kind of undercover"
+        },
+        {
+          "pattern": "~랄까 (ralkka)",
+          "explanation": "Shall I say, you could call it",
+          "example": "언더커버랄까 = shall I say undercover?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:09,080", "to": "00:02:10,760" },
+      "offsets": { "from": 129080, "to": 130760 }
+    },
+    {
+      "original": "우린 또 느낌 알잖아요.",
+      "pronunciation": "Urin tto neukkim aljanhayo.",
+      "translation": "We know that feeling, right?",
+      "grammar": [
+        {
+          "pattern": "우린 (urin)",
+          "explanation": "Contraction of 우리는 (urineun) = we",
+          "example": "우린 = we"
+        },
+        {
+          "pattern": "~잖아요 (janhayo)",
+          "explanation": "You know, as you know (assuming shared knowledge)",
+          "example": "알잖아요 = you know, right?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:10,760", "to": "00:02:29,240" },
+      "offsets": { "from": 130760, "to": 149240 }
+    },
+    {
+      "original": "아 이 남자가 나 좋아하는구나.",
+      "pronunciation": "A i namjaga na joahaneunguna.",
+      "translation": "Ah, this guy likes me.",
+      "grammar": [
+        {
+          "pattern": "~는구나 (neunguna)",
+          "explanation": "Exclamatory ending, realizing something",
+          "example": "좋아하는구나 = (I realize) he likes me!"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:29,360", "to": "00:02:34,200" },
+      "offsets": { "from": 149360, "to": 154200 }
+    },
+    {
+      "original": "그래서 시그널 보내는구나.",
+      "pronunciation": "Geuraeseo sigeunol bonaeneunguna.",
+      "translation": "So that's why he's sending signals.",
+      "grammar": [
+        {
+          "pattern": "그래서 (geuraeseo)",
+          "explanation": "So, therefore",
+          "example": "그래서 = so, that's why"
+        },
+        {
+          "pattern": "시그널 보내다 (sigeunol bonaeda)",
+          "explanation": "To send signals (Konglish)",
+          "example": "시그널 보내다 = sending signals"
+        }
+      ],
+      "culture": "시그널 (signal) is Konglish commonly used in Korean dating culture to describe subtle hints of romantic interest.",
+      "timestamps": { "from": "00:02:34,200", "to": "00:02:37,520" },
+      "offsets": { "from": 154200, "to": 157520 }
+    },
+    {
+      "original": "아니요 그건 아니었고.",
+      "pronunciation": "Aniyo geugeon ani-eotgo.",
+      "translation": "No, that wasn't it.",
+      "grammar": [
+        {
+          "pattern": "아니요 (aniyo)",
+          "explanation": "No (polite)",
+          "example": "아니요 = no"
+        },
+        {
+          "pattern": "~었고 (eotgo)",
+          "explanation": "Past tense + and (continuing)",
+          "example": "아니었고 = it wasn't, and..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:37,520", "to": "00:02:41,040" },
+      "offsets": { "from": 157520, "to": 161040 }
+    },
+    {
+      "original": "자꾸 복사기를 발로 차니까.",
+      "pronunciation": "Jakku boksagireul ballo chanikka.",
+      "translation": "Because she kept kicking the copy machine.",
+      "grammar": [
+        {
+          "pattern": "자꾸 (jakku)",
+          "explanation": "Repeatedly, keep doing",
+          "example": "자꾸 차다 = keep kicking"
+        },
+        {
+          "pattern": "~(으)로 (euro/ro)",
+          "explanation": "With, by means of",
+          "example": "발로 = with foot"
+        },
+        {
+          "pattern": "~니까 (nikka)",
+          "explanation": "Because, since",
+          "example": "차니까 = because she kicks"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:41,040", "to": "00:02:44,960" },
+      "offsets": { "from": 161040, "to": 164960 }
+    },
+    {
+      "original": "걱정이 되더라고요.",
+      "pronunciation": "Geokjeongi doedeoragoyo.",
+      "translation": "I got worried.",
+      "grammar": [
+        {
+          "pattern": "걱정이 되다 (geokjeongi doeda)",
+          "explanation": "To become worried",
+          "example": "걱정이 되다 = to get worried"
+        },
+        {
+          "pattern": "~더라고요 (deoragoyo)",
+          "explanation": "Recalling past experience, 'I found that...'",
+          "example": "되더라고요 = I found myself getting (worried)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:44,960", "to": "00:02:49,960" },
+      "offsets": { "from": 164960, "to": 169960 }
+    },
+    {
+      "original": "왜요 왜요 왜요?",
+      "pronunciation": "Waeyo waeyo waeyo?",
+      "translation": "Why? Why? Why?",
+      "grammar": [
+        {
+          "pattern": "왜요 (waeyo)",
+          "explanation": "Why? (polite)",
+          "example": "왜요 = why?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:49,960", "to": "00:02:51,280" },
+      "offsets": { "from": 169960, "to": 171280 }
+    },
+    {
+      "original": "복사기가.",
+      "pronunciation": "Boksagiga.",
+      "translation": "The copy machine.",
+      "grammar": [
+        {
+          "pattern": "~가/이 (ga/i)",
+          "explanation": "Subject particle",
+          "example": "복사기가 = the copy machine (subject)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:51,280", "to": "00:02:52,080" },
+      "offsets": { "from": 171280, "to": 172080 }
+    },
+    {
+      "original": "근데 몇 번 더 도와주다 보니까",
+      "pronunciation": "Geunde myeot beon deo dowajuda bonikka",
+      "translation": "But after helping a few more times...",
+      "grammar": [
+        {
+          "pattern": "근데 (geunde)",
+          "explanation": "But, however (casual form of 그런데)",
+          "example": "근데 = but"
+        },
+        {
+          "pattern": "~다 보니까 (da bonikka)",
+          "explanation": "After doing something repeatedly, as a result of",
+          "example": "도와주다 보니까 = after helping repeatedly"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:52,080", "to": "00:02:58,880" },
+      "offsets": { "from": 172080, "to": 178880 }
+    },
+    {
+      "original": "그 여자가 걱정됐어요.",
+      "pronunciation": "Geu yeojaga geokjeongdwaesseoyo.",
+      "translation": "I became worried about that woman.",
+      "grammar": [
+        {
+          "pattern": "그 (geu)",
+          "explanation": "That (demonstrative)",
+          "example": "그 여자 = that woman"
+        },
+        {
+          "pattern": "걱정되다 (geokjeongdoeda)",
+          "explanation": "To be worried (passive form)",
+          "example": "걱정됐어요 = I was worried"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:59,400", "to": "00:03:00,760" },
+      "offsets": { "from": 179400, "to": 180760 }
+    },
+    {
+      "original": "그리고 백스폰을 때는.",
+      "pronunciation": "Geurigo baekseuponeul ttaeneun.",
+      "translation": "And when she hit the backspace...",
+      "grammar": [
+        {
+          "pattern": "그리고 (geurigo)",
+          "explanation": "And, also",
+          "example": "그리고 = and"
+        },
+        {
+          "pattern": "~을/를 때 (eul/reul ttae)",
+          "explanation": "When (doing something)",
+          "example": "때는 = when hitting"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:00,760", "to": "00:03:03,800" },
+      "offsets": { "from": 180760, "to": 183800 }
+    },
+    {
+      "original": "그 당시 왠지 인상이 인턴으로 들어왔다고 회사의 소문이 자자해서 틀림없이 금방 잘릴 것 같았거든요.",
+      "pronunciation": "Geu dangsi waenji insangi inteon-euro deureowatdago hoesaui somuni jajahae-seo teullim-eopsi geumbang jallil geot gatatgeodeunyo.",
+      "translation": "At that time, there were lots of rumors at the company about some impressive intern, and I thought she would definitely get fired soon.",
+      "grammar": [
+        {
+          "pattern": "왠지 (waenji)",
+          "explanation": "Somehow, for some reason",
+          "example": "왠지 = for some reason"
+        },
+        {
+          "pattern": "자자하다 (jajahada)",
+          "explanation": "To be widespread (rumors)",
+          "example": "소문이 자자하다 = rumors are widespread"
+        },
+        {
+          "pattern": "~거든요 (geodeunyo)",
+          "explanation": "Giving background information or reason",
+          "example": "같았거든요 = because I thought..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:03,800", "to": "00:03:12,240" },
+      "offsets": { "from": 183800, "to": 192240 }
+    },
+    {
+      "original": "홍혜인 씨 진짜 어쩌려고 그럽니까.",
+      "pronunciation": "Hong Hyein ssi jinjja eojjeoryeogo geureomnikka.",
+      "translation": "Hong Hyein, what are you trying to do?",
+      "grammar": [
+        {
+          "pattern": "진짜 (jinjja)",
+          "explanation": "Really, seriously",
+          "example": "진짜 = really"
+        },
+        {
+          "pattern": "어쩌려고 (eojjeoryeogo)",
+          "explanation": "What are you going to do, what's your plan",
+          "example": "어쩌려고 그래 = what are you thinking?"
+        },
+        {
+          "pattern": "그럽니까 (geureomnikka)",
+          "explanation": "Formal form of 그래요, asking 'why are you doing that?'",
+          "example": "그럽니까 = why do you do that? (formal)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:12,240", "to": "00:03:21,520" },
+      "offsets": { "from": 192240, "to": 201520 }
+    },
+    {
+      "original": "내가 알바 많이 해봐서 아는데요.",
+      "pronunciation": "Naega alba mani haebwaseo aneundeyo.",
+      "translation": "I know because I've done a lot of part-time jobs.",
+      "grammar": [
+        {
+          "pattern": "알바 (alba)",
+          "explanation": "Part-time job (from German 'Arbeit')",
+          "example": "알바하다 = to work part-time"
+        },
+        {
+          "pattern": "~아/어 봐서 (abwaseo/eobwaseo)",
+          "explanation": "Because I've tried/experienced",
+          "example": "해봐서 = because I've done it"
+        }
+      ],
+      "culture": "알바 (alba) comes from the German word 'Arbeit' (work). It's commonly used in Korea and Japan for part-time work.",
+      "timestamps": { "from": "00:03:21,520", "to": "00:03:23,640" },
+      "offsets": { "from": 201520, "to": 203640 }
+    },
+    {
+      "original": "홍혜인 씨 그러다 그 잘립니다.",
+      "pronunciation": "Hong Hyein ssi geureoda geu jallim-nida.",
+      "translation": "Hong Hyein, you'll get fired if you keep that up.",
+      "grammar": [
+        {
+          "pattern": "그러다 (geureoda)",
+          "explanation": "If you keep doing that, at this rate",
+          "example": "그러다 = if you keep doing that"
+        },
+        {
+          "pattern": "잘리다 (jallida)",
+          "explanation": "To get fired, to be cut (passive)",
+          "example": "잘립니다 = you'll get fired"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:23,640", "to": "00:03:25,760" },
+      "offsets": { "from": 203640, "to": 205760 }
+    },
+    {
+      "original": "잘래도 상관없거든요.",
+      "pronunciation": "Jallaedo sanggwan-eopgeodeunyo.",
+      "translation": "I don't care if I get fired.",
+      "grammar": [
+        {
+          "pattern": "~아/어도 (ado/eodo)",
+          "explanation": "Even if",
+          "example": "잘래도 = even if I get fired"
+        },
+        {
+          "pattern": "상관없다 (sanggwan-eopda)",
+          "explanation": "It doesn't matter, I don't care",
+          "example": "상관없거든요 = I don't care (giving reason)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:25,760", "to": "00:03:27,480" },
+      "offsets": { "from": 205760, "to": 207480 }
+    },
+    {
+      "original": "상관없겠죠. 딴 데 가면 되니까.",
+      "pronunciation": "Sanggwan-eopgetjyo. Ttan de gamyeon doeni-kka.",
+      "translation": "Of course you don't care. You can just go somewhere else.",
+      "grammar": [
+        {
+          "pattern": "~겠죠 (getjyo)",
+          "explanation": "I suppose, probably (with slight sarcasm here)",
+          "example": "상관없겠죠 = I suppose you don't care"
+        },
+        {
+          "pattern": "딴 데 (ttan de)",
+          "explanation": "Somewhere else, another place",
+          "example": "딴 데 가다 = go somewhere else"
+        },
+        {
+          "pattern": "~면 되다 (myeon doeda)",
+          "explanation": "Just need to, all you have to do is",
+          "example": "가면 되니까 = because you can just go"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:27,480", "to": "00:03:30,560" },
+      "offsets": { "from": 207480, "to": 210560 }
+    },
+    {
+      "original": "근데 거기 가서 또 잘립니다.",
+      "pronunciation": "Geunde geogi gaseo tto jallim-nida.",
+      "translation": "But you'll get fired there too.",
+      "grammar": [
+        {
+          "pattern": "거기 (geogi)",
+          "explanation": "There",
+          "example": "거기 가서 = going there"
+        },
+        {
+          "pattern": "또 (tto)",
+          "explanation": "Again, also",
+          "example": "또 잘리다 = get fired again"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:30,560", "to": "00:03:32,720" },
+      "offsets": { "from": 210560, "to": 212720 }
+    },
+    {
+      "original": "내기할래요?",
+      "pronunciation": "Naegi-hallaeyo?",
+      "translation": "Wanna bet?",
+      "grammar": [
+        {
+          "pattern": "내기 (naegi)",
+          "explanation": "A bet, wager",
+          "example": "내기하다 = to make a bet"
+        },
+        {
+          "pattern": "~ㄹ래요 (llaeyo)",
+          "explanation": "Do you want to...?",
+          "example": "할래요? = do you want to do it?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:32,720", "to": "00:03:33,520" },
+      "offsets": { "from": 212720, "to": 213520 }
+    },
+    {
+      "original": "내가요.",
+      "pronunciation": "Naegayo.",
+      "translation": "Me?",
+      "grammar": [
+        {
+          "pattern": "~요 (yo)",
+          "explanation": "Polite particle, here used to express surprise",
+          "example": "내가요 = Me? (surprised)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:33,520", "to": "00:03:35,040" },
+      "offsets": { "from": 213520, "to": 215040 }
+    },
+    {
+      "original": "홍혜인 씨 부장님한테 혼날 때마다 깜짝깜짝 놀랍니다.",
+      "pronunciation": "Hong Hyein ssi bujangnim-hante honnal ttaemada kkamjjak-kkamjjak nollam-nida.",
+      "translation": "Every time you get scolded by the manager, I get startled.",
+      "grammar": [
+        {
+          "pattern": "~님 (nim)",
+          "explanation": "Honorific suffix for titles",
+          "example": "부장님 = manager (respectful)"
+        },
+        {
+          "pattern": "~한테 (hante)",
+          "explanation": "From, by (person)",
+          "example": "부장님한테 = by the manager"
+        },
+        {
+          "pattern": "~때마다 (ttaemada)",
+          "explanation": "Every time",
+          "example": "혼날 때마다 = every time (you) get scolded"
+        },
+        {
+          "pattern": "깜짝깜짝 (kkamjjak-kkamjjak)",
+          "explanation": "Repeatedly startled (onomatopoeia)",
+          "example": "깜짝깜짝 놀라다 = keep getting startled"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:35,040", "to": "00:03:39,360" },
+      "offsets": { "from": 215040, "to": 219360 }
+    },
+    {
+      "original": "도대체 하루에 몇 번까지 혼날 예정입니까?",
+      "pronunciation": "Dodaeche harue myeot beon-kkaji honnal yejeong-imnikka?",
+      "translation": "How many times a day are you planning to get scolded?",
+      "grammar": [
+        {
+          "pattern": "도대체 (dodaeche)",
+          "explanation": "On earth, what in the world (emphasis)",
+          "example": "도대체 = what on earth"
+        },
+        {
+          "pattern": "하루에 (harue)",
+          "explanation": "Per day, in a day",
+          "example": "하루에 몇 번 = how many times a day"
+        },
+        {
+          "pattern": "~ㄹ 예정이다 (l yejeong-ida)",
+          "explanation": "To be planning to, scheduled to",
+          "example": "혼날 예정 = planning to get scolded"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:39,360", "to": "00:03:42,080" },
+      "offsets": { "from": 219360, "to": 222080 }
+    },
+    {
+      "original": "왜 놀라는데요?",
+      "pronunciation": "Wae nollaneundeyo?",
+      "translation": "Why are you startled?",
+      "grammar": [
+        {
+          "pattern": "~는데요 (neundeyo)",
+          "explanation": "Soft question ending, asking for explanation",
+          "example": "놀라는데요 = why are you surprised?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:42,080", "to": "00:03:49,800" },
+      "offsets": { "from": 222080, "to": 229800 }
+    },
+    {
+      "original": "네?",
+      "pronunciation": "Ne?",
+      "translation": "What? / Pardon?",
+      "grammar": [
+        {
+          "pattern": "네 (ne)",
+          "explanation": "Yes, but as a question means 'what?' or 'pardon?'",
+          "example": "네? = what? / huh?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:58,480", "to": "00:03:59,240" },
+      "offsets": { "from": 238480, "to": 239240 }
+    },
+    {
+      "original": "왜 놀라냐고요.",
+      "pronunciation": "Wae nollanyagoyo.",
+      "translation": "I'm asking why you're startled.",
+      "grammar": [
+        {
+          "pattern": "~냐고요 (nyagoyo)",
+          "explanation": "I'm asking (repeating a question)",
+          "example": "놀라냐고요 = I'm asking why you're startled"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:59,240", "to": "00:04:01,240" },
+      "offsets": { "from": 239240, "to": 241240 }
+    },
+    {
+      "original": "내가 혼나는데 백현우 씨가?",
+      "pronunciation": "Naega honnaneunde Baek Hyeonwu ssi-ga?",
+      "translation": "I'm the one getting scolded, but Mr. Baek Hyeonwoo is startled?",
+      "grammar": [
+        {
+          "pattern": "~는데 (neunde)",
+          "explanation": "But, while (contrast)",
+          "example": "혼나는데 = I'm getting scolded, but..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:01,240", "to": "00:04:03,800" },
+      "offsets": { "from": 241240, "to": 243800 }
+    },
+    {
+      "original": "왜?",
+      "pronunciation": "Wae?",
+      "translation": "Why?",
+      "grammar": [
+        {
+          "pattern": "왜 (wae)",
+          "explanation": "Why",
+          "example": "왜? = why?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:03,800", "to": "00:04:04,320" },
+      "offsets": { "from": 243800, "to": 244320 }
+    },
+    {
+      "original": "한번 잘 생각해봐요 왜 그런건가.",
+      "pronunciation": "Hanbeon jal saenggakhaebwayo wae geureon-ganga.",
+      "translation": "Think about it carefully. Why that might be.",
+      "grammar": [
+        {
+          "pattern": "한번 (hanbeon)",
+          "explanation": "Once, try (softens request)",
+          "example": "한번 생각해봐요 = try thinking about it"
+        },
+        {
+          "pattern": "~아/어 봐요 (abwayo/eobwayo)",
+          "explanation": "Try doing (polite)",
+          "example": "생각해봐요 = try thinking"
+        },
+        {
+          "pattern": "~건가 (gonga)",
+          "explanation": "Wondering why/if (rhetorical)",
+          "example": "왜 그런건가 = why that is"
+        }
+      ],
+      "culture": "This is a classic K-drama line where someone hints at their feelings without directly confessing.",
+      "timestamps": { "from": "00:04:04,320", "to": "00:04:13,840" },
+      "offsets": { "from": 244320, "to": 253840 }
+    },
+    {
+      "original": "우산 없어요?",
+      "pronunciation": "Usan eopseoyo?",
+      "translation": "Don't you have an umbrella?",
+      "grammar": [
+        {
+          "pattern": "없어요 (eopseoyo)",
+          "explanation": "Don't have, there isn't (polite)",
+          "example": "우산 없어요 = don't have an umbrella"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:13,840", "to": "00:04:26,280" },
+      "offsets": { "from": 253840, "to": 266280 }
+    },
+    {
+      "original": "아 없긴 한데.",
+      "pronunciation": "A eopgin hande.",
+      "translation": "Ah, I don't have one, but...",
+      "grammar": [
+        {
+          "pattern": "~긴 하다 (gin hada)",
+          "explanation": "It is true that... (with reservation)",
+          "example": "없긴 하다 = I don't have one, but..."
+        },
+        {
+          "pattern": "~ㄴ데 (nde)",
+          "explanation": "But, however (trailing off)",
+          "example": "한데 = but..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:28,200", "to": "00:04:30,560" },
+      "offsets": { "from": 268200, "to": 270560 }
+    },
+    {
+      "original": "이거 써요.",
+      "pronunciation": "Igeo sseoyo.",
+      "translation": "Use this.",
+      "grammar": [
+        {
+          "pattern": "이거 (igeo)",
+          "explanation": "This (casual form of 이것)",
+          "example": "이거 = this"
+        },
+        {
+          "pattern": "쓰다 (sseuda)",
+          "explanation": "To use, to wear (umbrella/hat)",
+          "example": "써요 = use it (polite)"
+        }
+      ],
+      "culture": "In Korean, 쓰다 means both 'to write' and 'to wear/use' things on your head like umbrellas, hats, glasses.",
+      "timestamps": { "from": "00:04:30,560", "to": "00:04:32,840" },
+      "offsets": { "from": 270560, "to": 272840 }
+    },
+    {
+      "original": "자꾸 이런 거 얻고 그러니까 내가 더",
+      "pronunciation": "Jakku ireon geo eotgo geureonikka naega deo",
+      "translation": "Because I keep receiving things like this, I...",
+      "grammar": [
+        {
+          "pattern": "자꾸 (jakku)",
+          "explanation": "Keep doing, repeatedly",
+          "example": "자꾸 얻고 = keep receiving"
+        },
+        {
+          "pattern": "이런 거 (ireon geo)",
+          "explanation": "Things like this",
+          "example": "이런 거 = stuff like this"
+        },
+        {
+          "pattern": "그러니까 (geureonikka)",
+          "explanation": "So, because of that",
+          "example": "그러니까 = so, that's why"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:32,840", "to": "00:04:39,560" },
+      "offsets": { "from": 272840, "to": 279560 }
+    },
+    {
+      "original": "신경쓰이지.",
+      "pronunciation": "Singyeong-sseuiji.",
+      "translation": "It bothers me. / I can't stop thinking about it.",
+      "grammar": [
+        {
+          "pattern": "신경쓰이다 (singyeong-sseuida)",
+          "explanation": "To be bothered by, to be on one's mind",
+          "example": "신경쓰이다 = it's on my mind"
+        },
+        {
+          "pattern": "~지 (ji)",
+          "explanation": "Casual statement ending (talking to oneself)",
+          "example": "신경쓰이지 = it bothers me"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:39,560", "to": "00:04:42,880" },
+      "offsets": { "from": 279560, "to": 282880 }
+    },
+    {
+      "original": "뭐야.",
+      "pronunciation": "Mwoya.",
+      "translation": "What? / What's this?",
+      "grammar": [
+        {
+          "pattern": "뭐야 (mwoya)",
+          "explanation": "What is it? (casual, often expressing surprise)",
+          "example": "뭐야 = what?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:42,880", "to": "00:04:44,520" },
+      "offsets": { "from": 282880, "to": 284520 }
+    },
+    {
+      "original": "나 때문에 자꾸 놀란다더니 이제는 또 신경쓰인다고 그러네.",
+      "pronunciation": "Na ttaemune jakku nollan-dadeoni ijeneun tto singyeong-sseuindago geureone.",
+      "translation": "He said he keeps getting startled because of me, and now he says I'm on his mind.",
+      "grammar": [
+        {
+          "pattern": "~때문에 (ttaemune)",
+          "explanation": "Because of",
+          "example": "나 때문에 = because of me"
+        },
+        {
+          "pattern": "~다더니 (dadeoni)",
+          "explanation": "He said... and now (quoting + contrast)",
+          "example": "놀란다더니 = he said he was startled, and now"
+        },
+        {
+          "pattern": "~다고 그러다 (dago geureoda)",
+          "explanation": "To say that...",
+          "example": "신경쓰인다고 그러네 = he says it's on his mind"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:44,520", "to": "00:04:48,680" },
+      "offsets": { "from": 284520, "to": 288680 }
+    },
+    {
+      "original": "홍혜인 씨.",
+      "pronunciation": "Hong Hyein ssi.",
+      "translation": "Miss Hong Hyein.",
+      "grammar": [
+        {
+          "pattern": "~씨 (ssi)",
+          "explanation": "Honorific title after names, like Mr./Ms.",
+          "example": "홍혜인 씨 = Ms. Hong Hyein"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:57,640", "to": "00:04:58,680" },
+      "offsets": { "from": 297640, "to": 298680 }
+    },
+    {
+      "original": "지금부터 내 말 잘 들어요.",
+      "pronunciation": "Jigeum-buteo nae mal jal deureoyo.",
+      "translation": "Listen carefully to what I'm about to say.",
+      "grammar": [
+        {
+          "pattern": "지금부터 (jigeum-buteo)",
+          "explanation": "From now, starting now",
+          "example": "지금부터 = from now on"
+        },
+        {
+          "pattern": "말 듣다 (mal deutda)",
+          "explanation": "To listen to what someone says",
+          "example": "내 말 들어요 = listen to me"
+        },
+        {
+          "pattern": "잘 (jal)",
+          "explanation": "Well, carefully",
+          "example": "잘 들어요 = listen carefully"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:04:58,680", "to": "00:05:01,840" },
+      "offsets": { "from": 298680, "to": 301840 }
+    },
+    {
+      "original": "여태는 홍혜인 씨가 부담 가질까 봐 얘기 안 했는데요.",
+      "pronunciation": "Yeotaeneun Hong Hyein ssi-ga budam gajilkka bwa yaegi an haenneundeyo.",
+      "translation": "Until now, I didn't say anything because I was worried you'd feel burdened.",
+      "grammar": [
+        {
+          "pattern": "여태 (yeotae)",
+          "explanation": "Until now, so far",
+          "example": "여태는 = until now"
+        },
+        {
+          "pattern": "부담 가지다 (budam gajida)",
+          "explanation": "To feel burdened/pressured",
+          "example": "부담 가질까 봐 = worried you'd feel burdened"
+        },
+        {
+          "pattern": "~ㄹ까 봐 (lkka bwa)",
+          "explanation": "Worried that, afraid that",
+          "example": "가질까 봐 = worried that you'd have"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:01,840", "to": "00:05:06,920" },
+      "offsets": { "from": 301840, "to": 306920 }
+    },
+    {
+      "original": "사실 나",
+      "pronunciation": "Sasil na",
+      "translation": "Actually, I...",
+      "grammar": [
+        {
+          "pattern": "사실 (sasil)",
+          "explanation": "Actually, in fact",
+          "example": "사실 = actually"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:06,920", "to": "00:05:08,520" },
+      "offsets": { "from": 306920, "to": 308520 }
+    },
+    {
+      "original": "서울도 나왔어요.",
+      "pronunciation": "Seoul-do nawasseoyo.",
+      "translation": "I went to a Seoul university too.",
+      "grammar": [
+        {
+          "pattern": "~도 (do)",
+          "explanation": "Also, too",
+          "example": "서울도 = Seoul too"
+        },
+        {
+          "pattern": "나오다 (naoda)",
+          "explanation": "To come out, here means 'to graduate from'",
+          "example": "서울대 나왔다 = graduated from Seoul National University"
+        }
+      ],
+      "culture": "서울대 나왔다 (went to Seoul National) is a common way to say you graduated from Korea's most prestigious university. Here '서울도 나왔다' implies top-tier education.",
+      "timestamps": { "from": "00:05:08,520", "to": "00:05:11,400" },
+      "offsets": { "from": 308520, "to": 311400 }
+    },
+    {
+      "original": "그것도 법대.",
+      "pronunciation": "Geugeotdo beopdae.",
+      "translation": "Law school at that.",
+      "grammar": [
+        {
+          "pattern": "그것도 (geugeotdo)",
+          "explanation": "At that, on top of that",
+          "example": "그것도 = and on top of that"
+        },
+        {
+          "pattern": "법대 (beopdae)",
+          "explanation": "Law school (abbreviation of 법과대학)",
+          "example": "법대 = law school"
+        }
+      ],
+      "culture": "In Korea, law school (법대) is considered one of the most prestigious and competitive programs, signifying high intelligence and social status.",
+      "timestamps": { "from": "00:05:11,400", "to": "00:05:14,000" },
+      "offsets": { "from": 311400, "to": 314000 }
+    },
+    {
+      "original": "우리 집",
+      "pronunciation": "Uri jip",
+      "translation": "My family / My house",
+      "grammar": [
+        {
+          "pattern": "우리 (uri)",
+          "explanation": "Our/my (Koreans often say 'our' instead of 'my')",
+          "example": "우리 집 = my house/family"
+        }
+      ],
+      "culture": "Koreans commonly use 우리 (our) instead of 내 (my) for family, house, country, etc. It reflects the collectivist culture.",
+      "timestamps": { "from": "00:05:14,000", "to": "00:05:16,480" },
+      "offsets": { "from": 314000, "to": 316480 }
+    },
+    {
+      "original": "지방이긴 한데 그 마을에선 유지소리 듣는 집이고요.",
+      "pronunciation": "Jibang-igin hande geu maeul-eseon yuji-sori deunneun jib-igoyo.",
+      "translation": "It's in the countryside, but we're known as a prominent family in that village.",
+      "grammar": [
+        {
+          "pattern": "지방 (jibang)",
+          "explanation": "Countryside, rural area, provinces",
+          "example": "지방 = rural area"
+        },
+        {
+          "pattern": "유지 (yuji)",
+          "explanation": "Local notable, influential person in a community",
+          "example": "유지소리 듣다 = to be known as a notable"
+        },
+        {
+          "pattern": "~소리 듣다 (sori deutda)",
+          "explanation": "To be called, to be known as",
+          "example": "유지소리 듣다 = known as a local notable"
+        }
+      ],
+      "culture": "유지 (influential local figure) refers to a respected, usually wealthy family in rural Korean communities.",
+      "timestamps": { "from": "00:05:16,480", "to": "00:05:20,720" },
+      "offsets": { "from": 316480, "to": 320720 }
+    },
+    {
+      "original": "예를 들면 소가 30마리가 넘어요.",
+      "pronunciation": "Yereul deulmyeon soga samship-mariga neomeoyo.",
+      "translation": "For example, we have over 30 cows.",
+      "grammar": [
+        {
+          "pattern": "예를 들면 (yereul deulmyeon)",
+          "explanation": "For example",
+          "example": "예를 들면 = for example"
+        },
+        {
+          "pattern": "~마리 (mari)",
+          "explanation": "Counter for animals",
+          "example": "30마리 = 30 animals"
+        },
+        {
+          "pattern": "넘다 (neomda)",
+          "explanation": "To exceed, to be over",
+          "example": "30마리가 넘다 = over 30"
+        }
+      ],
+      "culture": "In rural Korea, owning many cattle is a sign of wealth. 30+ cows would indicate a very prosperous farming family.",
+      "timestamps": { "from": "00:05:20,720", "to": "00:05:23,440" },
+      "offsets": { "from": 320720, "to": 323440 }
+    },
+    {
+      "original": "엊그제 송아지 또 태어나가지고 35마리 육박하는 상황이고.",
+      "pronunciation": "Eotgeuje songaji tto taeeona-gajigo samshipoh-mari yukbak-haneun sanghwang-igo.",
+      "translation": "A calf was just born the other day, so we're approaching 35 now.",
+      "grammar": [
+        {
+          "pattern": "송아지 (songaji)",
+          "explanation": "Calf (baby cow)",
+          "example": "송아지 = calf"
+        },
+        {
+          "pattern": "~아/어 가지고 (a/eo gajigo)",
+          "explanation": "And so, because of that (casual)",
+          "example": "태어나가지고 = was born and so"
+        },
+        {
+          "pattern": "육박하다 (yukbak-hada)",
+          "explanation": "To approach, to be close to (a number)",
+          "example": "35마리 육박 = approaching 35"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:23,440", "to": "00:05:29,120" },
+      "offsets": { "from": 323440, "to": 329120 }
+    },
+    {
+      "original": "지금 사는 오피스텔도 월세 아니고",
+      "pronunciation": "Jigeum saneun opiseutel-do wolse anigo",
+      "translation": "The officetel I live in now isn't monthly rent either,",
+      "grammar": [
+        {
+          "pattern": "오피스텔 (opiseutel)",
+          "explanation": "Officetel - studio apartment that can be used as office",
+          "example": "오피스텔 = studio apartment"
+        },
+        {
+          "pattern": "월세 (wolse)",
+          "explanation": "Monthly rent",
+          "example": "월세 아니고 = not monthly rent"
+        }
+      ],
+      "culture": "오피스텔 is a Korean housing type - small studio apartments often used by young professionals. It's a combination of 'office' and 'hotel'.",
+      "timestamps": { "from": "00:05:29,120", "to": "00:05:31,520" },
+      "offsets": { "from": 329120, "to": 331520 }
+    },
+    {
+      "original": "전세예요.",
+      "pronunciation": "Jeonse-yeyo.",
+      "translation": "It's jeonse (lump-sum deposit).",
+      "grammar": [
+        {
+          "pattern": "전세 (jeonse)",
+          "explanation": "Large deposit rental system unique to Korea",
+          "example": "전세 = lump-sum deposit rental"
+        }
+      ],
+      "culture": "전세 is Korea's unique rental system where you pay a large lump-sum deposit (often 50-80% of property value) instead of monthly rent. Having jeonse money indicates financial stability.",
+      "timestamps": { "from": "00:05:31,520", "to": "00:05:33,240" },
+      "offsets": { "from": 331520, "to": 333240 }
+    },
+    {
+      "original": "그만큼 목돈이 있다는 얘기인 거고.",
+      "pronunciation": "Geumankeum mokdon-i itdaneun yaegi-in geogo.",
+      "translation": "That means I have that much money saved up.",
+      "grammar": [
+        {
+          "pattern": "그만큼 (geumankeum)",
+          "explanation": "That much, to that extent",
+          "example": "그만큼 = that much"
+        },
+        {
+          "pattern": "목돈 (mokdon)",
+          "explanation": "Lump sum of money, significant savings",
+          "example": "목돈이 있다 = to have a lump sum"
+        },
+        {
+          "pattern": "~다는 얘기 (daneun yaegi)",
+          "explanation": "It means that, it's saying that",
+          "example": "있다는 얘기 = it means I have"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:33,240", "to": "00:05:36,400" },
+      "offsets": { "from": 333240, "to": 336400 }
+    },
+    {
+      "original": "무슨 말이 하고 싶은 건데요?",
+      "pronunciation": "Museun mari hago sipeun geondeyo?",
+      "translation": "What are you trying to say?",
+      "grammar": [
+        {
+          "pattern": "무슨 말 (museun mal)",
+          "explanation": "What kind of words, what",
+          "example": "무슨 말 = what (are you saying)"
+        },
+        {
+          "pattern": "~고 싶다 (go sipda)",
+          "explanation": "Want to (do something)",
+          "example": "하고 싶다 = want to say"
+        },
+        {
+          "pattern": "~ㄴ 건데요 (n geondeyo)",
+          "explanation": "It is that... (asking for clarification)",
+          "example": "싶은 건데요 = what is it that you want?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:36,400", "to": "00:05:39,360" },
+      "offsets": { "from": 336400, "to": 339360 }
+    },
+    {
+      "original": "그쪽에 행연아",
+      "pronunciation": "Geujjoge haeng-yeona",
+      "translation": "What I'm saying is...",
+      "grammar": [
+        {
+          "pattern": "그쪽 (geujjok)",
+          "explanation": "That side, you (formal/distant)",
+          "example": "그쪽에 = to you"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:39,360", "to": "00:05:41,640" },
+      "offsets": { "from": 339360, "to": 341640 }
+    },
+    {
+      "original": "인턴 짤리고 재취업 안 돼도",
+      "pronunciation": "Inteon jjalligo chaechwiup an dwaedo",
+      "translation": "Even if you get fired from your internship and can't find another job,",
+      "grammar": [
+        {
+          "pattern": "짤리다 (jjallida)",
+          "explanation": "To get fired (slang from 잘리다)",
+          "example": "인턴 짤리다 = get fired from internship"
+        },
+        {
+          "pattern": "재취업 (chaechwiup)",
+          "explanation": "Re-employment, finding another job",
+          "example": "재취업 안 되다 = can't find another job"
+        },
+        {
+          "pattern": "~아/어도 (ado/eodo)",
+          "explanation": "Even if",
+          "example": "안 돼도 = even if it doesn't work"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:41,640", "to": "00:05:44,120" },
+      "offsets": { "from": 341640, "to": 344120 }
+    },
+    {
+      "original": "내가 당신 책임질 수 있다.",
+      "pronunciation": "Naega dangsin chaegimjil su itda.",
+      "translation": "I can take responsibility for you.",
+      "grammar": [
+        {
+          "pattern": "당신 (dangsin)",
+          "explanation": "You (formal, often used between couples)",
+          "example": "당신 = you"
+        },
+        {
+          "pattern": "책임지다 (chaegimjida)",
+          "explanation": "To take responsibility for",
+          "example": "책임질 수 있다 = can take responsibility"
+        },
+        {
+          "pattern": "~ㄹ 수 있다 (l su itda)",
+          "explanation": "Can, be able to",
+          "example": "책임질 수 있다 = can take responsibility"
+        }
+      ],
+      "culture": "책임지다 in romantic context is a serious declaration, often implying marriage intentions. It's a traditional Korean way of proposing commitment.",
+      "timestamps": { "from": "00:05:44,120", "to": "00:05:46,800" },
+      "offsets": { "from": 344120, "to": 346800 }
+    },
+    {
+      "original": "그 얘기요.",
+      "pronunciation": "Geu yaegi-yo.",
+      "translation": "That's what I'm saying.",
+      "grammar": [
+        {
+          "pattern": "그 얘기 (geu yaegi)",
+          "explanation": "That story, that's the point",
+          "example": "그 얘기요 = that's what I mean"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:46,800", "to": "00:05:48,440" },
+      "offsets": { "from": 346800, "to": 348440 }
+    },
+    {
+      "original": "솔직히",
+      "pronunciation": "Soljikhi",
+      "translation": "Honestly,",
+      "grammar": [
+        {
+          "pattern": "솔직히 (soljikhi)",
+          "explanation": "Honestly, frankly",
+          "example": "솔직히 = honestly"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:48,440", "to": "00:05:50,720" },
+      "offsets": { "from": 348440, "to": 350720 }
+    },
+    {
+      "original": "맞벌이 선호했는데 홍혜인 씨라면",
+      "pronunciation": "Matbeori seonho-haenneunde Hong Hyein ssi-ramyeon",
+      "translation": "I preferred dual income, but if it's you, Hong Hyein,",
+      "grammar": [
+        {
+          "pattern": "맞벌이 (matbeori)",
+          "explanation": "Dual income (both spouses working)",
+          "example": "맞벌이 = dual income couple"
+        },
+        {
+          "pattern": "선호하다 (seonho-hada)",
+          "explanation": "To prefer",
+          "example": "맞벌이 선호하다 = prefer dual income"
+        },
+        {
+          "pattern": "~라면 (ramyeon)",
+          "explanation": "If it's (someone)",
+          "example": "홍혜인 씨라면 = if it's Hong Hyein"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:51,400", "to": "00:05:54,520" },
+      "offsets": { "from": 351400, "to": 354520 }
+    },
+    {
+      "original": "외벌이도 감당해보고 싶어졌어요.",
+      "pronunciation": "Oebeori-do gamdang-haebogo sipeo-jyeosseoyo.",
+      "translation": "I want to try being the sole breadwinner.",
+      "grammar": [
+        {
+          "pattern": "외벌이 (oebeori)",
+          "explanation": "Single income (one spouse working)",
+          "example": "외벌이 = single income"
+        },
+        {
+          "pattern": "감당하다 (gamdang-hada)",
+          "explanation": "To handle, to manage, to afford",
+          "example": "감당하다 = to handle"
+        },
+        {
+          "pattern": "~아/어 보고 싶다 (abogo/eobogo sipda)",
+          "explanation": "Want to try doing",
+          "example": "감당해보고 싶다 = want to try handling"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:54,520", "to": "00:05:57,160" },
+      "offsets": { "from": 354520, "to": 357160 }
+    },
+    {
+      "original": "아니 부담은 갖지 말고요.",
+      "pronunciation": "Ani budam-eun gatji malgoyo.",
+      "translation": "No, don't feel pressured.",
+      "grammar": [
+        {
+          "pattern": "부담 갖다 (budam gatda)",
+          "explanation": "To feel burdened/pressured",
+          "example": "부담 갖지 마 = don't feel pressured"
+        },
+        {
+          "pattern": "~지 말다 (ji malda)",
+          "explanation": "Don't (do something)",
+          "example": "갖지 말고요 = don't have (pressure)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:05:57,160", "to": "00:06:01,880" },
+      "offsets": { "from": 357160, "to": 361880 }
+    },
+    {
+      "original": "그냥 내가",
+      "pronunciation": "Geunyang naega",
+      "translation": "It's just that I...",
+      "grammar": [
+        {
+          "pattern": "그냥 (geunyang)",
+          "explanation": "Just, simply",
+          "example": "그냥 = just"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:01,880", "to": "00:06:03,800" },
+      "offsets": { "from": 361880, "to": 363800 }
+    },
+    {
+      "original": "좋아서 그래요.",
+      "pronunciation": "Johaseo geuraeyo.",
+      "translation": "I'm doing this because I like you.",
+      "grammar": [
+        {
+          "pattern": "좋아서 (johaseo)",
+          "explanation": "Because I like (you)",
+          "example": "좋아서 = because I like"
+        },
+        {
+          "pattern": "그래요 (geuraeyo)",
+          "explanation": "That's why, I do that",
+          "example": "그래요 = that's why I do this"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:03,800", "to": "00:06:07,040" },
+      "offsets": { "from": 363800, "to": 367040 }
+    },
+    {
+      "original": "그러니까",
+      "pronunciation": "Geureonikka",
+      "translation": "So...",
+      "grammar": [
+        {
+          "pattern": "그러니까 (geureonikka)",
+          "explanation": "So, therefore",
+          "example": "그러니까 = so"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:07,040", "to": "00:06:10,840" },
+      "offsets": { "from": 367040, "to": 370840 }
+    },
+    {
+      "original": "나 어때요?",
+      "pronunciation": "Na eottaeyo?",
+      "translation": "What do you think of me?",
+      "grammar": [
+        {
+          "pattern": "어때요 (eottaeyo)",
+          "explanation": "How is it? What do you think?",
+          "example": "나 어때요 = what do you think of me?"
+        }
+      ],
+      "culture": "나 어때요? is a classic indirect confession in Korean dating culture, asking if the other person would consider dating them.",
+      "timestamps": { "from": "00:06:10,840", "to": "00:06:15,760" },
+      "offsets": { "from": 370840, "to": 375760 }
+    },
+    {
+      "original": "아니 아니 오늘 꼭 대답 안 해도 되고요.",
+      "pronunciation": "Ani ani oneul kkok daedap an haedo doegoyo.",
+      "translation": "No no, you don't have to answer today.",
+      "grammar": [
+        {
+          "pattern": "꼭 (kkok)",
+          "explanation": "Necessarily, must",
+          "example": "꼭 안 해도 되다 = don't necessarily have to"
+        },
+        {
+          "pattern": "~안 해도 되다 (an haedo doeda)",
+          "explanation": "Don't have to, it's okay not to",
+          "example": "대답 안 해도 되다 = don't have to answer"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:20,760", "to": "00:06:24,120" },
+      "offsets": { "from": 380760, "to": 384120 }
+    },
+    {
+      "original": "피, 피 맞지 말고.",
+      "pronunciation": "Pi, pi matji malgo.",
+      "translation": "Don't, don't get rained on.",
+      "grammar": [
+        {
+          "pattern": "비 맞다 (bi matda)",
+          "explanation": "To get rained on",
+          "example": "비 맞지 마 = don't get rained on"
+        },
+        {
+          "pattern": "~지 말고 (ji malgo)",
+          "explanation": "Don't do... and",
+          "example": "맞지 말고 = don't get hit and..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:24,120", "to": "00:06:27,800" },
+      "offsets": { "from": 384120, "to": 387800 }
+    },
+    {
+      "original": "아니.",
+      "pronunciation": "Ani.",
+      "translation": "No.",
+      "grammar": [
+        {
+          "pattern": "아니 (ani)",
+          "explanation": "No (casual)",
+          "example": "아니 = no"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:27,800", "to": "00:06:32,040" },
+      "offsets": { "from": 387800, "to": 392040 }
+    },
+    {
+      "original": "나 괜찮으니까",
+      "pronunciation": "Na gwaenchanheunikka",
+      "translation": "I'm fine, so...",
+      "grammar": [
+        {
+          "pattern": "괜찮다 (gwaenchanta)",
+          "explanation": "To be okay, to be fine",
+          "example": "괜찮으니까 = because I'm fine"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:32,040", "to": "00:06:33,360" },
+      "offsets": { "from": 392040, "to": 393360 }
+    },
+    {
+      "original": "쓰고 가요.",
+      "pronunciation": "Sseugo gayo.",
+      "translation": "Take it and go.",
+      "grammar": [
+        {
+          "pattern": "쓰고 가다 (sseugo gada)",
+          "explanation": "To use/wear and go",
+          "example": "쓰고 가요 = take (umbrella) and go"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:33,360", "to": "00:06:35,320" },
+      "offsets": { "from": 393360, "to": 395320 }
+    },
+    {
+      "original": "백현우 씨.",
+      "pronunciation": "Baek Hyeonwu ssi.",
+      "translation": "Mr. Baek Hyeonwoo.",
+      "grammar": [
+        {
+          "pattern": "~씨 (ssi)",
+          "explanation": "Honorific title after names",
+          "example": "백현우 씨 = Mr. Baek Hyeonwoo"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:35,320", "to": "00:06:36,200" },
+      "offsets": { "from": 395320, "to": 396200 }
+    },
+    {
+      "original": "괜찮다고요.",
+      "pronunciation": "Gwaenchantago-yo.",
+      "translation": "I said I'm fine.",
+      "grammar": [
+        {
+          "pattern": "~다고요 (dagoyo)",
+          "explanation": "I said that... (repeating oneself)",
+          "example": "괜찮다고요 = I said I'm fine"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:36,200", "to": "00:06:37,320" },
+      "offsets": { "from": 396200, "to": 397320 }
+    },
+    {
+      "original": "나는요.",
+      "pronunciation": "Naneun-yo.",
+      "translation": "But I...",
+      "grammar": [
+        {
+          "pattern": "나는요 (naneunyo)",
+          "explanation": "As for me, but I (emphasizing contrast)",
+          "example": "나는요 = but I / as for me"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:37,320", "to": "00:06:38,360" },
+      "offsets": { "from": 397320, "to": 398360 }
+    },
+    {
+      "original": "나는 기사가 있다고.",
+      "pronunciation": "Naneun gisaga itdago.",
+      "translation": "I have a driver.",
+      "grammar": [
+        {
+          "pattern": "기사 (gisa)",
+          "explanation": "Driver (chauffeur)",
+          "example": "기사가 있다 = I have a driver"
+        },
+        {
+          "pattern": "~다고 (dago)",
+          "explanation": "I'm telling you that...",
+          "example": "있다고 = I'm saying I have"
+        }
+      ],
+      "culture": "Having a personal driver (기사) in Korea indicates significant wealth and status, as it's uncommon except for executives and chaebol families.",
+      "timestamps": { "from": "00:06:50,760", "to": "00:06:58,720" },
+      "offsets": { "from": 410760, "to": 418720 }
+    },
+    {
+      "original": "아무튼 그때부터 백현우 씨는 못 말리는 사랑꾼이었어요.",
+      "pronunciation": "Amutun geuttae-buteo Baek Hyeonwu ssi-neun mot mallineun sarangkkun-ieosseoyo.",
+      "translation": "Anyway, from that moment on, Mr. Baek Hyeonwoo was an unstoppable romantic.",
+      "grammar": [
+        {
+          "pattern": "아무튼 (amutun)",
+          "explanation": "Anyway, in any case",
+          "example": "아무튼 = anyway"
+        },
+        {
+          "pattern": "못 말리다 (mot mallida)",
+          "explanation": "Unstoppable, can't be stopped",
+          "example": "못 말리는 = unstoppable"
+        },
+        {
+          "pattern": "사랑꾼 (sarangkkun)",
+          "explanation": "Someone who's good at romance, a romantic",
+          "example": "사랑꾼 = romantic person"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:06:58,720", "to": "00:07:17,720" },
+      "offsets": { "from": 418720, "to": 437720 }
+    },
+    {
+      "original": "그렇게 시작된 연애였는데 내가 누구 딸인지 알고 나서 충격받은 그 사람이 사직서를 내고 잠수를 타버리더라고요.",
+      "pronunciation": "Geureoke sijakdoen yeonae-yeonneunde naega nugu ttal-inji algo naseo chunggyeokbadeun geu sarami sajikseoreul naego jamsureul tabeori-deoragoyo.",
+      "translation": "That's how our relationship started, but after finding out whose daughter I was, he was so shocked that he submitted his resignation and disappeared.",
+      "grammar": [
+        {
+          "pattern": "~고 나서 (go naseo)",
+          "explanation": "After doing something",
+          "example": "알고 나서 = after finding out"
+        },
+        {
+          "pattern": "사직서를 내다 (sajikseoreul naeda)",
+          "explanation": "To submit a resignation letter",
+          "example": "사직서를 내다 = resign"
+        },
+        {
+          "pattern": "잠수 타다 (jamsu tada)",
+          "explanation": "To disappear, go off the radar (lit. 'ride submarine')",
+          "example": "잠수 타다 = disappear/ghost someone"
+        }
+      ],
+      "culture": "잠수 타다 (literally 'ride a submarine') is Korean slang for disappearing or ghosting someone, often used when someone cuts off all contact.",
+      "timestamps": { "from": "00:07:18,720", "to": "00:07:27,880" },
+      "offsets": { "from": 438720, "to": 447880 }
+    },
+    {
+      "original": "그래서.",
+      "pronunciation": "Geuraeseo.",
+      "translation": "So.",
+      "grammar": [
+        {
+          "pattern": "그래서 (geuraeseo)",
+          "explanation": "So, therefore",
+          "example": "그래서 = so"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:07:27,880", "to": "00:07:29,600" },
+      "offsets": { "from": 447880, "to": 449600 }
+    },
+    {
+      "original": "백현우 나와.",
+      "pronunciation": "Baek Hyeonwu nawa.",
+      "translation": "Baek Hyeonwoo, come out.",
+      "grammar": [
+        {
+          "pattern": "나오다 (naoda)",
+          "explanation": "To come out",
+          "example": "나와 = come out (casual command)"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:07:29,600", "to": "00:07:35,480" },
+      "offsets": { "from": 449600, "to": 455480 }
+    },
+    {
+      "original": "됐어 됐어.",
+      "pronunciation": "Dwaesseo dwaesseo.",
+      "translation": "That's enough, that's enough.",
+      "grammar": [
+        {
+          "pattern": "됐어 (dwaesseo)",
+          "explanation": "That's enough, stop it, it's done",
+          "example": "됐어 = enough / stop"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:07:49,720", "to": "00:07:51,480" },
+      "offsets": { "from": 469720, "to": 471480 }
+    },
+    {
+      "original": "나 왜 여기에 이렇게 됐을 거야?",
+      "pronunciation": "Na wae yeogie ireoke dwaesseul geoya?",
+      "translation": "Why did I end up here like this?",
+      "grammar": [
+        {
+          "pattern": "왜 (wae)",
+          "explanation": "Why",
+          "example": "왜 = why"
+        },
+        {
+          "pattern": "이렇게 되다 (ireoke doeda)",
+          "explanation": "To end up like this",
+          "example": "이렇게 됐다 = ended up like this"
+        },
+        {
+          "pattern": "~을 거야 (eul geoya)",
+          "explanation": "Will, would (casual future/rhetorical)",
+          "example": "됐을 거야 = would have ended up"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:08:18,720", "to": "00:08:31,160" },
+      "offsets": { "from": 498720, "to": 511160 }
+    },
+    {
+      "original": "그땐 정말 강림 천사 여신?",
+      "pronunciation": "Geuttaen jeongmal gangnim cheonsa yeosin?",
+      "translation": "Back then, was she really like an angel descended from heaven? A goddess?",
+      "grammar": [
+        {
+          "pattern": "그땐 (geuttaen)",
+          "explanation": "Back then (contraction of 그때는)",
+          "example": "그땐 = back then"
+        },
+        {
+          "pattern": "강림 (gangnim)",
+          "explanation": "Descent (from heaven), coming down",
+          "example": "강림 천사 = descended angel"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:08:48,720", "to": "00:08:57,520" },
+      "offsets": { "from": 528720, "to": 537520 }
+    },
+    {
+      "original": "그렇게 보였는데.",
+      "pronunciation": "Geureoke boyeonneunde.",
+      "translation": "That's how she looked.",
+      "grammar": [
+        {
+          "pattern": "보이다 (boida)",
+          "explanation": "To look like, to appear",
+          "example": "그렇게 보이다 = to look like that"
+        },
+        {
+          "pattern": "~는데 (neunde)",
+          "explanation": "But (trailing off, implying contrast)",
+          "example": "보였는데 = she looked like that, but..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:08:57,520", "to": "00:09:01,560" },
+      "offsets": { "from": 537520, "to": 541560 }
+    },
+    {
+      "original": "그럼 지금은 아니란 말씀?",
+      "pronunciation": "Geureom jigeum-eun aniran malsseum?",
+      "translation": "So you're saying she's not like that now?",
+      "grammar": [
+        {
+          "pattern": "그럼 (geureom)",
+          "explanation": "Then, so",
+          "example": "그럼 = then"
+        },
+        {
+          "pattern": "~란 말씀 (ran malsseum)",
+          "explanation": "You're saying that... (honorific)",
+          "example": "아니란 말씀 = you're saying it's not"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:09:01,560", "to": "00:09:03,520" },
+      "offsets": { "from": 541560, "to": 543520 }
+    },
+    {
+      "original": "아니죠 지금도 너무 그렇죠.",
+      "pronunciation": "Anijyo jigeumdo neomu geureotjyo.",
+      "translation": "No, she's still very much like that.",
+      "grammar": [
+        {
+          "pattern": "아니죠 (anijyo)",
+          "explanation": "No (polite, seeking agreement)",
+          "example": "아니죠 = no, right?"
+        },
+        {
+          "pattern": "지금도 (jigeumdo)",
+          "explanation": "Even now, still",
+          "example": "지금도 = even now"
+        },
+        {
+          "pattern": "너무 (neomu)",
+          "explanation": "So much, very (originally 'too much' but often means 'very')",
+          "example": "너무 그렇다 = very much so"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:09:03,520", "to": "00:09:08,140" },
+      "offsets": { "from": 543520, "to": 548140 }
+    },
+    {
+      "original": "누차 말씀드렸지 않습니까?",
+      "pronunciation": "Nucha malsseum-deuryeotji anseumnikka?",
+      "translation": "Haven't I told you many times?",
+      "grammar": [
+        {
+          "pattern": "누차 (nucha)",
+          "explanation": "Repeatedly, many times",
+          "example": "누차 = many times"
+        },
+        {
+          "pattern": "말씀드리다 (malsseum-deurida)",
+          "explanation": "To tell (humble honorific)",
+          "example": "말씀드렸다 = I told (humble)"
+        },
+        {
+          "pattern": "~지 않습니까 (ji anseumnikka)",
+          "explanation": "Haven't I...? (rhetorical question, formal)",
+          "example": "드렸지 않습니까 = haven't I told you?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:09:08,140", "to": "00:09:10,840" },
+      "offsets": { "from": 548140, "to": 550840 }
+    },
+    {
+      "original": "저는 행복하다고.",
+      "pronunciation": "Jeoneun haengbok-hadago.",
+      "translation": "That I'm happy.",
+      "grammar": [
+        {
+          "pattern": "~다고 (dago)",
+          "explanation": "That... (quoting oneself)",
+          "example": "행복하다고 = that I'm happy"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:09:10,840", "to": "00:09:13,080" },
+      "offsets": { "from": 550840, "to": 553080 }
+    },
+    {
+      "original": "아 진짜 저희 정말 잘 살고 있고",
+      "pronunciation": "A jinjja jeohui jeongmal jal salgo itgo",
+      "translation": "Really, we're living so well together,",
+      "grammar": [
+        {
+          "pattern": "저희 (jeohui)",
+          "explanation": "We/our (humble)",
+          "example": "저희 = we (humble)"
+        },
+        {
+          "pattern": "잘 살다 (jal salda)",
+          "explanation": "To live well, to have a good life",
+          "example": "잘 살고 있다 = living well"
+        },
+        {
+          "pattern": "~고 있고 (go itgo)",
+          "explanation": "Is doing... and (continuing)",
+          "example": "살고 있고 = living and..."
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:09:13,080", "to": "00:09:18,600" },
+      "offsets": { "from": 553080, "to": 558600 }
+    },
+    {
+      "original": "그때나 지금이나 사랑하는 마음은 똑같습니다.",
+      "pronunciation": "Geuttaena jigeum-ina saranghaneun maeum-eun ttokgat-seumnida.",
+      "translation": "My love for her is the same now as it was then.",
+      "grammar": [
+        {
+          "pattern": "~나 ~나 (na ~ na)",
+          "explanation": "Whether... or..., both... and...",
+          "example": "그때나 지금이나 = then or now"
+        },
+        {
+          "pattern": "똑같다 (ttokgatda)",
+          "explanation": "To be exactly the same",
+          "example": "똑같습니다 = it's exactly the same"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:09:19,040", "to": "00:09:21,800" },
+      "offsets": { "from": 559040, "to": 561800 }
+    },
+    {
+      "original": "백현우 이혼한데.",
+      "pronunciation": "Baek Hyeonwu ihon-hande.",
+      "translation": "I heard Baek Hyeonwoo got divorced.",
+      "grammar": [
+        {
+          "pattern": "이혼하다 (ihon-hada)",
+          "explanation": "To divorce",
+          "example": "이혼했다 = got divorced"
+        },
+        {
+          "pattern": "~ㄴ대 (ndae)",
+          "explanation": "I heard that... (hearsay)",
+          "example": "이혼한대 = I heard he divorced"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:09:21,800", "to": "00:09:26,920" },
+      "offsets": { "from": 561800, "to": 566920 }
+    }
+  ]
+}
