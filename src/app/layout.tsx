@@ -3,6 +3,7 @@ import { Geist_Mono, Inter } from 'next/font/google';
 import Script from 'next/script';
 
 import { ThemeProvider } from '@/app/(main)/_components/theme-provider';
+import { Header } from '@/components/header';
 import { Toaster } from '@/components/ui/toast';
 import { env } from '@/config/env';
 import { AnalyticsProvider } from '@/providers/analytics-provider';
@@ -164,7 +165,10 @@ export default function RootLayout({
         >
           <AnalyticsProvider>
             <QueryProvider>
-              {children}
+              <div className="bg-background min-h-screen">
+                <Header />
+                {children}
+              </div>
               <Toaster />
             </QueryProvider>
           </AnalyticsProvider>

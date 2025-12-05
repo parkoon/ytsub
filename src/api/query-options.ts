@@ -1,6 +1,6 @@
 import { queryOptions } from '@tanstack/react-query';
 
-import { getYTSubtitleService, getVideosService } from './services';
+import { getVideoDetailService, getVideosService, getYTSubtitleService } from './services';
 
 type getYTSubtitleQueryOptionsParams = {
   videoId?: string;
@@ -18,5 +18,12 @@ export const getVideosQueryOptions = () =>
   queryOptions({
     queryKey: ['videos'],
     queryFn: getVideosService,
+    staleTime: 10 * 60 * 1000, // 10분
+  });
+
+export const getVideoDetailQueryOptions = (videoId: string) =>
+  queryOptions({
+    queryKey: ['videoDetail', videoId],
+    queryFn: () => getVideoDetailService(videoId),
     staleTime: 10 * 60 * 1000, // 10분
   });

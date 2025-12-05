@@ -1,6 +1,6 @@
 import { api } from '@/lib/axios';
 
-import { getYTSubtitleParams, GetYTSubtitleResponse, VideosData } from './types';
+import { getYTSubtitleParams, GetYTSubtitleResponse, VideoDetail, VideosData } from './types';
 
 export const getYTSubtitleService = async ({
   videoId,
@@ -20,6 +20,14 @@ export const getVideosService = async (): Promise<VideosData> => {
   const response = await fetch('/videos.json');
   if (!response.ok) {
     throw new Error('Failed to fetch videos');
+  }
+  return response.json();
+};
+
+export const getVideoDetailService = async (videoId: string): Promise<VideoDetail> => {
+  const response = await fetch(`/detail/${videoId}.json`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch video detail for ${videoId}`);
   }
   return response.json();
 };

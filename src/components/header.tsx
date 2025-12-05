@@ -1,4 +1,4 @@
-import { ThemeToggle } from './theme-toggle';
+import { ThemeToggle } from '../app/(main)/_components/theme-toggle';
 
 export function Header() {
   return (

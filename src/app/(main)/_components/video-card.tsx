@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Video } from '@/types';
 
@@ -8,7 +10,7 @@ type VideoCardProps = {
 export function VideoCard({ video }: VideoCardProps) {
   return (
     <Card className="group cursor-pointer overflow-hidden pt-0 transition-all hover:shadow-md">
-      <a href={'video.url'} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={`/videos/${video.id}`} className="block">
         <div className="relative aspect-video overflow-hidden bg-zinc-100 dark:bg-zinc-800">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -24,7 +26,7 @@ export function VideoCard({ video }: VideoCardProps) {
         <CardContent>
           <p className="text-muted-foreground mb-3 line-clamp-2 text-sm">{video.synopsis}</p>
         </CardContent>
-      </a>
+      </Link>
     </Card>
   );
 }

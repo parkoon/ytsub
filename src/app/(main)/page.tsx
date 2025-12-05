@@ -6,7 +6,7 @@ import videosData from '@/data/videos.json';
 import { useDebouncedValue } from '@/hooks/use-debounced-value';
 import { Video } from '@/types';
 
-import { Header } from './_components/header';
+import { Header } from '../../components/header';
 import { SearchBar } from './_components/search-bar';
 import { VideoCard } from './_components/video-card';
 
@@ -31,17 +31,14 @@ export default function Home() {
   }, [debouncedSearchQuery]);
 
   return (
-    <div className="bg-background min-h-screen">
-      <Header />
-      <main className="container mx-auto px-4 py-12">
-        <SearchBar value={searchQuery} onChange={setSearchQuery} />
+    <main className="container mx-auto px-4 py-12">
+      <SearchBar value={searchQuery} onChange={setSearchQuery} />
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filteredVideos.map((video: Video) => (
-            <VideoCard key={video.id} video={video} />
-          ))}
-        </div>
-      </main>
-    </div>
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {filteredVideos.map((video: Video) => (
+          <VideoCard key={video.id} video={video} />
+        ))}
+      </div>
+    </main>
   );
 }

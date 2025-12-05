@@ -30,3 +30,21 @@ export type VideosData = {
   categories: string[];
   videos: Video[];
 };
+
+export type VideoDetail = {
+  title: string;
+  synopsis: string;
+  contents: Array<{
+    original: string;
+    pronunciation: string;
+    translation: string;
+    grammar: Array<{
+      pattern: string;
+      explanation: string;
+      example: string;
+    }>;
+    culture: string;
+    timestamps: { from: string; to: string };
+    offsets: { from: number; to: number };
+  }>;
+};
