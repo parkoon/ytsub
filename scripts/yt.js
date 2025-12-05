@@ -87,5 +87,5 @@ if (!url) {
 if (command === 'metadata') {
   getVideoMetadata(url, outputName);
 } else {
-  youtubeToSubtitle(url, outputName);
+youtubeToSubtitle(url, outputName);
 }

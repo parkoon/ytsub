@@ -1,17 +1,21 @@
-import { YouTubePlayer } from './youtube-player';
+'use client';
+
+import { YouTubePlayer, YouTubePlayerRef } from './youtube-player';
 
 interface VideoHeaderProps {
   videoId: string;
   title: string;
   synopsis: string;
+  playerRef: React.RefObject<YouTubePlayerRef | null>;
+  onStateChange?: (state: number) => void;
 }
 
-export function VideoHeader({ videoId, title, synopsis }: VideoHeaderProps) {
+export function VideoHeader({ videoId, title, synopsis, playerRef, onStateChange }: VideoHeaderProps) {
   return (
     <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
       {/* YouTube Player - 왼쪽 (PC) */}
       <div className="w-full lg:w-1/2">
-        <YouTubePlayer videoId={videoId} />
+        <YouTubePlayer ref={playerRef} videoId={videoId} onStateChange={onStateChange} />
       </div>
 
       {/* Title & Synopsis - 오른쪽 (PC) */}

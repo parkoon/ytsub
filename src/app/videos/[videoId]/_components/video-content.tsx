@@ -1,19 +1,44 @@
 'use client';
 
+import { useRef, useState } from 'react';
+
 import { useQuery } from '@tanstack/react-query';
 
 import { getVideoDetailQueryOptions } from '@/api/query-options';
+import { VideoDetail } from '@/api/types';
 
+import { useSubtitleTracking } from '../hooks/use-subtitle-tracking';
+import { SubtitleDisplay } from './subtitle-display';
 import { VideoError } from './video-error';
 import { VideoHeader } from './video-header';
 import { VideoLoading } from './video-loading';
+import { YOUTUBE_PLAYER_STATE, YouTubePlayerRef } from './youtube-player';
 
 interface VideoContentProps {
   videoId: string;
 }
 
 export function VideoContent({ videoId }: VideoContentProps) {
+  const playerRef = useRef<YouTubePlayerRef>(null);
   const { data: video, isLoading, error } = useQuery(getVideoDetailQueryOptions(videoId));
+  const [currentSubtitle, setCurrentSubtitle] = useState<VideoDetail['contents'][0] | null>(null);
+
+  const { startTimeTracking, stopTimeTracking } = useSubtitleTracking({
+    contents: video?.contents || [],
+    playerRef,
+    currentSubtitle,
+    onSubtitleFound: (foundSubtitle) => {
+      setCurrentSubtitle(foundSubtitle);
+    },
+  });
+
+  const handleStateChange = (state: number) => {
+    if (state === YOUTUBE_PLAYER_STATE.PLAYING) {
+      startTimeTracking();
+      return;
+    }
+    stopTimeTracking();
+  };
 
   if (isLoading) {
     return <VideoLoading />;
@@ -29,44 +54,15 @@ export function VideoContent({ videoId }: VideoContentProps) {
 
   return (
     <div className="space-y-8">
-      <VideoHeader videoId={videoId} title={video.title} synopsis={video.synopsis} />
+      <VideoHeader
+        videoId={videoId}
+        title={video.title}
+        synopsis={video.synopsis}
+        playerRef={playerRef}
+        onStateChange={handleStateChange}
+      />
 
-      <div className="space-y-6">
-        {video.contents.map((content, index) => (
-          <div key={index} className="rounded-lg border p-6">
-            <div className="mb-4">
-              <p className="mb-2 text-lg font-medium">{content.original}</p>
-              <p className="text-muted-foreground mb-1 text-sm">{content.pronunciation}</p>
-              <p className="text-muted-foreground text-sm">{content.translation}</p>
-            </div>
-
-            {content.grammar && content.grammar.length > 0 && (
-              <div className="mb-4">
-                <h3 className="mb-2 font-semibold">Grammar</h3>
-                <ul className="space-y-2">
-                  {content.grammar.map((grammar, grammarIndex) => (
-                    <li key={grammarIndex} className="text-sm">
-                      <span className="font-medium">{grammar.pattern}:</span> {grammar.explanation}
-                      {grammar.example && (
-                        <span className="text-muted-foreground block">
-                          Example: {grammar.example}
-                        </span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            {content.culture && (
-              <div>
-                <h3 className="mb-2 font-semibold">Culture</h3>
-                <p className="text-muted-foreground text-sm">{content.culture}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
+      <SubtitleDisplay currentSubtitle={currentSubtitle} />
     </div>
   );
 }
