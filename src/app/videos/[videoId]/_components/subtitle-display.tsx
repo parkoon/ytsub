@@ -2,12 +2,56 @@
 
 import { useMemo } from 'react';
 
+import { motion } from 'framer-motion';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 import { VideoDetail } from '@/api/types';
 
 const CARD_HEIGHT = 420;
+
+interface CarouselButtonsProps {
+  showPrevious: boolean;
+  showNext: boolean;
+  onPrevious?: () => void;
+  onNext?: () => void;
+}
+
+function CarouselButtons({ showPrevious, showNext, onPrevious, onNext }: CarouselButtonsProps) {
+  return (
+    <>
+      {/* 왼쪽 버튼 */}
+      {showPrevious && onPrevious && (
+        <motion.button
+          onClick={onPrevious}
+          className="absolute top-1/2 left-2 -translate-y-1/2 rounded-tr-xl rounded-br-xl bg-gray-500/10 p-2"
+          aria-label="Previous subtitle"
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </motion.button>
+      )}
+
+      {/* 오른쪽 버튼 */}
+      {showNext && onNext && (
+        <motion.button
+          onClick={onNext}
+          className="absolute top-1/2 right-2 -translate-y-1/2 rounded-tl-xl rounded-bl-xl bg-gray-500/10 p-2"
+          aria-label="Next subtitle"
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        >
+          <ChevronRight className="h-5 w-5" />
+        </motion.button>
+      )}
+    </>
+  );
+}
 interface SubtitleDisplayProps {
   currentSubtitle: VideoDetail['contents'][0] | null;
   contents: VideoDetail['contents'];
+  onPrevious?: () => void;
+  onNext?: () => void;
 }
 
 function SubtitleCard({
@@ -20,7 +64,7 @@ function SubtitleCard({
   return (
     <div
       className={`h-full overflow-y-auto rounded-lg border p-6 transition-all duration-300`}
-      style={{ maxHeight: `${CARD_HEIGHT}px` }}
+      style={{ height: `${CARD_HEIGHT}px` }}
     >
       <div className="space-y-4">
         <div>
@@ -56,7 +100,12 @@ function SubtitleCard({
   );
 }
 
-export function SubtitleDisplay({ currentSubtitle, contents }: SubtitleDisplayProps) {
+export function SubtitleDisplay({
+  currentSubtitle,
+  contents,
+  onPrevious,
+  onNext,
+}: SubtitleDisplayProps) {
   const { prevSubtitle, nextSubtitle } = useMemo(() => {
     if (!currentSubtitle) {
       return { prevSubtitle: null, nextSubtitle: null };
@@ -100,6 +149,13 @@ export function SubtitleDisplay({ currentSubtitle, contents }: SubtitleDisplayPr
           <div className="h-full w-2 shrink-0 rounded-tl-lg rounded-bl-lg border-y border-l" />
         )}
       </div>
+
+      <CarouselButtons
+        showPrevious={!!prevSubtitle}
+        showNext={!!nextSubtitle}
+        onPrevious={onPrevious}
+        onNext={onNext}
+      />
     </div>
   );
 }

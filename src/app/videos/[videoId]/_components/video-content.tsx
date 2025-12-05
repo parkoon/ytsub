@@ -40,6 +40,44 @@ export function VideoContent({ videoId }: VideoContentProps) {
     stopTimeTracking();
   };
 
+  const handlePrevious = () => {
+    if (!video || !currentSubtitle) return;
+
+    const currentIndex = video.contents.findIndex(
+      (content) =>
+        content.offsets.from === currentSubtitle.offsets.from &&
+        content.offsets.to === currentSubtitle.offsets.to
+    );
+
+    if (currentIndex > 0) {
+      const prevSubtitle = video.contents[currentIndex - 1];
+      setCurrentSubtitle(prevSubtitle);
+      // 비디오 시간도 해당 자막의 시작 시간으로 이동
+      if (playerRef.current) {
+        playerRef.current.seekTo(prevSubtitle.offsets.from / 1000);
+      }
+    }
+  };
+
+  const handleNext = () => {
+    if (!video || !currentSubtitle) return;
+
+    const currentIndex = video.contents.findIndex(
+      (content) =>
+        content.offsets.from === currentSubtitle.offsets.from &&
+        content.offsets.to === currentSubtitle.offsets.to
+    );
+
+    if (currentIndex < video.contents.length - 1) {
+      const nextSubtitle = video.contents[currentIndex + 1];
+      setCurrentSubtitle(nextSubtitle);
+      // 비디오 시간도 해당 자막의 시작 시간으로 이동
+      if (playerRef.current) {
+        playerRef.current.seekTo(nextSubtitle.offsets.from / 1000);
+      }
+    }
+  };
+
   if (isLoading) {
     return <VideoLoading />;
   }
@@ -62,7 +100,12 @@ export function VideoContent({ videoId }: VideoContentProps) {
         onStateChange={handleStateChange}
       />
 
-      <SubtitleDisplay currentSubtitle={currentSubtitle} contents={video.contents} />
+      <SubtitleDisplay
+        currentSubtitle={currentSubtitle}
+        contents={video.contents}
+        onPrevious={handlePrevious}
+        onNext={handleNext}
+      />
     </div>
   );
 }
