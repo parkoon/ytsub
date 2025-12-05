@@ -23,6 +23,7 @@ export function VideoContent({ videoId }: VideoContentProps) {
   const { data: video, isLoading, error } = useQuery(getVideoDetailQueryOptions(videoId));
   const [currentSubtitle, setCurrentSubtitle] = useState<VideoDetail['contents'][0] | null>(null);
   const [isDrillActive, setIsDrillActive] = useState(false);
+  const [playerState, setPlayerState] = useState<number>(YOUTUBE_PLAYER_STATE.UNSTARTED);
 
   const { startTimeTracking, stopTimeTracking } = useSubtitleTracking({
     contents: video?.contents || [],
@@ -35,6 +36,7 @@ export function VideoContent({ videoId }: VideoContentProps) {
   });
 
   const handleStateChange = (state: number) => {
+    setPlayerState(state);
     if (state === YOUTUBE_PLAYER_STATE.PLAYING) {
       startTimeTracking();
       return;
@@ -100,6 +102,12 @@ export function VideoContent({ videoId }: VideoContentProps) {
         synopsis={video.synopsis}
         playerRef={playerRef}
         onStateChange={handleStateChange}
+        isDrillActive={isDrillActive}
+        onDrillToggle={() => setIsDrillActive((prev) => !prev)}
+        onPrevious={handlePrevious}
+        onNext={handleNext}
+        currentSubtitle={currentSubtitle}
+        playerState={playerState}
       />
 
       <SubtitleDisplay
@@ -107,8 +115,6 @@ export function VideoContent({ videoId }: VideoContentProps) {
         contents={video.contents}
         onPrevious={handlePrevious}
         onNext={handleNext}
-        isDrillActive={isDrillActive}
-        onDrillToggle={() => setIsDrillActive((prev) => !prev)}
       />
     </div>
   );

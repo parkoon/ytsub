@@ -3,7 +3,7 @@
 import { useMemo } from 'react';
 
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Repeat } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { VideoDetail } from '@/api/types';
 
@@ -52,39 +52,20 @@ interface SubtitleDisplayProps {
   contents: VideoDetail['contents'];
   onPrevious?: () => void;
   onNext?: () => void;
-  isDrillActive?: boolean;
-  onDrillToggle?: () => void;
 }
 
 function SubtitleCard({
   subtitle,
   isActive = false,
-  isDrillActive = false,
-  onDrillToggle,
 }: {
   subtitle: VideoDetail['contents'][0];
   isActive?: boolean;
-  isDrillActive?: boolean;
-  onDrillToggle?: () => void;
 }) {
   return (
     <div
       className={`relative h-full overflow-y-auto rounded-lg border p-6 transition-all duration-300`}
       style={{ height: `${CARD_HEIGHT}px` }}
     >
-      {/* Drill 토글 버튼 */}
-      {isActive && onDrillToggle && (
-        <button
-          onClick={onDrillToggle}
-          className={`absolute top-4 right-4 rounded-lg p-2 transition-colors ${
-            isDrillActive ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'
-          }`}
-          aria-label="Toggle drill mode"
-          title="Repeat current subtitle"
-        >
-          <Repeat className={`h-4 w-4 ${isDrillActive ? 'animate-spin' : ''}`} />
-        </button>
-      )}
       <div className="space-y-4">
         <div>
           <p className="mb-2 text-lg font-medium">{subtitle.original}</p>
@@ -124,8 +105,6 @@ export function SubtitleDisplay({
   contents,
   onPrevious,
   onNext,
-  isDrillActive = false,
-  onDrillToggle,
 }: SubtitleDisplayProps) {
   const { prevSubtitle, nextSubtitle } = useMemo(() => {
     if (!currentSubtitle) {
@@ -162,12 +141,7 @@ export function SubtitleDisplay({
 
         {/* 현재 자막 (중앙) */}
         <div className="flex-1 px-2">
-          <SubtitleCard
-            subtitle={currentSubtitle}
-            isActive
-            isDrillActive={isDrillActive}
-            onDrillToggle={onDrillToggle}
-          />
+          <SubtitleCard subtitle={currentSubtitle} isActive />
         </div>
 
         {/* 오른쪽 fake border */}
