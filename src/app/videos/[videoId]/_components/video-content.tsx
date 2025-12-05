@@ -1,25 +1,38 @@
 'use client';
 
-import { useSuspenseQuery } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 
 import { getVideoDetailQueryOptions } from '@/api/query-options';
+
+import { VideoError } from './video-error';
+import { VideoHeader } from './video-header';
+import { VideoLoading } from './video-loading';
 
 interface VideoContentProps {
   videoId: string;
 }
 
 export function VideoContent({ videoId }: VideoContentProps) {
-  const { data: videoDetail } = useSuspenseQuery(getVideoDetailQueryOptions(videoId));
+  const { data: video, isLoading, error } = useQuery(getVideoDetailQueryOptions(videoId));
+
+  if (isLoading) {
+    return <VideoLoading />;
+  }
+
+  if (error) {
+    return <VideoError error={error} />;
+  }
+
+  if (!video) {
+    return null;
+  }
 
   return (
     <div className="space-y-8">
-      <div>
-        <h1 className="mb-2 text-3xl font-bold">{videoDetail.title}</h1>
-        <p className="text-muted-foreground text-lg">{videoDetail.synopsis}</p>
-      </div>
+      <VideoHeader videoId={videoId} title={video.title} synopsis={video.synopsis} />
 
       <div className="space-y-6">
-        {videoDetail.contents.map((content, index) => (
+        {video.contents.map((content, index) => (
           <div key={index} className="rounded-lg border p-6">
             <div className="mb-4">
               <p className="mb-2 text-lg font-medium">{content.original}</p>

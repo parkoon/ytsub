@@ -25,7 +25,15 @@ export const getVideosService = async (): Promise<VideosData> => {
 };
 
 export const getVideoDetailService = async (videoId: string): Promise<VideoDetail> => {
-  const response = await fetch(`/detail/${videoId}.json`);
+  // 클라이언트 사이드에서만 실행되도록 보장
+  if (typeof window === 'undefined') {
+    throw new Error('getVideoDetailService can only be called on the client side');
+  }
+
+  // 절대 URL 사용 (public 폴더의 파일은 루트에서 접근 가능)
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const url = `${baseUrl}/detail/${videoId}.json`;
+  const response = await fetch(url);
   if (!response.ok) {
     throw new Error(`Failed to fetch video detail for ${videoId}`);
   }
