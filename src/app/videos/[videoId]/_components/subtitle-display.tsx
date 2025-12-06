@@ -75,11 +75,7 @@ function SubtitleCard({
   totalCount?: number;
 }) {
   const [isPressing, setIsPressing] = useState(false);
-  const [toggleValues, setToggleValues] = useState<string[]>([
-    'practice',
-    'translation',
-    'pronunciation',
-  ]);
+  const [toggleValues, setToggleValues] = useState<string[]>(['translation', 'pronunciation']);
   const cardRef = useRef<HTMLDivElement>(null);
 
   const isTranslationVisible = toggleValues.includes('translation');
