@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 import { motion } from 'framer-motion';
-import { Gauge, Pause, Play, SkipBack, SkipForward } from 'lucide-react';
+import { Gauge, Pause, Play, Repeat, SkipBack, SkipForward } from 'lucide-react';
 
 import {
   DropdownMenu,
@@ -15,23 +15,29 @@ import {
 
 import { YOUTUBE_PLAYER_STATE } from './youtube-player';
 
-interface CustomVideoPlayerProps {
+interface CustomVideoControllerProps {
+  isPracticeActive?: boolean;
+  isRepeatActive?: boolean;
   onPrevious: () => void;
   onNext: () => void;
   onPlayPause: () => void;
   onPlaybackRateChange: (rate: number) => void;
   playerState?: number;
+  onRepeatToggle?: () => void;
 }
 
 const PLAYBACK_RATES = [0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0];
 
-export function CustomVideoPlayer({
+export function CustomVideoController({
   onPrevious,
   onNext,
   onPlayPause,
   onPlaybackRateChange,
   playerState = YOUTUBE_PLAYER_STATE.UNSTARTED,
-}: CustomVideoPlayerProps) {
+  isPracticeActive = false,
+  isRepeatActive = false,
+  onRepeatToggle,
+}: CustomVideoControllerProps) {
   const [playbackRate, setPlaybackRate] = useState(1.0);
 
   // playerState를 기반으로 재생 상태 계산
@@ -60,6 +66,23 @@ export function CustomVideoPlayer({
         >
           <SkipBack className="h-5 w-5" />
         </motion.button>
+        {onRepeatToggle && (
+          <motion.button
+            onClick={onRepeatToggle}
+            disabled={isPracticeActive}
+            className={`rounded-lg p-2 transition-colors ${
+              isPracticeActive ? 'cursor-not-allowed opacity-50' : ''
+            } ${isRepeatActive ? 'text-primary' : ''}`}
+            aria-label="Repeat current subtitle"
+            title={
+              isPracticeActive ? 'Repeat is active in Practice Mode' : 'Repeat current subtitle'
+            }
+            whileTap={isPracticeActive ? {} : { scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          >
+            <Repeat className="h-5 w-5" />
+          </motion.button>
+        )}
       </div>
 
       <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2">

@@ -23,13 +23,14 @@ export function VideoContent({ videoId }: VideoContentProps) {
   const { data: video, isLoading, error } = useQuery(getVideoDetailQueryOptions(videoId));
   const [currentSubtitle, setCurrentSubtitle] = useState<VideoDetail['contents'][0] | null>(null);
   const [isPracticeActive, setIsPracticeActive] = useState(false);
+  const [isRepeatActive, setIsRepeatActive] = useState(false);
   const [playerState, setPlayerState] = useState<number>(YOUTUBE_PLAYER_STATE.UNSTARTED);
 
   const { startTimeTracking, stopTimeTracking } = useSubtitleTracking({
     contents: video?.contents || [],
     playerRef,
     currentSubtitle,
-    repeatMode: isPracticeActive,
+    repeatMode: isPracticeActive || isRepeatActive,
     onSubtitleFound: (foundSubtitle) => {
       setCurrentSubtitle(foundSubtitle);
     },
@@ -123,6 +124,9 @@ export function VideoContent({ videoId }: VideoContentProps) {
         onPlayPause={handlePlayPause}
         onPlaybackRateChange={handlePlaybackRateChange}
         playerState={playerState}
+        isPracticeActive={isPracticeActive}
+        isRepeatActive={isRepeatActive}
+        onRepeatToggle={() => setIsRepeatActive((prev) => !prev)}
       />
 
       <SubtitleDisplay

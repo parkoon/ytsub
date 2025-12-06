@@ -1,6 +1,6 @@
 'use client';
 
-import { CustomVideoPlayer } from './custom-video-player';
+import { CustomVideoController } from './custom-video-contoller';
 import { YouTubePlayer, YouTubePlayerRef } from './youtube-player';
 
 interface VideoHeaderProps {
@@ -14,6 +14,9 @@ interface VideoHeaderProps {
   onPlayPause?: () => void;
   onPlaybackRateChange?: (rate: number) => void;
   playerState?: number;
+  isPracticeActive?: boolean;
+  isRepeatActive?: boolean;
+  onRepeatToggle?: () => void;
 }
 
 export function VideoHeader({
@@ -27,6 +30,9 @@ export function VideoHeader({
   onPlayPause,
   onPlaybackRateChange,
   playerState,
+  isPracticeActive,
+  isRepeatActive,
+  onRepeatToggle,
 }: VideoHeaderProps) {
   return (
     <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
@@ -35,20 +41,23 @@ export function VideoHeader({
         <YouTubePlayer ref={playerRef} videoId={videoId} onStateChange={onStateChange} />
         {/* Custom Video Player */}
         {(onPrevious || onNext) && (
-          <CustomVideoPlayer
+          <CustomVideoController
             onPrevious={onPrevious || (() => {})}
             onNext={onNext || (() => {})}
             onPlayPause={onPlayPause || (() => {})}
             onPlaybackRateChange={onPlaybackRateChange || (() => {})}
             playerState={playerState}
+            isPracticeActive={isPracticeActive}
+            isRepeatActive={isRepeatActive}
+            onRepeatToggle={onRepeatToggle}
           />
         )}
       </div>
 
       {/* Title & Synopsis - 오른쪽 (PC) */}
       <div className="w-full lg:w-1/2">
-        <h1 className="mb-2 text-3xl font-bold">{title}</h1>
-        <p className="text-muted-foreground text-lg">{synopsis}</p>
+        <h1 className="mb-2 text-xl font-bold">{title}</h1>
+        <p className="text-muted-foreground text-base">{synopsis}</p>
       </div>
     </div>
   );
