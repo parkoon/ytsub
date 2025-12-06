@@ -6,7 +6,7 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between px-4 py-4">
         <div className="flex items-center gap-2">
           <h1 className="text-xl font-semibold">
-            Tube<span className="text-primary">Wiki</span>
+            YT<span className="text-primary">Sub</span>
           </h1>
         </div>
         <div className="flex items-center gap-2">
