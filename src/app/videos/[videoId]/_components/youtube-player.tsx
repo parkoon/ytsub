@@ -145,7 +145,7 @@ export const YouTubePlayer = forwardRef<YouTubePlayerRef, YouTubePlayerProps>(
     return (
       <div
         className={cn(
-          'relative aspect-video w-full bg-black',
+          'relative aspect-video w-full border bg-black',
           disabled ? 'pointer-events-none' : '',
           className
         )}

@@ -8,6 +8,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { VideoDetail } from '@/api/types';
 import { Switch } from '@/components/ui/switch';
+import { cn } from '@/lib/utils';
 
 const CARD_HEIGHT = 420;
 
@@ -125,9 +126,11 @@ function SubtitleCard({
   return (
     <div
       ref={cardRef}
-      className={`relative h-full overflow-y-auto rounded-lg border p-6 transition-all duration-300 ${
-        isPracticeActive && !isPressing ? 'cursor-pointer' : ''
-      }`}
+      className={cn(
+        `relative h-full overflow-y-auto rounded-lg border p-6`,
+        isPracticeActive && !isPressing && 'cursor-pointer',
+        isPracticeActive && 'border-primary'
+      )}
       style={{ height: `${CARD_HEIGHT}px` }}
     >
       {onPracticeToggle && (
