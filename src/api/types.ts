@@ -1,4 +1,9 @@
-import { Subtitle } from '@/types';
+type Subtitle = {
+  id: string;
+  text: string;
+  startTime: number;
+  endTime: number;
+};
 
 export type GetYTSubtitleResponse = {
   videoId: string;

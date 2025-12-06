@@ -6,7 +6,6 @@ import videosData from '@/data/videos.json';
 import { useDebouncedValue } from '@/hooks/use-debounced-value';
 import { Video } from '@/types';
 
-import { Header } from '../../components/header';
 import { SearchBar } from './_components/search-bar';
 import { VideoCard } from './_components/video-card';
 
