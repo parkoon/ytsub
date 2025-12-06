@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { VideoDetail } from '@/api/types';
+import { Switch } from '@/components/ui/switch';
 
 const CARD_HEIGHT = 420;
 
@@ -52,20 +53,32 @@ interface SubtitleDisplayProps {
   contents: VideoDetail['contents'];
   onPrevious?: () => void;
   onNext?: () => void;
+  isPracticeActive?: boolean;
+  onPracticeToggle?: () => void;
 }
 
 function SubtitleCard({
   subtitle,
   isActive = false,
+  isPracticeActive = false,
+  onPracticeToggle,
 }: {
   subtitle: VideoDetail['contents'][0];
   isActive?: boolean;
+  isPracticeActive?: boolean;
+  onPracticeToggle?: () => void;
 }) {
   return (
     <div
       className={`relative h-full overflow-y-auto rounded-lg border p-6 transition-all duration-300`}
       style={{ height: `${CARD_HEIGHT}px` }}
     >
+      {onPracticeToggle && (
+        <div className="absolute top-4 right-4 z-10 flex items-center gap-2">
+          <span className="text-muted-foreground text-sm">Practice Mode</span>
+          <Switch checked={isPracticeActive} onCheckedChange={onPracticeToggle} />
+        </div>
+      )}
       <div className="space-y-4">
         <div>
           <p className="mb-2 text-lg font-medium">{subtitle.original}</p>
@@ -105,6 +118,8 @@ export function SubtitleDisplay({
   contents,
   onPrevious,
   onNext,
+  isPracticeActive,
+  onPracticeToggle,
 }: SubtitleDisplayProps) {
   const { prevSubtitle, nextSubtitle } = useMemo(() => {
     if (!currentSubtitle) {
@@ -141,7 +156,12 @@ export function SubtitleDisplay({
 
         {/* 현재 자막 (중앙) */}
         <div className="flex-1 px-2">
-          <SubtitleCard subtitle={currentSubtitle} isActive />
+          <SubtitleCard
+            subtitle={currentSubtitle}
+            isActive
+            isPracticeActive={isPracticeActive}
+            onPracticeToggle={onPracticeToggle}
+          />
         </div>
 
         {/* 오른쪽 fake border */}

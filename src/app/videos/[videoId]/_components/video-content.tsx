@@ -22,14 +22,14 @@ export function VideoContent({ videoId }: VideoContentProps) {
   const playerRef = useRef<YouTubePlayerRef>(null);
   const { data: video, isLoading, error } = useQuery(getVideoDetailQueryOptions(videoId));
   const [currentSubtitle, setCurrentSubtitle] = useState<VideoDetail['contents'][0] | null>(null);
-  const [isDrillActive, setIsDrillActive] = useState(false);
+  const [isPracticeActive, setIsPracticeActive] = useState(false);
   const [playerState, setPlayerState] = useState<number>(YOUTUBE_PLAYER_STATE.UNSTARTED);
 
   const { startTimeTracking, stopTimeTracking } = useSubtitleTracking({
     contents: video?.contents || [],
     playerRef,
     currentSubtitle,
-    repeatMode: isDrillActive,
+    repeatMode: isPracticeActive,
     onSubtitleFound: (foundSubtitle) => {
       setCurrentSubtitle(foundSubtitle);
     },
@@ -82,6 +82,22 @@ export function VideoContent({ videoId }: VideoContentProps) {
     }
   };
 
+  const handlePlayPause = () => {
+    if (!playerRef.current) return;
+
+    const currentState = playerRef.current.getPlayerState();
+    if (currentState === YOUTUBE_PLAYER_STATE.PLAYING) {
+      playerRef.current.pause();
+    } else {
+      playerRef.current.play();
+    }
+  };
+
+  const handlePlaybackRateChange = (rate: number) => {
+    if (!playerRef.current) return;
+    playerRef.current.setPlaybackRate(rate);
+  };
+
   if (isLoading) {
     return <VideoLoading />;
   }
@@ -102,11 +118,10 @@ export function VideoContent({ videoId }: VideoContentProps) {
         synopsis={video.synopsis}
         playerRef={playerRef}
         onStateChange={handleStateChange}
-        isDrillActive={isDrillActive}
-        onDrillToggle={() => setIsDrillActive((prev) => !prev)}
         onPrevious={handlePrevious}
         onNext={handleNext}
-        currentSubtitle={currentSubtitle}
+        onPlayPause={handlePlayPause}
+        onPlaybackRateChange={handlePlaybackRateChange}
         playerState={playerState}
       />
 
@@ -115,6 +130,8 @@ export function VideoContent({ videoId }: VideoContentProps) {
         contents={video.contents}
         onPrevious={handlePrevious}
         onNext={handleNext}
+        isPracticeActive={isPracticeActive}
+        onPracticeToggle={() => setIsPracticeActive((prev) => !prev)}
       />
     </div>
   );

@@ -3,29 +3,25 @@
 import { useState } from 'react';
 
 import { motion } from 'framer-motion';
-import { Play, Pause, SkipBack, SkipForward, Repeat, Gauge } from 'lucide-react';
+import { Gauge, Pause, Play, SkipBack, SkipForward } from 'lucide-react';
 
-import { YOUTUBE_PLAYER_STATE, YouTubePlayerRef } from './youtube-player';
+import { YOUTUBE_PLAYER_STATE } from './youtube-player';
 
 interface CustomVideoPlayerProps {
-  playerRef: React.RefObject<YouTubePlayerRef | null>;
-  isDrillActive: boolean;
-  onDrillToggle: () => void;
   onPrevious: () => void;
   onNext: () => void;
-  currentSubtitle: { offsets: { from: number; to: number } } | null;
+  onPlayPause: () => void;
+  onPlaybackRateChange: (rate: number) => void;
   playerState?: number;
 }
 
 const PLAYBACK_RATES = [0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0];
 
 export function CustomVideoPlayer({
-  playerRef,
-  isDrillActive,
-  onDrillToggle,
   onPrevious,
   onNext,
-  currentSubtitle,
+  onPlayPause,
+  onPlaybackRateChange,
   playerState = YOUTUBE_PLAYER_STATE.UNSTARTED,
 }: CustomVideoPlayerProps) {
   const [playbackRate, setPlaybackRate] = useState(1.0);
@@ -35,60 +31,21 @@ export function CustomVideoPlayer({
   const isPlaying = playerState === YOUTUBE_PLAYER_STATE.PLAYING;
 
   const handlePlayPause = () => {
-    if (!playerRef.current) return;
-
-    if (isPlaying) {
-      playerRef.current.pause();
-    } else {
-      playerRef.current.play();
-    }
+    onPlayPause();
   };
 
   const handlePlaybackRateChange = (rate: number) => {
-    if (!playerRef.current) return;
-    playerRef.current.setPlaybackRate(rate);
+    onPlaybackRateChange(rate);
     setPlaybackRate(rate);
     setShowPlaybackRateMenu(false);
   };
 
-  const handleSkipBack = () => {
-    if (!playerRef.current) return;
-    const currentTime = playerRef.current.getCurrentTime();
-    const newTime = Math.max(0, currentTime - 5);
-    playerRef.current.seekTo(newTime);
-  };
-
-  const handleSkipForward = () => {
-    if (!playerRef.current) return;
-    const currentTime = playerRef.current.getCurrentTime();
-    const duration = playerRef.current.getDuration();
-    const newTime = Math.min(duration, currentTime + 5);
-    playerRef.current.seekTo(newTime);
-  };
-
   return (
-    <div className="flex items-center justify-between gap-2 rounded-lg border bg-background p-3">
-      {/* 왼쪽: Drill 버튼 */}
-      <div className="flex items-center gap-2">
-        <motion.button
-          onClick={onDrillToggle}
-          className={`rounded-lg p-2 transition-colors ${
-            isDrillActive ? 'bg-primary text-primary-foreground' : 'bg-muted hover:bg-muted/80'
-          }`}
-          aria-label="Toggle drill mode"
-          title="Repeat current subtitle"
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-        >
-          <Repeat className={`h-5 w-5 ${isDrillActive ? 'animate-spin' : ''}`} />
-        </motion.button>
-      </div>
-
-      {/* 중앙: 재생 컨트롤 */}
-      <div className="flex flex-1 items-center justify-center gap-2">
+    <div className="bg-background relative flex h-14 items-center rounded-br-xl rounded-bl-xl border p-3">
+      <div className="absolute top-1/2 left-3 z-10 flex -translate-y-1/2 items-center gap-8">
         <motion.button
           onClick={onPrevious}
-          className="rounded-lg bg-muted p-2 transition-colors hover:bg-muted/80"
+          className="rounded-lg p-2 transition-colors"
           aria-label="Previous subtitle"
           title="Previous subtitle"
           whileTap={{ scale: 0.95 }}
@@ -96,20 +53,34 @@ export function CustomVideoPlayer({
         >
           <SkipBack className="h-5 w-5" />
         </motion.button>
+      </div>
 
+      <div className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2">
         <motion.button
           onClick={handlePlayPause}
-          className="rounded-lg bg-primary p-3 text-primary-foreground transition-colors hover:bg-primary/90"
+          className="rounded-lg p-3 transition-colors"
           aria-label={isPlaying ? 'Pause' : 'Play'}
           whileTap={{ scale: 0.95 }}
           transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         >
           {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
         </motion.button>
+      </div>
 
+      <div className="absolute top-1/2 right-3 z-10 flex -translate-y-1/2 items-center gap-8">
+        <motion.button
+          onClick={() => setShowPlaybackRateMenu(!showPlaybackRateMenu)}
+          className="flex w-[60px] flex-col items-center justify-center rounded-lg px-3 py-2 transition-colors"
+          aria-label="Playback rate"
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        >
+          <Gauge className="-mb-1 h-4 w-4" />
+          <span className="text-xs font-medium">{playbackRate}x</span>
+        </motion.button>
         <motion.button
           onClick={onNext}
-          className="rounded-lg bg-muted p-2 transition-colors hover:bg-muted/80"
+          className="rounded-lg p-2 transition-colors"
           aria-label="Next subtitle"
           title="Next subtitle"
           whileTap={{ scale: 0.95 }}
@@ -119,40 +90,23 @@ export function CustomVideoPlayer({
         </motion.button>
       </div>
 
-      {/* 오른쪽: 배속 조절 */}
-      <div className="relative flex items-center gap-2">
-        <motion.button
-          onClick={() => setShowPlaybackRateMenu(!showPlaybackRateMenu)}
-          className="flex items-center gap-1 rounded-lg bg-muted px-3 py-2 transition-colors hover:bg-muted/80"
-          aria-label="Playback rate"
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-        >
-          <Gauge className="h-4 w-4" />
-          <span className="text-sm font-medium">{playbackRate}x</span>
-        </motion.button>
-
-        {showPlaybackRateMenu && (
-          <div className="absolute bottom-full right-0 mb-2 rounded-lg border bg-background shadow-lg">
-            <div className="flex flex-col p-1">
-              {PLAYBACK_RATES.map((rate) => (
-                <button
-                  key={rate}
-                  onClick={() => handlePlaybackRateChange(rate)}
-                  className={`rounded px-3 py-1.5 text-left text-sm transition-colors ${
-                    playbackRate === rate
-                      ? 'bg-primary text-primary-foreground'
-                      : 'hover:bg-muted'
-                  }`}
-                >
-                  {rate}x
-                </button>
-              ))}
-            </div>
+      {showPlaybackRateMenu && (
+        <div className="bg-background absolute right-0 bottom-full mb-2 rounded-lg border shadow-lg">
+          <div className="flex flex-col p-1">
+            {PLAYBACK_RATES.map((rate) => (
+              <button
+                key={rate}
+                onClick={() => handlePlaybackRateChange(rate)}
+                className={`rounded px-3 py-1.5 text-left text-sm transition-colors ${
+                  playbackRate === rate ? 'bg-primary text-primary-foreground' : 'hover:bg-muted'
+                }`}
+              >
+                {rate}x
+              </button>
+            ))}
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
-

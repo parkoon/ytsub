@@ -46,7 +46,7 @@ export const useSubtitleTracking = ({
 
       const activeSubtitle = currentSubtitleRef.current;
 
-      // Drill 모드가 활성화되어 있고 현재 자막이 끝났을 때 → 다시 시작 시간으로 이동
+      // Practice 모드가 활성화되어 있고 현재 자막이 끝났을 때 → 다시 시작 시간으로 이동
       if (repeatModeRef.current && activeSubtitle && timeMs >= activeSubtitle.offsets.to) {
         playerRef.current?.seekTo(activeSubtitle.offsets.from / 1000);
         return;
@@ -77,7 +77,7 @@ export const useSubtitleTracking = ({
     animationFrameRef.current = requestAnimationFrame(updateTime);
   };
 
-  // Drill 모드가 변경되면 추적 재시작
+  // Practice 모드가 변경되면 추적 재시작
   useEffect(() => {
     if (repeatModeRef.current && playerRef.current) {
       const playerState = playerRef.current.getPlayerState();

@@ -9,11 +9,10 @@ interface VideoHeaderProps {
   synopsis: string;
   playerRef: React.RefObject<YouTubePlayerRef | null>;
   onStateChange?: (state: number) => void;
-  isDrillActive?: boolean;
-  onDrillToggle?: () => void;
   onPrevious?: () => void;
   onNext?: () => void;
-  currentSubtitle?: { offsets: { from: number; to: number } } | null;
+  onPlayPause?: () => void;
+  onPlaybackRateChange?: (rate: number) => void;
   playerState?: number;
 }
 
@@ -23,28 +22,24 @@ export function VideoHeader({
   synopsis,
   playerRef,
   onStateChange,
-  isDrillActive = false,
-  onDrillToggle,
   onPrevious,
   onNext,
-  currentSubtitle,
+  onPlayPause,
+  onPlaybackRateChange,
   playerState,
 }: VideoHeaderProps) {
-  console.log('🚀 ~ VideoHeader ~ playerState:', playerState);
   return (
     <div className="flex flex-col gap-6 lg:flex-row lg:items-start">
       {/* YouTube Player - 왼쪽 (PC) */}
       <div className="w-full lg:w-1/2">
         <YouTubePlayer ref={playerRef} videoId={videoId} onStateChange={onStateChange} />
         {/* Custom Video Player */}
-        {(onDrillToggle || onPrevious || onNext) && (
+        {(onPrevious || onNext) && (
           <CustomVideoPlayer
-            playerRef={playerRef}
-            isDrillActive={isDrillActive}
-            onDrillToggle={onDrillToggle || (() => {})}
             onPrevious={onPrevious || (() => {})}
             onNext={onNext || (() => {})}
-            currentSubtitle={currentSubtitle || null}
+            onPlayPause={onPlayPause || (() => {})}
+            onPlaybackRateChange={onPlaybackRateChange || (() => {})}
             playerState={playerState}
           />
         )}
