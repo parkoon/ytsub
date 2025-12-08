@@ -1,0 +1,621 @@
+{
+  "title": "Episode 5-2 Highlights | Kim Soo-hyun × Kim Ji-won, The Couple Who Inevitably Drifted Apart",
+  "synopsis": "A flashback reveals how Hyun-woo and Hye-in's marriage fell apart. He tells his friend he can't go inside—being near her makes him lose his mind, but not in a good way anymore. Hye-in clears out the baby items, a painful reminder of the child they'll never have. She moves to a separate room. When she waits outside all night for him to come home, she denies it fiercely—'I'm not the type to wait for anyone.' His response cuts deep: 'I know better than anyone you're not that kind of person.'",
+  "contents": [
+    {
+      "original": "너도 정신 차리고 얼른 들어가.",
+      "pronunciation": "Neo-do jeongsin charigo eolleun deureoga.",
+      "translation": "You snap out of it too and hurry inside.",
+      "grammar": [
+        {
+          "pattern": "정신 차리다 (jeongsin charida)",
+          "explanation": "Expression meaning 'to snap out of it/get a grip'",
+          "example": "정신 차리고 = snap out of it and"
+        },
+        {
+          "pattern": "얼른 (eolleun)",
+          "explanation": "Adverb meaning 'quickly/hurry'",
+          "example": "얼른 들어가 = hurry inside"
+        }
+      ],
+      "culture": "This is a flashback scene—Hyun-woo's friend telling him to go back inside to his wife.",
+      "timestamps": { "from": "00:00:00,000", "to": "00:00:02,540" },
+      "offsets": { "from": 0, "to": 2540 }
+    },
+    {
+      "original": "내가 정신을 차리려고 나온 거야.",
+      "pronunciation": "Naega jeongsin-eul chariryeogo naon geoya.",
+      "translation": "I came out TO get a grip.",
+      "grammar": [
+        {
+          "pattern": "~(으)려고 (euryeogo)",
+          "explanation": "Expression meaning 'in order to'",
+          "example": "차리려고 나온 거야 = I came out to get a grip"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:00:02,540", "to": "00:00:09,600" },
+      "offsets": { "from": 2540, "to": 9600 }
+    },
+    {
+      "original": "들어가면 정신이 하나도 없다고.",
+      "pronunciation": "Deureogamyeon jeongsin-i hanado eopdago.",
+      "translation": "When I'm inside, I completely lose it.",
+      "grammar": [
+        {
+          "pattern": "정신이 없다 (jeongsin-i eopda)",
+          "explanation": "Expression meaning 'to be overwhelmed/lose one's mind'",
+          "example": "정신이 하나도 없다 = completely lose it"
+        }
+      ],
+      "culture": "Double meaning—in the past (this flashback), being around Hye-in drove him crazy in a bad way. Now (present), it's driving him crazy with rekindled feelings.",
+      "timestamps": { "from": "00:00:09,600", "to": "00:00:11,740" },
+      "offsets": { "from": 9600, "to": 11740 }
+    },
+    {
+      "original": "들어가면 왜 정신이 없어?",
+      "pronunciation": "Deureogamyeon wae jeongsin-i eopseo?",
+      "translation": "Why do you lose it when you go inside?",
+      "grammar": [
+        {
+          "pattern": "왜 (wae)",
+          "explanation": "Question word 'why'",
+          "example": "왜 정신이 없어 = why do you lose it"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:00:11,740", "to": "00:00:22,740" },
+      "offsets": { "from": 11740, "to": 22740 }
+    },
+    {
+      "original": "몰라, 그냥 정신이 없어.",
+      "pronunciation": "Molla, geunyang jeongsin-i eopseo.",
+      "translation": "I don't know, I just lose it.",
+      "grammar": [
+        {
+          "pattern": "몰라 (molla)",
+          "explanation": "Casual 'I don't know'",
+          "example": "몰라 = I don't know"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:00:22,740", "to": "00:00:32,740" },
+      "offsets": { "from": 22740, "to": 32740 }
+    },
+    {
+      "original": "어디?",
+      "pronunciation": "Eodi?",
+      "translation": "Where are you?",
+      "grammar": [
+        {
+          "pattern": "어디 (eodi)",
+          "explanation": "Question word 'where'",
+          "example": "어디? = where?"
+        }
+      ],
+      "culture": "Hye-in's text message asking where Hyun-woo is.",
+      "timestamps": { "from": "00:00:53,740", "to": "00:01:01,740" },
+      "offsets": { "from": 53740, "to": 61740 }
+    },
+    {
+      "original": "뭐 하는 거야, 문자 안 보고. 어? 봤어.",
+      "pronunciation": "Mwo haneun geoya, munja an bogo. Eo? Bwasseo.",
+      "translation": "What are you doing, not reading texts. Huh? I saw it.",
+      "grammar": [
+        {
+          "pattern": "문자 (munja)",
+          "explanation": "Noun meaning 'text message'",
+          "example": "문자 안 보고 = not reading texts"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:01,740", "to": "00:01:16,280" },
+      "offsets": { "from": 61740, "to": 76280 }
+    },
+    {
+      "original": "먼저 자.",
+      "pronunciation": "Meonjeo ja.",
+      "translation": "Go to sleep first.",
+      "grammar": [
+        {
+          "pattern": "먼저 (meonjeo)",
+          "explanation": "Adverb meaning 'first'",
+          "example": "먼저 자 = sleep first"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:16,280", "to": "00:01:22,140" },
+      "offsets": { "from": 76280, "to": 82140 }
+    },
+    {
+      "original": "먼저 자? 자라고, 먼저? 나 혼자야?",
+      "pronunciation": "Meonjeo ja? Jarago, meonjeo? Na honjaya?",
+      "translation": "Sleep first? You're telling me to sleep first? Alone?",
+      "grammar": [
+        {
+          "pattern": "~라고 (rago)",
+          "explanation": "Quotation marker showing disbelief",
+          "example": "자라고 = you're telling me to sleep?"
+        },
+        {
+          "pattern": "혼자 (honja)",
+          "explanation": "Adverb meaning 'alone'",
+          "example": "나 혼자야? = alone?"
+        }
+      ],
+      "culture": "Hye-in's hurt and disbelief—her husband is telling her to sleep alone.",
+      "timestamps": { "from": "00:01:22,140", "to": "00:01:37,900" },
+      "offsets": { "from": 82140, "to": 97900 }
+    },
+    {
+      "original": "그래, 먼저 자라잖아. 자자, 먼저 자.",
+      "pronunciation": "Geurae, meonjeo jarajana. Jaja, meonjeo ja.",
+      "translation": "Yeah, I said sleep first. Go on, sleep first.",
+      "grammar": [
+        {
+          "pattern": "~잖아 (jana)",
+          "explanation": "Ending emphasizing known information",
+          "example": "자라잖아 = I'm telling you to sleep"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:37,900", "to": "00:01:51,780" },
+      "offsets": { "from": 97900, "to": 111780 }
+    },
+    {
+      "original": "아, 피한 거 맞네. 왜? 내가 뭐, 지를 잡아먹어? 내가 무서워?",
+      "pronunciation": "A, pihan geo manne. Wae? Naega mwo, jireul jabameogeo? Naega museowo?",
+      "translation": "Ah, so he IS avoiding me. Why? Am I going to eat her alive? Is she scared of me?",
+      "grammar": [
+        {
+          "pattern": "피하다 (pihada)",
+          "explanation": "Verb meaning 'to avoid'",
+          "example": "피한 거 맞네 = he IS avoiding"
+        },
+        {
+          "pattern": "잡아먹다 (jabameokda)",
+          "explanation": "Expression meaning 'to devour/eat alive'",
+          "example": "잡아먹어? = am I going to eat her?"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:01:51,780", "to": "00:02:02,220" },
+      "offsets": { "from": 111780, "to": 122220 }
+    },
+    {
+      "original": "시끄러워. 내가 뭐가 무서워? 어디 가, 어딜?",
+      "pronunciation": "Sikkeureowo. Naega mwoga museowo? Eodi ga, eodil?",
+      "translation": "Shut up. Why would I be scared? Where are you going?",
+      "grammar": [
+        {
+          "pattern": "시끄럽다 (sikkeureupda)",
+          "explanation": "Adjective meaning 'noisy/shut up'",
+          "example": "시끄러워 = shut up"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:02,220", "to": "00:02:16,220" },
+      "offsets": { "from": 122220, "to": 136220 }
+    },
+    {
+      "original": "야, 이 동네 개들도 안 짖는다. 우리도 이제 들어가서 자자.",
+      "pronunciation": "Ya, i dongne gae-deul-do an jitneunda. Uri-do ije deureogaseo jaja.",
+      "translation": "Hey, even the neighborhood dogs aren't barking anymore. Let's go inside and sleep too.",
+      "grammar": [
+        {
+          "pattern": "짖다 (jitda)",
+          "explanation": "Verb meaning 'to bark'",
+          "example": "개들도 안 짖는다 = even dogs aren't barking"
+        }
+      ],
+      "culture": "It's extremely late at night—even dogs have stopped barking.",
+      "timestamps": { "from": "00:02:16,220", "to": "00:02:21,220" },
+      "offsets": { "from": 136220, "to": 141220 }
+    },
+    {
+      "original": "나는 좀 더 있다가.",
+      "pronunciation": "Na-neun jom deo itdaga.",
+      "translation": "I'll stay a bit longer.",
+      "grammar": [
+        {
+          "pattern": "있다가 (itdaga)",
+          "explanation": "Expression meaning 'after staying/being'",
+          "example": "좀 더 있다가 = after staying a bit more"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:21,220", "to": "00:02:23,220" },
+      "offsets": { "from": 141220, "to": 143220 }
+    },
+    {
+      "original": "제수씨 혼자 자겠다. 응, 그러니까. 나 혜인이 자면 들어가려고.",
+      "pronunciation": "Jesu-ssi honja jagetda. Eung, geureonikka. Na Hyein-i jamyeon deureogaryeogo.",
+      "translation": "Your wife is going to sleep alone. Yeah, exactly. I'll go in once Hye-in falls asleep.",
+      "grammar": [
+        {
+          "pattern": "제수씨 (jesu-ssi)",
+          "explanation": "Term for 'younger brother's wife'",
+          "example": "제수씨 혼자 = your wife alone"
+        },
+        {
+          "pattern": "~(으)면 (myeon)",
+          "explanation": "Conditional 'if/when'",
+          "example": "혜인이 자면 = when Hye-in sleeps"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:23,220", "to": "00:02:35,220" },
+      "offsets": { "from": 143220, "to": 155220 }
+    },
+    {
+      "original": "아이씨, 제수씨 또. 왜, 왜 제수씨 자면 들어가?",
+      "pronunciation": "Aissi, jesu-ssi tto. Wae, wae jesu-ssi jamyeon deureoga?",
+      "translation": "Geez, your wife again. Why, why do you go in when she falls asleep?",
+      "grammar": [
+        {
+          "pattern": "아이씨 (aissi)",
+          "explanation": "Mild expletive of frustration",
+          "example": "아이씨 = geez/damn"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:35,220", "to": "00:02:47,220" },
+      "offsets": { "from": 155220, "to": 167220 }
+    },
+    {
+      "original": "아, 내가 사고 칠까 봐.",
+      "pronunciation": "A, naega sago chilkka bwa.",
+      "translation": "Because I might cause trouble.",
+      "grammar": [
+        {
+          "pattern": "사고 치다 (sago chida)",
+          "explanation": "Expression meaning 'to cause trouble/make a mistake'",
+          "example": "사고 칠까 봐 = worried I might cause trouble"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:47,220", "to": "00:02:52,220" },
+      "offsets": { "from": 167220, "to": 172220 }
+    },
+    {
+      "original": "뭔 소리야. 사고는 술 마시면 치는 거고 사고치기 싫으면 술을 마시지 말아야지.",
+      "pronunciation": "Mwon soriya. Sago-neun sul masimyeon chineun geogo sagochigi sireumyeon sur-eul masiji marayaji.",
+      "translation": "What are you talking about? You cause trouble when you drink. If you don't want trouble, don't drink.",
+      "grammar": [
+        {
+          "pattern": "~지 말다 (ji malda)",
+          "explanation": "Negative imperative 'don't'",
+          "example": "마시지 말아야지 = shouldn't drink"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:02:52,220", "to": "00:02:57,220" },
+      "offsets": { "from": 172220, "to": 177220 }
+    },
+    {
+      "original": "아니, 나는 술 마시고 뻗어야 사고를 안 칠 것 같아.",
+      "pronunciation": "Ani, na-neun sul masigo ppeo-deoya sago-reul an chil geot gata.",
+      "translation": "No, I think I need to drink and pass out to NOT cause trouble.",
+      "grammar": [
+        {
+          "pattern": "뻗다 (ppeotda)",
+          "explanation": "Verb meaning 'to pass out/stretch out'",
+          "example": "술 마시고 뻗어야 = need to drink and pass out"
+        }
+      ],
+      "culture": "Hyun-woo's twisted logic—he needs to be unconscious to avoid doing something he might regret with Hye-in.",
+      "timestamps": { "from": "00:02:57,220", "to": "00:03:03,220" },
+      "offsets": { "from": 177220, "to": 183220 }
+    },
+    {
+      "original": "난 네 말을 대체적으로 잘 이해를 못하겠어.",
+      "pronunciation": "Nan ne mar-eul daechejeogeuro jal ihae-reul mothagetsseo.",
+      "translation": "I generally don't understand what you're saying.",
+      "grammar": [
+        {
+          "pattern": "대체적으로 (daechejeogeuro)",
+          "explanation": "Adverb meaning 'generally/mostly'",
+          "example": "대체적으로 잘 이해를 못하겠어 = I generally can't understand"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:03:03,220", "to": "00:03:07,220" },
+      "offsets": { "from": 183220, "to": 187220 }
+    },
+    {
+      "original": "형 잘 들어. 나는 지금부터 술을 더 마실 거야. 그리고 인사불성이 될 거야.",
+      "pronunciation": "Hyeong jal deureo. Na-neun jigeum-buteo sur-eul deo masil geoya. Geurigo insabulseong-i doel geoya.",
+      "translation": "Listen carefully, hyung. From now on, I'm going to drink more. And I'm going to get completely wasted.",
+      "grammar": [
+        {
+          "pattern": "인사불성 (insabulseong)",
+          "explanation": "Idiom meaning 'completely unconscious/blackout drunk'",
+          "example": "인사불성이 될 거야 = I'll become unconscious"
+        }
+      ],
+      "culture": "인사불성 (人事不省) - literally 'unable to recognize people,' meaning blackout drunk.",
+      "timestamps": { "from": "00:03:07,220", "to": "00:03:16,220" },
+      "offsets": { "from": 187220, "to": 196220 }
+    },
+    {
+      "original": "형은 이것만 명심해 줘. 뭐? 절대 나를 방에 넣지 마.",
+      "pronunciation": "Hyeong-eun igeotman myeongsimhae jwo. Mwo? Jeoldae na-reul bang-e neochi ma.",
+      "translation": "Just remember this one thing, hyung. What? Never put me in the room.",
+      "grammar": [
+        {
+          "pattern": "명심하다 (myeongsimhada)",
+          "explanation": "Verb meaning 'to keep in mind/remember'",
+          "example": "명심해 줘 = remember this"
+        },
+        {
+          "pattern": "절대 ~지 마 (jeoldae ji ma)",
+          "explanation": "Strong prohibition 'never'",
+          "example": "절대 넣지 마 = never put me"
+        }
+      ],
+      "culture": "The pivotal request—Hyun-woo asking his friend to keep him away from Hye-in's room no matter what.",
+      "timestamps": { "from": "00:03:16,220", "to": "00:03:32,220" },
+      "offsets": { "from": 196220, "to": 212220 }
+    },
+    {
+      "original": "저 방 치우는 거야? 나도 필요가 있어? 눈에 보이면 짜증이나 나지.",
+      "pronunciation": "Jeo bang chiuneun geoya? Na-do pilyo-ga isseo? Nun-e boimyeon jjajeung-ina naji.",
+      "translation": "Are you clearing out that room? Is there any need? It just irritates me when I see it.",
+      "grammar": [
+        {
+          "pattern": "치우다 (chiuda)",
+          "explanation": "Verb meaning 'to clear out/clean up'",
+          "example": "방 치우는 거야 = are you clearing the room"
+        },
+        {
+          "pattern": "짜증나다 (jjajeung-nada)",
+          "explanation": "Expression meaning 'to be irritated'",
+          "example": "짜증이나 나지 = it just irritates me"
+        }
+      ],
+      "culture": "Hye-in is clearing out baby items—a painful reminder of the child they'll never have due to her illness.",
+      "timestamps": { "from": "00:03:32,220", "to": "00:03:43,220" },
+      "offsets": { "from": 212220, "to": 223220 }
+    },
+    {
+      "original": "짜증이 나? 필요도 없잖아, 이제.",
+      "pronunciation": "Jjajeung-i na? Pilyo-do eobjana, ije.",
+      "translation": "It irritates you? There's no need for them anymore, anyway.",
+      "grammar": [
+        {
+          "pattern": "필요 없다 (pilyo eopda)",
+          "explanation": "Expression meaning 'no need'",
+          "example": "필요도 없잖아 = there's no need"
+        }
+      ],
+      "culture": "Heartbreaking moment—Hye-in has given up on having children (현연 글렀다 from earlier) due to her terminal illness.",
+      "timestamps": { "from": "00:03:43,220", "to": "00:03:59,220" },
+      "offsets": { "from": 223220, "to": 239220 }
+    },
+    {
+      "original": "실적이 안 나오면 상품 본부에서 좋은 브랜드를 유치할 수가 없다고. 왜 하나만 한 소리를 하지?",
+      "pronunciation": "Siljeok-i an naomyeon sangpum bonbu-eseo joeun beuraendeu-reul yuchihhal suga eopdago. Wae hanaman han sori-reul haji?",
+      "translation": "If we don't get results, the merchandise division can't attract good brands. Why do you keep saying the same thing?",
+      "grammar": [
+        {
+          "pattern": "실적 (siljeok)",
+          "explanation": "Noun meaning 'results/performance'",
+          "example": "실적이 안 나오면 = if results don't come"
+        },
+        {
+          "pattern": "유치하다 (yuchihada)",
+          "explanation": "Verb meaning 'to attract/recruit'",
+          "example": "브랜드를 유치할 수가 없다 = can't attract brands"
+        }
+      ],
+      "culture": "Work stress bleeding into their marriage—Hye-in's constant focus on business.",
+      "timestamps": { "from": "00:03:59,220", "to": "00:04:14,220" },
+      "offsets": { "from": 239220, "to": 254220 }
+    },
+    {
+      "original": "제 짐들 이 방으로 옮겨주세요. 네? 침대 하나 놔주시고요. 당분간 여기서 지낼 겁니다.",
+      "pronunciation": "Je jim-deul i bang-euro omgyeojuseyo. Ne? Chimdae hana nwajusigoyo. Dangbungan yeogi-seo jinal geomnida.",
+      "translation": "Please move my things to this room. What? Put a bed in here. I'll be staying here for a while.",
+      "grammar": [
+        {
+          "pattern": "짐 (jim)",
+          "explanation": "Noun meaning 'belongings/luggage'",
+          "example": "제 짐들 = my things"
+        },
+        {
+          "pattern": "당분간 (dangbungan)",
+          "explanation": "Adverb meaning 'for the time being/for a while'",
+          "example": "당분간 여기서 = for a while here"
+        }
+      ],
+      "culture": "Hye-in moving to sleep separately—the marriage is falling apart. She's moving into what was meant to be the baby's room.",
+      "timestamps": { "from": "00:04:14,220", "to": "00:04:35,220" },
+      "offsets": { "from": 254220, "to": 275220 }
+    },
+    {
+      "original": "울지 마. 그럴 자격 없어.",
+      "pronunciation": "Ulji ma. Geureol jagyeok eopseo.",
+      "translation": "Don't cry. You don't have the right to.",
+      "grammar": [
+        {
+          "pattern": "울다 (ulda)",
+          "explanation": "Verb meaning 'to cry'",
+          "example": "울지 마 = don't cry"
+        },
+        {
+          "pattern": "자격 (jagyeok)",
+          "explanation": "Noun meaning 'qualification/right'",
+          "example": "그럴 자격 없어 = no right to do that"
+        }
+      ],
+      "culture": "Hyun-woo talking to himself—denying himself the right to be sad about the marriage falling apart, or perhaps struggling with guilt about his original divorce plan.",
+      "timestamps": { "from": "00:06:55,220", "to": "00:07:12,220" },
+      "offsets": { "from": 415220, "to": 432220 }
+    },
+    {
+      "original": "안 기다렸어. 내가 어젯밤 안 잤다고 해서 당신 기다렸다고 생각하지 마.",
+      "pronunciation": "An gidaryeosseo. Naega eojetbam an jatdago haeseo dangsin gidaryeotdago saenggak-haji ma.",
+      "translation": "I wasn't waiting. Just because I didn't sleep last night, don't think I was waiting for you.",
+      "grammar": [
+        {
+          "pattern": "기다리다 (gidarida)",
+          "explanation": "Verb meaning 'to wait'",
+          "example": "기다렸다고 생각하지 마 = don't think I was waiting"
+        }
+      ],
+      "culture": "Classic tsundere moment—Hye-in denying that she waited up for Hyun-woo all night.",
+      "timestamps": { "from": "00:07:12,220", "to": "00:07:19,220" },
+      "offsets": { "from": 432220, "to": 439220 }
+    },
+    {
+      "original": "그렇게 생각 안 해. 들어가자. 추워.",
+      "pronunciation": "Geureoke saenggak an hae. Deureogaja. Chuwo.",
+      "translation": "I don't think that. Let's go inside. It's cold.",
+      "grammar": [
+        {
+          "pattern": "춥다 (chupda)",
+          "explanation": "Adjective meaning 'cold'",
+          "example": "추워 = it's cold"
+        }
+      ],
+      "culture": null,
+      "timestamps": { "from": "00:07:19,220", "to": "00:07:27,220" },
+      "offsets": { "from": 439220, "to": 447220 }
+    },
+    {
+      "original": "기다린 게 아니라 잠이 안 온 거야. 잠자리도 낯설고 동네 개들도 짖어대고 수면제도 안 가져왔고 그래서 잠 못 잔 거라고.",
+      "pronunciation": "Gidarin ge anira jam-i an on geoya. Jamjari-do natsеolgo dongne gae-deul-do jijeo-daego sumyeonje-do an gajeowatgo geuraeseo jam mot jan georago.",
+      "translation": "I wasn't waiting, I just couldn't sleep. The bed was unfamiliar, the neighborhood dogs kept barking, I didn't bring my sleeping pills—that's why I couldn't sleep.",
+      "grammar": [
+        {
+          "pattern": "~이 아니라 (i anira)",
+          "explanation": "Expression meaning 'not A but B'",
+          "example": "기다린 게 아니라 = not that I was waiting"
+        },
+        {
+          "pattern": "낯설다 (natsеolda)",
+          "explanation": "Adjective meaning 'unfamiliar/strange'",
+          "example": "잠자리도 낯설고 = the bed was unfamiliar"
+        },
+        {
+          "pattern": "짖어대다 (jijeo-daeda)",
+          "explanation": "Verb meaning 'to keep barking'",
+          "example": "개들도 짖어대고 = dogs kept barking"
+        },
+        {
+          "pattern": "수면제 (sumyeonje)",
+          "explanation": "Noun meaning 'sleeping pills'",
+          "example": "수면제도 안 가져왔고 = didn't bring sleeping pills"
+        }
+      ],
+      "culture": "Hye-in making excuses—listing every possible reason except the truth (that she was worried about him).",
+      "timestamps": { "from": "00:07:27,220", "to": "00:07:34,220" },
+      "offsets": { "from": 447220, "to": 454220 }
+    },
+    {
+      "original": "알았다잖아. 기다렸다고 생각 안 한다고. 네가 언제 나 기다린 적 있어?",
+      "pronunciation": "Aratdajana. Gidaryeotdago saenggak an handago. Nega eonje na gidarin jeok isseo?",
+      "translation": "I said I know. I said I don't think you were waiting. When have you ever waited for me?",
+      "grammar": [
+        {
+          "pattern": "~(으)ㄴ 적 있다 (eun jeok itda)",
+          "explanation": "Expression meaning 'have ever done'",
+          "example": "기다린 적 있어 = have you ever waited"
+        }
+      ],
+      "culture": "Hyun-woo's bitter rhetorical question—implying Hye-in has never cared enough to wait for him.",
+      "timestamps": { "from": "00:07:34,220", "to": "00:07:39,220" },
+      "offsets": { "from": 454220, "to": 459220 }
+    },
+    {
+      "original": "맞아. 나는 원래 누구 기다리고 그런 사람 아니야.",
+      "pronunciation": "Maja. Na-neun wollae nugu gidarigo geureon saram aniya.",
+      "translation": "Right. I'm not the type of person who waits for anyone.",
+      "grammar": [
+        {
+          "pattern": "원래 (wollae)",
+          "explanation": "Adverb meaning 'originally/by nature'",
+          "example": "원래 그런 사람 아니야 = I'm not that kind of person"
+        }
+      ],
+      "culture": "Hye-in defensively agreeing—but her actions (staying up all night) contradict her words.",
+      "timestamps": { "from": "00:07:39,220", "to": "00:07:42,220" },
+      "offsets": { "from": 459220, "to": 462220 }
+    },
+    {
+      "original": "그래, 너 그런 사람 아닌 거 누구보다 내가 잘 알아.",
+      "pronunciation": "Geurae, neo geureon saram anin geo nuguboda naega jal ara.",
+      "translation": "Yeah, I know better than anyone that you're not that kind of person.",
+      "grammar": [
+        {
+          "pattern": "누구보다 (nuguboda)",
+          "explanation": "Expression meaning 'more than anyone'",
+          "example": "누구보다 내가 잘 알아 = I know better than anyone"
+        }
+      ],
+      "culture": "The most painful line—Hyun-woo confirming that he believes she doesn't care. Years of feeling unloved crystallized in one sentence.",
+      "timestamps": { "from": "00:07:42,220", "to": "00:07:52,220" },
+      "offsets": { "from": 462220, "to": 472220 }
+    },
+    {
+      "original": "우산이나 똑바로 들어. 알았으니까 빨리 들어가기는 하자고. 비 점점 쏟아지잖아. 감기 들고 싶어? 할 얘기 있으면 집에서 하자고.",
+      "pronunciation": "Usan-ina ttokbaro deureo. Arasseunnikka ppalli deureogagineun hajago. Bi jeomjeom ssodajijana. Gamgi deulgo sipeo? Hal yaegi isseumyeon jib-eseo hajago.",
+      "translation": "At least hold the umbrella properly. I said okay, so let's hurry inside. The rain is getting heavier. Want to catch a cold? If you have something to say, let's talk at home.",
+      "grammar": [
+        {
+          "pattern": "~이나 (ina)",
+          "explanation": "Particle meaning 'at least'",
+          "example": "우산이나 똑바로 들어 = at least hold the umbrella right"
+        },
+        {
+          "pattern": "쏟아지다 (ssodajida)",
+          "explanation": "Verb meaning 'to pour down'",
+          "example": "비 점점 쏟아지잖아 = the rain is pouring"
+        },
+        {
+          "pattern": "감기 들다 (gamgi deulda)",
+          "explanation": "Expression meaning 'to catch a cold'",
+          "example": "감기 들고 싶어? = want to catch a cold?"
+        }
+      ],
+      "culture": "Despite the tension, Hyun-woo still cares about her health—holding the umbrella for her in the rain.",
+      "timestamps": { "from": "00:08:07,220", "to": "00:08:18,220" },
+      "offsets": { "from": 487220, "to": 498220 }
+    },
+    {
+      "original": "나는 할 얘기 없거든.",
+      "pronunciation": "Na-neun hal yaegi eopgeodeun.",
+      "translation": "I have nothing to say.",
+      "grammar": [
+        {
+          "pattern": "~거든 (geodeun)",
+          "explanation": "Sentence ending giving reason/emphasis",
+          "example": "없거든 = because there isn't/I don't have any"
+        }
+      ],
+      "culture": "Hye-in shutting down communication—the wall between them.",
+      "timestamps": { "from": "00:08:18,220", "to": "00:08:28,220" },
+      "offsets": { "from": 498220, "to": 508220 }
+    },
+    {
+      "original": "너 왜 비를 맞고 있어? 네가 여기 왜 있어? 일단 들어가서 얘기하자.",
+      "pronunciation": "Neo wae bi-reul matgo isseo? Nega yeogi wae isseo? Ildan deureogaseo yaegi-haja.",
+      "translation": "Why are you standing in the rain? Why are you here? Let's go inside and talk first.",
+      "grammar": [
+        {
+          "pattern": "비를 맞다 (bi-reul matda)",
+          "explanation": "Expression meaning 'to get rained on'",
+          "example": "비를 맞고 있어 = standing in the rain"
+        },
+        {
+          "pattern": "일단 (ildan)",
+          "explanation": "Adverb meaning 'first/for now'",
+          "example": "일단 들어가서 = let's go in first"
+        }
+      ],
+      "culture": "Despite everything, they still care about each other—just unable to communicate.",
+      "timestamps": { "from": "00:08:28,220", "to": "00:08:44,220" },
+      "offsets": { "from": 508220, "to": 524220 }
+    }
+  ]
+}

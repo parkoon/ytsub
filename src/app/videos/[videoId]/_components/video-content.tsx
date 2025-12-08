@@ -1,11 +1,21 @@
 'use client';
 
 import { useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import { useQuery } from '@tanstack/react-query';
 
 import { getVideoDetailQueryOptions } from '@/api/query-options';
 import { VideoDetail } from '@/api/types';
+import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 import { useSubtitleTracking } from '../hooks/use-subtitle-tracking';
 import { SubtitleDisplay } from './subtitle-display';
@@ -19,12 +29,14 @@ interface VideoContentProps {
 }
 
 export function VideoContent({ videoId }: VideoContentProps) {
+  const router = useRouter();
   const playerRef = useRef<YouTubePlayerRef>(null);
   const { data: video, isLoading, error } = useQuery(getVideoDetailQueryOptions(videoId));
   const [currentSubtitle, setCurrentSubtitle] = useState<VideoDetail['contents'][0] | null>(null);
   const [isPracticeActive, setIsPracticeActive] = useState(false);
   const [isRepeatActive, setIsRepeatActive] = useState(false);
   const [playerState, setPlayerState] = useState<number>(YOUTUBE_PLAYER_STATE.UNSTARTED);
+  const [showEndModal, setShowEndModal] = useState(false);
 
   const { startTimeTracking, stopTimeTracking } = useSubtitleTracking({
     contents: video?.contents || [],
@@ -42,7 +54,16 @@ export function VideoContent({ videoId }: VideoContentProps) {
       startTimeTracking();
       return;
     }
+    if (state === YOUTUBE_PLAYER_STATE.ENDED) {
+      stopTimeTracking();
+      setShowEndModal(true);
+      return;
+    }
     stopTimeTracking();
+  };
+
+  const handleGoHome = () => {
+    router.push('/');
   };
 
   const handlePrevious = () => {
@@ -112,31 +133,45 @@ export function VideoContent({ videoId }: VideoContentProps) {
   }
 
   return (
-    <div className="space-y-8">
-      <VideoHeader
-        videoId={videoId}
-        title={video.title}
-        synopsis={video.synopsis}
-        playerRef={playerRef}
-        onStateChange={handleStateChange}
-        onPrevious={handlePrevious}
-        onNext={handleNext}
-        onPlayPause={handlePlayPause}
-        onPlaybackRateChange={handlePlaybackRateChange}
-        playerState={playerState}
-        isPracticeActive={isPracticeActive}
-        isRepeatActive={isRepeatActive}
-        onRepeatToggle={() => setIsRepeatActive((prev) => !prev)}
-      />
+    <>
+      <div className="space-y-8">
+        <VideoHeader
+          videoId={videoId}
+          title={video.title}
+          synopsis={video.synopsis}
+          playerRef={playerRef}
+          onStateChange={handleStateChange}
+          onPrevious={handlePrevious}
+          onNext={handleNext}
+          onPlayPause={handlePlayPause}
+          onPlaybackRateChange={handlePlaybackRateChange}
+          playerState={playerState}
+          isPracticeActive={isPracticeActive}
+          isRepeatActive={isRepeatActive}
+          onRepeatToggle={() => setIsRepeatActive((prev) => !prev)}
+        />
 
-      <SubtitleDisplay
-        currentSubtitle={currentSubtitle}
-        contents={video.contents}
-        onPrevious={handlePrevious}
-        onNext={handleNext}
-        isPracticeActive={isPracticeActive}
-        onPracticeToggle={() => setIsPracticeActive((prev) => !prev)}
-      />
-    </div>
+        <SubtitleDisplay
+          currentSubtitle={currentSubtitle}
+          contents={video.contents}
+          onPrevious={handlePrevious}
+          onNext={handleNext}
+          isPracticeActive={isPracticeActive}
+          onPracticeToggle={() => setIsPracticeActive((prev) => !prev)}
+        />
+      </div>
+
+      <Dialog open={showEndModal} onOpenChange={setShowEndModal}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Video Ended</DialogTitle>
+            <DialogDescription>Great job! Continue learning with other videos.</DialogDescription>
+          </DialogHeader>
+          <DialogFooter>
+            <Button onClick={handleGoHome}>Go to Home</Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }

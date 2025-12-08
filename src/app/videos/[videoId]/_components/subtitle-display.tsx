@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { VideoDetail } from '@/api/types';
-import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
+import { Switch } from '@/components/ui/switch';
 import { cn } from '@/lib/utils';
 
 const CARD_HEIGHT = 420;
@@ -75,24 +75,16 @@ function SubtitleCard({
   totalCount?: number;
 }) {
   const [isPressing, setIsPressing] = useState(false);
-  const [toggleValues, setToggleValues] = useState<string[]>(['translation', 'pronunciation']);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const isTranslationVisible = toggleValues.includes('translation');
-  const isPronunciationVisible = toggleValues.includes('pronunciation');
-  const currentPracticeActive = toggleValues.includes('practice');
-
-  // Toggle Group 값 변경 시 Practice Mode 상태도 업데이트
-  const handleToggleChange = (values: string[]) => {
-    setToggleValues(values);
-    const newPracticeActive = values.includes('practice');
-    if (newPracticeActive !== isPracticeActive && onPracticeToggle) {
+  const handlePracticeToggle = (checked: boolean) => {
+    if (checked !== isPracticeActive && onPracticeToggle) {
       onPracticeToggle();
     }
   };
 
   useEffect(() => {
-    if (!currentPracticeActive) {
+    if (!isPracticeActive) {
       return;
     }
 
@@ -137,49 +129,43 @@ function SubtitleCard({
       card.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchend', handleTouchEnd);
     };
-  }, [currentPracticeActive]);
+  }, [isPracticeActive]);
 
-  const shouldShowSubtitle = !currentPracticeActive || isPressing;
+  const shouldShowSubtitle = !isPracticeActive || isPressing;
 
   return (
     <div
       ref={cardRef}
       className={cn(
         `relative h-full overflow-y-auto rounded-lg border px-6 pt-14 pb-6`,
-        currentPracticeActive && !isPressing && 'cursor-pointer',
-        currentPracticeActive && 'border-primary'
+        isPracticeActive && !isPressing && 'cursor-pointer',
+        isPracticeActive && 'border-primary'
       )}
       style={{ height: `${CARD_HEIGHT}px` }}
     >
       {onPracticeToggle && (
-        <div className="absolute top-4 left-0 z-20 flex w-full justify-between gap-2 px-6">
+        <div className="absolute top-4 left-0 z-20 flex w-full items-center justify-between gap-2 px-6">
           {currentIndex !== undefined && totalCount !== undefined && (
             <span className="text-muted-foreground text-sm">
               <b className="font-semibold">{currentIndex + 1}</b> / {totalCount}
             </span>
           )}
-          <ToggleGroup
-            type="multiple"
-            variant="outline"
-            size="sm"
-            value={toggleValues}
-            onValueChange={handleToggleChange}
-          >
-            <ToggleGroupItem value="practice" aria-label="Practice Mode">
-              Practice
-            </ToggleGroupItem>
-            <ToggleGroupItem value="translation" aria-label="Translation">
-              Translation
-            </ToggleGroupItem>
-            <ToggleGroupItem value="pronunciation" aria-label="Pronunciation">
-              Pronunciation
-            </ToggleGroupItem>
-          </ToggleGroup>
+          <div className="flex items-center gap-2">
+            <label htmlFor="practice-mode" className="text-sm font-medium">
+              Practice Mode
+            </label>
+            <Switch
+              id="practice-mode"
+              checked={isPracticeActive}
+              onCheckedChange={handlePracticeToggle}
+              aria-label="Practice Mode"
+            />
+          </div>
         </div>
       )}
 
       {/* Practice Mode가 활성화되고 카드를 누르지 않을 때 가려진 상태 UI */}
-      {currentPracticeActive && !isPressing && (
+      {isPracticeActive && !isPressing && (
         <div className="bg-background absolute inset-0 z-10 flex flex-col items-center justify-center">
           <div className="mb-6">
             <Image
@@ -203,12 +189,8 @@ function SubtitleCard({
         <div className="space-y-4">
           <div>
             <p className="mb-2 text-lg font-medium">{subtitle.original}</p>
-            {isPronunciationVisible && (
-              <p className="text-muted-foreground mb-1 text-sm">{subtitle.pronunciation}</p>
-            )}
-            {isTranslationVisible && (
-              <p className="text-muted-foreground text-sm">{subtitle.translation}</p>
-            )}
+            <p className="text-muted-foreground mb-1 text-sm">{subtitle.pronunciation}</p>
+            <p className="text-muted-foreground text-sm">{subtitle.translation}</p>
           </div>
 
           {isActive && subtitle.grammar && subtitle.grammar.length > 0 && (
